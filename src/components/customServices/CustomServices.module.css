@@ -1,0 +1,9 @@
+.custom-card img {
+  height: 200px;
+  width: 200px;
+  /* padding: 11%; */
+  /* margin-right: 2em; */
+}
+.custom-card {
+  margin-right: 6em;
+}
