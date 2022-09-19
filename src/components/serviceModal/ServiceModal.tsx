@@ -6,6 +6,10 @@ import { CarBrands, CarModels, FuelType } from "./carBrands";
 import carlogo from "../../assets/images/carLogos/Mahindra-logo.png";
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { style } from "@mui/system";
+import { useNavigate } from "react-router-dom";
+
 export const ServiceModal = () => {
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
@@ -68,7 +72,13 @@ export const ServiceModal = () => {
         </div>
       ) : !model.isCarModel ? (
         <div>
-          <span>Select Manufacturer</span>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setIsSelectCar(false)}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Manufacturer</span>
           <div className={styles["select-car"]}>
             <input type="search" placeholder="Search Brands" />
           </div>
@@ -88,7 +98,7 @@ export const ServiceModal = () => {
               {CarBrands.map((data, i) => (
                 <Grid item xs={2} sm={4} md={4} key={i}>
                   <div
-                    className="d-flex flex-column justify-content-center"
+                    className={styles["car-text"]}
                     onClick={() => {
                       setSelectedCar({ ...selectedCar, brand: data.name });
                       setModel({ ...model, isCarModel: true });
@@ -110,7 +120,13 @@ export const ServiceModal = () => {
         </div>
       ) : !model.isFuelType ? (
         <div>
-          <span>Select Model</span>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setModel({ ...model, isCarModel: false })}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Model</span>
           <div className={styles["select-car"]}>
             <input type="search" placeholder="Search Model" />
           </div>
@@ -130,7 +146,7 @@ export const ServiceModal = () => {
               {CarModels.map((data, i) => (
                 <Grid item xs={2} sm={4} md={4} key={i}>
                   <div
-                    className="d-flex flex-column justify-content-center"
+                    className={styles["car-text"]}
                     onClick={() => {
                       setSelectedCar({ ...selectedCar, carModel: data.name });
                       setModel({ ...model, isFuelType: true });
@@ -140,7 +156,10 @@ export const ServiceModal = () => {
                       <img
                         src={data.icon}
                         alt="icon"
-                        style={{ width: "100%", height: "100%" }}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
                       />
                     </div>
                     <span>{data.name}</span>
@@ -152,7 +171,13 @@ export const ServiceModal = () => {
         </div>
       ) : (
         <div>
-          <span>Select Fuel</span>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setModel({ ...model, isFuelType: false })}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Fuel</span>
           <div className={styles["select-car"]}>
             <input type="search" placeholder="Search Fuel Type" />
           </div>
@@ -165,7 +190,7 @@ export const ServiceModal = () => {
             {FuelType.map((data, i) => (
               <Grid item xs={2} sm={4} md={4} key={i}>
                 <div
-                  className="d-flex flex-column justify-content-center"
+                  className={styles["car-text"]}
                   onClick={() => {
                     setSelectedCar({ ...selectedCar, fuelType: data.name });
                     setIsSelectCar(false);

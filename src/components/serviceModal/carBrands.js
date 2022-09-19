@@ -1,66 +1,74 @@
 export const CarBrands = [
   {
     name: "Hyundai",
-    icon: "images/carLogos/Hyundai-logo.png",
+    icon: "images/carLogos/hundai.jpeg",
   },
   {
     name: "Maruti Suzuki",
-    icon: "images/carLogos/Suzuki-logo.png",
+    icon: "images/carLogos/maruti-suzuki.jpeg",
   },
   {
     name: "Chevrolet",
-    icon: "images/carLogos/Chevrolet-logo.png",
+    icon: "images/carLogos/chevrolet.jpeg",
   },
   {
     name: "Daewoo",
-    icon: "images/carLogos/Daewoo-logo.png",
+    icon: "images/carLogos/daewoo.jpeg",
   },
   {
     name: "Datsun",
-    icon: "images/carLogos/Datsun-logo.png",
+    icon: "images/carLogos/datsun.jpeg",
   },
   {
     name: "Fiat",
-    icon: "images/carLogos/Fiat-logo.png",
+    icon: "images/carLogos/fiat.jpeg",
   },
   {
     name: "Ford",
-    icon: "images/carLogos/Ford-logo.png",
+    icon: "images/carLogos/ford.jpeg",
   },
   {
     name: "Mahindra",
-    icon: "images/carLogos/Mahindra-logo.png",
+    icon: "images/carLogos/mahindra.jpeg",
   },
   {
     name: "Honda",
-    icon: "images/carLogos/Honda-logo.png",
+    icon: "images/carLogos/honda.jpeg",
+  },
+  {
+    name: "Volkswagan",
+    icon: "images/carLogos/volkswagan.jpeg",
+  },
+  {
+    name: "Tata",
+    icon: "images/carLogos/tata.jpeg",
   },
 ];
 
 export const CarModels = [
   {
-    name: "Model1",
+    name: "Swift",
     icon: "images/carModels/model1.jpeg",
   },
   {
-    name: "Model2",
+    name: "WagonR",
     icon: "images/carModels/model2.jpeg",
   },
   {
-    name: "Model3",
+    name: "Swift Dzire",
     icon: "images/carModels/model3.jpeg",
   },
 
   {
-    name: "Model4",
+    name: "Alto",
     icon: "images/carModels/model4.jpeg",
   },
   {
-    name: "Model5",
+    name: "Ritz",
     icon: "images/carModels/model5.jpeg",
   },
   {
-    name: "Model6",
+    name: "Baleno",
     icon: "images/carModels/model6.jpeg",
   },
 ];
@@ -73,6 +81,10 @@ export const FuelType = [
   {
     name: "CNG",
     icon: "images/carModels/CNG.svg",
+  },
+  {
+    name: "Disel",
+    icon: "images/carModels/DIESEL.svg",
   },
 ];
 
