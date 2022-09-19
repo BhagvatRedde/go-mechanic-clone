@@ -14,6 +14,8 @@ export const ServiceModal = () => {
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -75,12 +77,19 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setIsSelectCar(false)}
+              onClick={() => {
+                setIsSelectCar(false);
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Manufacturer</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Brands" />
+            <input
+              type="search"
+              placeholder="Search Brands"
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -90,32 +99,37 @@ export const ServiceModal = () => {
               size={20}
             />
           ) : (
-            <Grid
-              container
-              spacing={{ xs: 1, md: 2 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-            >
-              {CarBrands.map((data, i) => (
-                <Grid item xs={2} sm={4} md={4} key={i}>
-                  <div
-                    className={styles["car-text"]}
-                    onClick={() => {
-                      setSelectedCar({ ...selectedCar, brand: data.name });
-                      setModel({ ...model, isCarModel: true });
-                    }}
-                  >
-                    <div className={styles["car-logo"]}>
-                      <img
-                        src={data.icon}
-                        alt="icon"
-                        style={{ width: "100%", height: "100%" }}
-                      />
+            <div style={{ overflowY: "scroll" }}>
+              <Grid
+                container
+                spacing={{ xs: 1, md: 2 }}
+                columns={{ xs: 4, sm: 8, md: 12 }}
+              >
+                {CarBrands.filter((CarBrands) =>
+                  CarBrands.name.toLocaleLowerCase().includes(search)
+                ).map((data, i) => (
+                  <Grid item xs={2} sm={4} md={4} key={i}>
+                    <div
+                      className={styles["car-text"]}
+                      onClick={() => {
+                        setSelectedCar({ ...selectedCar, brand: data.name });
+                        setSearch("");
+                        setModel({ ...model, isCarModel: true });
+                      }}
+                    >
+                      <div className={styles["car-logo"]}>
+                        <img
+                          src={data.icon}
+                          alt="icon"
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </div>
+                      <span>{data.name}</span>
                     </div>
-                    <span>{data.name}</span>
-                  </div>
-                </Grid>
-              ))}
-            </Grid>
+                  </Grid>
+                ))}
+              </Grid>
+            </div>
           )}
         </div>
       ) : !model.isFuelType ? (
@@ -123,12 +137,19 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isCarModel: false })}
+              onClick={() => {
+                setModel({ ...model, isCarModel: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Model</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Model" />
+            <input
+              type="search"
+              placeholder="Search Model"
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -143,12 +164,15 @@ export const ServiceModal = () => {
               spacing={{ xs: 1, md: 2 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              {CarModels.map((data, i) => (
+              {CarModels.filter((carModel) =>
+                carModel.name.toLocaleLowerCase().includes(search)
+              ).map((data: any, i: any) => (
                 <Grid item xs={2} sm={4} md={4} key={i}>
                   <div
                     className={styles["car-text"]}
                     onClick={() => {
                       setSelectedCar({ ...selectedCar, carModel: data.name });
+                      setSearch("");
                       setModel({ ...model, isFuelType: true });
                     }}
                   >
@@ -174,12 +198,19 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isFuelType: false })}
+              onClick={() => {
+                setModel({ ...model, isFuelType: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Fuel</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Fuel Type" />
+            <input
+              type="search"
+              placeholder="Search Fuel Type"
+              onChange={(e) => setSearch(e.target.value)}
+            />
           </div>
 
           <Grid
@@ -187,7 +218,9 @@ export const ServiceModal = () => {
             spacing={{ xs: 1, md: 2 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {FuelType.map((data, i) => (
+            {FuelType.filter((fuelType) =>
+              fuelType.name.toLocaleLowerCase().includes(search)
+            ).map((data: any, i: any) => (
               <Grid item xs={2} sm={4} md={4} key={i}>
                 <div
                   className={styles["car-text"]}
@@ -195,6 +228,7 @@ export const ServiceModal = () => {
                     setSelectedCar({ ...selectedCar, fuelType: data.name });
                     setIsSelectCar(false);
                     setModel({ isCarModel: false, isFuelType: false });
+                    setSearch("");
                     setYourSelectedCar(
                       `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
                     );

@@ -7,7 +7,9 @@
   height: 80vh;
   z-index: 98;
 }
-
+.scroll-card {
+  overflow-y: auto !important;
+}
 .select-car {
   text-transform: uppercase;
   border: 1px solid gray;
@@ -26,6 +28,9 @@
   padding: 0.5em;
   margin-bottom: 1em;
   font-weight: 500;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
 .mobile-no input {
   border: none;
@@ -68,4 +73,14 @@
 }
 .text-heading {
   font-weight: bold;
+}
+.list {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.listItem {
+  margin-bottom: 20px;
+}
+.scroll {
 }
