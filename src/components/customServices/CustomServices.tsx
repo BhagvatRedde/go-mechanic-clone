@@ -14,7 +14,7 @@ const CustomServices = () => {
           <img src="images/customServices/accessories-1.png"></img>
         </div>
       </div>
-      <div className="mt-4">
+      <div className="mt-4" id="curated-customer-service">
         <h2>Curated Custom Services</h2>
       </div>
     </>

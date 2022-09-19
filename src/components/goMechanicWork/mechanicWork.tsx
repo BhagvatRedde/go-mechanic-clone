@@ -4,7 +4,7 @@ import styles from "./mechanicWork.module.css";
 import Grid from "@mui/material/Grid";
 const MechanicWork = () => {
   const Work = ({ items }: any) => (
-    <ul className="col-md-8">
+    <ul className="col-md-8" id="gomechanic-work">
       {items.map((data: any, i: number) => (
         <li key={i} className="name-data d-flex ">
           <div className="d-flex flex-column pt-4">
