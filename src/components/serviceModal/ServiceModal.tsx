@@ -8,7 +8,7 @@ import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { style } from "@mui/system";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 export const ServiceModal = () => {
   const [value, setValue] = useState("");
