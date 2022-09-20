@@ -37,7 +37,7 @@ export const ServiceModal = () => {
     return true;
   };
   return (
-    <Card className={styles["service-modal"]}>
+    <Card className={styles["service-modal"]} sx={{ boxShadow: 5 }}>
       {!isSelectCar ? (
         <div>
           <h3>Experience The Best Car Services In Pune</h3>

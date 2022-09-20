@@ -1,8 +1,8 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
 import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
@@ -24,6 +24,7 @@ const style = {
 };
 
 export default function CityModal({ open, setOpen, chooseCityName }: any) {
+  const AppData = useSelector((state: any) => state.data);
   const handleClose = () => setOpen(false);
 
   return (
@@ -62,26 +63,28 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
               columns={{ xs: 4, sm: 8, md: 5 }}
               sx={{ textAlign: "center" }}
             >
-              {CitiesData.map((data, i) => (
-                <Grid item xs={2} sm={4} md={1} key={i}>
-                  <div
-                    className="d-flex flex-column justify-content-center cursor-pointer"
-                    onClick={() => {
-                      chooseCityName(data.name);
-                      handleClose();
-                    }}
-                  >
-                    <div>
-                      <img
-                        src={logo}
-                        alt="icon"
-                        style={{ width: "35%", height: "35%" }}
-                      />
+              {AppData &&
+                CitiesData.map((data: any, i: number) => (
+                  <Grid item xs={2} sm={4} md={1} key={i}>
+                    <div
+                      className="d-flex flex-column justify-content-center cursor-pointer"
+                      onClick={() => {
+                        chooseCityName(data.name);
+                        handleClose();
+                        console.log(AppData[0][0].City);
+                      }}
+                    >
+                      <div>
+                        <img
+                          src={logo}
+                          alt="icon"
+                          style={{ width: "35%", height: "35%" }}
+                        />
+                      </div>
+                      <span>{data.name}</span>
                     </div>
-                    <span>{data.name}</span>
-                  </div>
-                </Grid>
-              ))}
+                  </Grid>
+                ))}
             </Grid>
           </Box>
         </Collapse>

@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
+import { Services } from "./pages/services/Services";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -14,7 +15,7 @@ function App() {
   }, []);
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <PulseLoader
           className="text-center"
           color={"#D0021B"}
@@ -23,7 +24,9 @@ function App() {
         />
       ) : (
         <Home />
-      )}
+        // <Services />
+      )} */}
+      <Home />
     </div>
   );
 }
