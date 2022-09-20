@@ -7,6 +7,7 @@ import CarServices from "../components/carServices/CarServices";
 import { MechanicBenefits } from "../components/goMechanicBenefit/mechanicBenefits";
 import MechanicWork from "../components/goMechanicWork/mechanicWork";
 import { StickyHeader } from "../components/stickyHeader/StickyHeader";
+import FestiveCarEssential from "../components/festiveCarEssential/FestiveCarEssential";
 
 export const Home = () => {
   return (
@@ -21,6 +22,7 @@ export const Home = () => {
         <StickyHeader />
         <CarServices />
         <CustomServices />
+        <FestiveCarEssential/>
         {/* Slider Components */}
         <MechanicWork />
         <MechanicBenefits />

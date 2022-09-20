@@ -138,3 +138,80 @@ export const CitiesData = [
     icon: "",
   },
 ];
+export const CarAccessories =[
+  {
+    name:"Brakes",
+    icon:"images/customServices/Brakes.png",
+  },
+  {
+    name:"AC Parts",
+    icon:"images/customServices/AC Parts.png",
+  },
+  {
+    name:"Clutch",
+    icon:"images/customServices/Clutch.png",
+  },
+  {
+    name:"Tyres",
+    icon:"images/customServices/Tyres.png",
+  },
+  {
+    name:"Steering",
+    icon:"images/customServices/Steering.png",
+  },
+  {
+    name:"Suspension",
+    icon:"images/customServices/Suspension.png",
+  },
+  {
+    name:"GoConnect",
+    icon:"images/customServices/GoConnect.png",
+  },
+  {
+    name:"Lights",
+    icon:"images/customServices/Lights.png",
+  },
+  {
+    name:"Body Parts",
+    icon:"images/customServices/Body Parts.png",
+  },
+  {
+    name:"Glasses",
+    icon:"images/customServices/Glasses.png",
+  },
+  {
+    name:"Batteries",
+    icon:"images/customServices/Batteries.png",
+  },
+  {
+    name:"Car Spa",
+    icon:"images/customServices/Car Spa.png",
+  },
+  {
+    name:"Car Detailing",
+    icon:"images/customServices/Car Detailing.png",
+  },
+  {
+    name:"Side Mirror",
+    icon:"images/customServices/Side Mirror.png",
+  },
+  ]
+
+export  const festive =[
+  {
+    name:"Used car Inspection",
+    icon:"images/Festive Car Inspection/uci.jpg",
+  },
+  {
+    name:"RSA Service in 10 Mins",
+    icon:"images/Festive Car Inspection/RSA service.jpg",
+  },
+  {
+    name:"Festive 360° Cleaning",
+    icon:"images/Festive Car Inspection/Festive 360.jpg",
+  },
+  {
+    name:"Used car Inspection",
+    icon:"images/Festive Car Inspection/Ac Service repair.jpg",
+  },
+]
