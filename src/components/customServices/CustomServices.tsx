@@ -23,7 +23,7 @@ const CustomServices = () => {
           <img src="images/customServices/accessories-1.png"></img>
         </div>
       </div>
-      <div className={`${styles["custom-card"]} mt-8  w-25`}>
+      <div className="mt-4" id="curated-customer-service">
         <h2>Curated Custom Services</h2>
           <Carousel   >
             

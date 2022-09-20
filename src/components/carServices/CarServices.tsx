@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
 const CarServices = () => {
   return (
-    <div>
+    <div id="our-services">
       <h3>Car Services Available In Pune</h3>
       <p className={styles["heading-data"]}>
         Get Affordable and hassle-free periodic car service,car repair,wheel
@@ -15,6 +15,8 @@ const CarServices = () => {
       <Grid
         container
         spacing={{ xs: 1, md: 3 }}
+        columnSpacing={{ md: 0 }}
+        rowSpacing={{ md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
         {CarServicesData.map((data, i) => (

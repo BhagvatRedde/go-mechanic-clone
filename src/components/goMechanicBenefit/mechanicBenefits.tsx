@@ -4,7 +4,7 @@ import { MechanicBenefitData } from "./mechanicBenefit";
 import styles from "./goBenefit.module.css";
 export const MechanicBenefits = () => {
   return (
-    <div>
+    <div id="gomechanic-benefits">
       <h3 className={styles["text-data"]}>GoMechanic Benefits</h3>
       <Grid
         container
