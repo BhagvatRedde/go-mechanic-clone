@@ -24,3 +24,7 @@ html {
 * {
   -ms-overflow-style: none;
 }
+
+.slick-arrow slick-next{
+  background-color: black;
+}

@@ -7,8 +7,22 @@ const FestiveCarEssential = () => {
   return (
     <>
       <div className="mt-4">
-        <h2>Curated Custom Services</h2>
-        <Grid
+        <h2>Festive Car Essential</h2>
+        <div className="row mt-4">
+        <div className={`${styles["custom-card"]} col-md-1`}>
+          <img src="images/Festive Car Inspection/uci.jpg"></img>
+        </div>
+        <div className={`${styles["custom-card"]} col-md-1`}>
+          <img src="images/Festive Car Inspection/RSA service.jpg"></img>
+        </div>
+        <div className={`${styles["custom-card"]} col-md-1`}>
+          <img src="images/Festive Car Inspection/Festive 360.jpg"></img>
+        </div>
+        <div className={`${styles["custom-card"]} col-md-1`}>
+          <img src="images/Festive Car Inspection/Ac Service repair.jpg"></img>
+        </div>
+      </div>
+        {/* <Grid
             container
             spacing={{ xs: 1, md: 2 }}
             columns={{ xs: 4, sm: 8, md: 28 }}
@@ -29,7 +43,7 @@ const FestiveCarEssential = () => {
                 </div>
               </Grid>
             ))}   
-          </Grid>
+          </Grid> */}
       </div>
     </>
   )

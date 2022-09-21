@@ -12,6 +12,8 @@ import { SaveData } from "../redux-store/action";
 
 import axios from "axios";
 import FestiveCarEssential from "../components/festiveCarEssential/FestiveCarEssential";
+import Workshop from "../components/workshop/Workshop";
+import LuxCars from "../components/lux-cars.tsx/LuxCars";
 export const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -37,6 +39,8 @@ export const Home = () => {
         <CarServices />
         <CustomServices />
         <FestiveCarEssential/>
+        <Workshop/>
+        <LuxCars/>
         {/* Slider Components */}
         <MechanicWork />
         <MechanicBenefits />

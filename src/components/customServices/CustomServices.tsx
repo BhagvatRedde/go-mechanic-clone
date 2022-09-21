@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React from "react";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
@@ -7,20 +6,19 @@ import styles from "./CustomServices.module.css";
 // import Slider from 'react-slick';
 
 const CustomServices = () => {
-  
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const settings = {
+    loop: false,
     className: "center",
-     centerMode: true,
+    centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "290px",
     slidesToShow: 1,
     speed: 500,
     rows: 2,
     slidesPerRow: 1,
-    
   };
-  const AppData = useSelector((state: any) => state.data[0]);
-
   return (
     <>
       <div className="row mt-4">
@@ -36,33 +34,26 @@ const CustomServices = () => {
       </div>
       <div className="mt-4" id="curated-customer-service">
         <h2>Curated Custom Services</h2>
-          {/* <Carousel 
-          controls={true}
-          > */}
-              <Slider {...settings} >
-            
-          {AppData[0]?.CustomServices?.map((data:any) => (
-            //  <Carousel.Item  >
-              <div className=" flex-column  text-center ">
-               
-                <div className={`${styles["card-logo"]} w-100`}>
 
+        <Slider {...settings}>
+          {AppData &&
+            AppData[0]?.CustomServices?.map((data: any) => (
+              //  <Carousel.Item  >
+              <div className="   text-center ">
+                <div className={`${styles["card-logo"]}`}>
                   <img
-                    src={data.icon}
+                    src={data.image}
                     alt="icon"
-                    style={{ width: "25%", height: "25%" }}
+                    style={{ width: "100%", height: "100%", padding: "10%" }}
                   />
-
                 </div>
 
                 <span>{data.name}</span>
-
               </div>
-              // </Carousel.Item>
-          ))}
-              </Slider>
+            ))}
+        </Slider>
 
-          {/* </Carousel> */}
+        {/* </Carousel> */}
       </div>
     </>
   );

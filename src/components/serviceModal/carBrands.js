@@ -227,3 +227,38 @@ export  const festive =[
     icon:"images/Festive Car Inspection/Ac Service repair.jpg",
   },
 ]
+
+
+export const WorkshopArray =[
+  {
+    icon:"/images/workshop/1.jpg"
+  },
+  {
+    icon:"/images/workshop/2.jpg"
+  },
+  {
+    icon:"/images/workshop/3.jpg"
+  },
+  {
+    icon:"/images/workshop/4.png"
+  },
+]
+
+export const LuxCarsArray=[
+  {
+    icon:"images/luxCars/lux-Audi.jpg"
+  },
+  {
+    icon:"images/luxCars/luc-Merc.jpg"
+  },
+  {
+    icon:"images/luxCars/lux-BMW.jpg"
+  },
+  {
+    icon:"images/luxCars/lux-jag.jpg"
+  },
+  {
+    icon:"images/luxCars/lux-Rover.jpg"
+  },
+  
+]

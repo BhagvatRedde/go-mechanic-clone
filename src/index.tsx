@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { legacy_createStore as createStore } from "redux";
 import Reducer from "./redux-store";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );

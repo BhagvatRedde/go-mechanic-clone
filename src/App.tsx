@@ -6,6 +6,7 @@ import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
 import { Services } from "./pages/services/Services";
 
 
+
 function App() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {

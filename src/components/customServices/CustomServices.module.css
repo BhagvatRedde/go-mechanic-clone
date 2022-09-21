@@ -8,19 +8,4 @@
   margin-right: 6em;
 }
 
-/* .carousel-control-next{
-  color: black;
-  border: 2ch;
-} */
-
-.carousel-item{
-  width: 25%;
-}
-.carousel-indicators{
-  background-color: black !important;
-}
-.carousel-control-next-icon{
-  background-color: black;
-}
-
 
