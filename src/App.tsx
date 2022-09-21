@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
+import { useDispatch, useSelector } from "react-redux";
+import { requestUsers } from "./redux/action";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -12,6 +14,13 @@ function App() {
       setLoading(false);
     }, 1000);
   }, []);
+ 
+//  const { AllData, isLoading } = useSelector((state) => state);
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     dispatch(requestUsers(data));
+//   }, [AllData]);
   return (
     <div>
       {loading ? (

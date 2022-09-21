@@ -1,10 +1,19 @@
-import React from "react";
-import { MechanicWorkData } from "./mechanicWorkData";
+import React, { useEffect, useState } from "react";
 import styles from "./mechanicWork.module.css";
 import Grid from "@mui/material/Grid";
+import axios from "axios";
+import { MechanicWorkData } from "./mechanicWorkData";
 const MechanicWork = () => {
+  // const [MechanicWorkData, setMechanicWorkData] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3000/MechanicWorkData")
+  //     .then((res) => setMechanicWorkData(res.data))
+  //     .catch((err: any) => console.log(err));
+ 
+  // }, [MechanicWorkData]);
   const Work = ({ items }: any) => (
-    <ul className="col-md-8">
+    <ul className={styles["line"]}>
       {items.map((data: any, i: number) => (
         <li key={i} className="name-data d-flex ">
           <div className="d-flex flex-column pt-4">

@@ -8,6 +8,9 @@ import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
 import { CitiesData } from "../serviceModal/carBrands";
 import logo from "../../assets/images/delhi.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useSelector } from "react-redux";
 
 const style = {
   position: "absolute" as "absolute",
@@ -25,7 +28,16 @@ const style = {
 
 export default function CityModal({ open, setOpen, chooseCityName }: any) {
   const handleClose = () => setOpen(false);
-
+  // const { AllData } = useSelector((state) => state);
+  const [City, setCity] = useState([]);
+  // console.log(AllData);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/City")
+      .then((res: any) => setCity(res.data))
+      .catch((err: any) => console.log(err));
+    console.log(setCity);
+  }, [City]);
   return (
     <div>
       <Modal
@@ -62,7 +74,7 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
               columns={{ xs: 4, sm: 8, md: 5 }}
               sx={{ textAlign: "center" }}
             >
-              {CitiesData.map((data, i) => (
+              {City.map((data: any, i: any) => (
                 <Grid item xs={2} sm={4} md={1} key={i}>
                   <div
                     className="d-flex flex-column justify-content-center cursor-pointer"
@@ -73,8 +85,8 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
                   >
                     <div>
                       <img
-                        src={logo}
-                        alt="icon"
+                        src={data.image}
+                        alt="img"
                         style={{ width: "35%", height: "35%" }}
                       />
                     </div>

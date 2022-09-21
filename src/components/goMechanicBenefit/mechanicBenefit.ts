@@ -10,12 +10,12 @@ export const MechanicBenefitData = [
     image: "images/mechanicBenefit/img2.png",
   },
   {
-    name: " Network Warranty On Car Service",
+    name: "Network Warranty On Car Service",
     text: "We Will Take Care Of Everything from here",
     image: "images/mechanicBenefit/img3.png",
   },
   {
-    name: " 100% Genuine Parts",
+    name: "100% Genuine Parts",
     text: "Spread The Word! You Get Rs.720.Your Friend Get Rs.720",
     image: "images/mechanicBenefit/img4.png",
   },

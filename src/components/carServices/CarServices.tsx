@@ -1,8 +1,17 @@
-import React from "react";
-import { CarServicesData } from "./carServiceData";
+import React, { useEffect, useState } from "react";
+//import { CarServicesData } from "./carServiceData";
 import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
+import axios from "axios";
+import { CarServicesData } from "./carServiceData";
 const CarServices = () => {
+  // const [CarServicesData, setCarServicesData] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://localhost:3000/CarServicesData")
+  //     .then((res) => setCarServicesData(res.data))
+  //     .catch((err: any) => console.log(err));
+  // }, [CarServicesData]);
   return (
     <div>
       <h3>Car Services Available In Pune</h3>
@@ -17,7 +26,7 @@ const CarServices = () => {
         spacing={{ xs: 1, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        {CarServicesData.map((data, i) => (
+        {CarServicesData.map((data: any, i: any) => (
           <Grid item xs={4} sm={4} md={3} key={i}>
             <div className={styles["car-service"]}>
               <img
