@@ -6,7 +6,7 @@ import Modal from "@mui/material/Modal";
 import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
-import { CitiesData } from "../serviceModal/carBrands";
+
 import logo from "../../assets/images/delhi.png";
 
 const style = {
@@ -24,7 +24,8 @@ const style = {
 };
 
 export default function CityModal({ open, setOpen, chooseCityName }: any) {
-  const AppData = useSelector((state: any) => state.data);
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const handleClose = () => setOpen(false);
 
   return (
@@ -64,14 +65,14 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
               sx={{ textAlign: "center" }}
             >
               {AppData &&
-                CitiesData.map((data: any, i: number) => (
+                AppData[0]?.City?.map((data: any, i: number) => (
                   <Grid item xs={2} sm={4} md={1} key={i}>
                     <div
                       className="d-flex flex-column justify-content-center cursor-pointer"
                       onClick={() => {
                         chooseCityName(data.name);
                         handleClose();
-                        console.log(AppData[0][0].City);
+                        console.log(AppData[0].City);
                       }}
                     >
                       <div>

@@ -1,12 +1,13 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
+
 import Box from "@mui/material/Box";
 import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Link from "@mui/material/Link";
-import { StickyMenuData } from "./data";
-
 import styles from "./StickyHeader.module.css";
 export function StickyHeader() {
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -45,23 +46,24 @@ export function StickyHeader() {
         }}
         className={styles["sticky-tabs"]}
       >
-        {StickyMenuData.map((data, index) => (
-          <Tab
-            label={data.title}
-            key={index}
-            sx={{
-              textTransform: "capitalize",
-              color: "#4a4a4a",
-              fontWeight: "600",
-              fontStretch: "normal",
-              fontStyle: "normal",
-              fontSize: ".9rem",
-            }}
-            onClick={() => {
-              scrollSmoothTo(data.id);
-            }}
-          />
-        ))}
+        {AppData &&
+          AppData[0]?.StickyMenudata.map((data: any, index: number) => (
+            <Tab
+              label={data.title}
+              key={index}
+              sx={{
+                textTransform: "capitalize",
+                color: "#4a4a4a",
+                fontWeight: "600",
+                fontStretch: "normal",
+                fontStyle: "normal",
+                fontSize: ".9rem",
+              }}
+              onClick={() => {
+                scrollSmoothTo(data.id);
+              }}
+            />
+          ))}
       </Tabs>
     </Box>
   );

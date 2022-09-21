@@ -1,13 +1,17 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
+
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 
 import { TabPanel, TabContext, TabList } from "@mui/lab";
 
 import { AppHeader } from "../../components/header/AppHeader";
-import { SerivesData } from "./data";
+
 import styles from "./ServiceTabs.module.css";
 export function ServiceTabs() {
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
@@ -39,23 +43,24 @@ export function ServiceTabs() {
               scrollButtons={true}
               aria-label="visible arrows tabs example text-center"
             >
-              {SerivesData.map((data) => (
-                <div className="d-flex flex-column justify-content-center align-items-center">
-                  <img src={data.icon} className={styles["tab-image"]} />
-                  <Tab
-                    label={data.name}
-                    value={data.value}
-                    color="black"
-                    sx={{
-                      fontSize: "0.7rem",
-                      textTransform: "none",
-                      lineHeight: 1.12,
-                      width: 145,
-                      marginTop: "-0.5rem",
-                    }}
-                  />
-                </div>
-              ))}
+              {AppData &&
+                AppData[0]?.ServiceTabsData?.map((data: any, i: number) => (
+                  <div className="d-flex flex-column justify-content-center align-items-center">
+                    <img src={data.icon} className={styles["tab-image"]} />
+                    <Tab
+                      label={data.name}
+                      value={data.value}
+                      color="black"
+                      sx={{
+                        fontSize: "0.7rem",
+                        textTransform: "none",
+                        lineHeight: 1.12,
+                        width: 145,
+                        marginTop: "-0.5rem",
+                      }}
+                    />
+                  </div>
+                ))}
             </TabList>
           </Box>
           <TabPanel value="1">Item Onsdfse</TabPanel>

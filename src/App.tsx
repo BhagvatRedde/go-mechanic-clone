@@ -27,6 +27,7 @@ function App() {
         // <Services />
       )} */}
       <Home />
+      {/* <Services /> */}
     </div>
   );
 }
