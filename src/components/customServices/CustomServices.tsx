@@ -1,15 +1,25 @@
+import { render } from "@testing-library/react";
 import React from "react";
-import { Carousel } from "react-bootstrap";
+import { Carousel, Stack } from "react-bootstrap";
+import Slider from "react-slick";
 import { CarAccessories } from "../serviceModal/carBrands";
 import styles from "./CustomServices.module.css";
+
+// import Slider from 'react-slick';
+
 const CustomServices = () => {
-    // const settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   speed: 500,
-    //   // slidesToShow: 1,
-    //   // slidesToScroll: 1
-    // };
+  
+  const settings = {
+    className: "center",
+     centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 500,
+    rows: 2,
+    slidesPerRow: 1,
+    
+  };
   return (
     <>
       <div className="row mt-4">
@@ -25,24 +35,33 @@ const CustomServices = () => {
       </div>
       <div className="mt-4" id="curated-customer-service">
         <h2>Curated Custom Services</h2>
-          <Carousel   >
+          {/* <Carousel 
+          controls={true}
+          > */}
+              <Slider  {...settings} >
             
           {CarAccessories.map((data) => (
-             <Carousel.Item >
-              <div className="d-flex flex-column  text-center ">
+            //  <Carousel.Item  >
+              <div className=" flex-column  text-center ">
                
-                <div className={styles["car-logo"]}>
+                <div className={`${styles["card-logo"]} w-100`}>
+
                   <img
                     src={data.icon}
                     alt="icon"
-                    style={{ width: "100%", height: "100%" }}
+                    style={{ width: "25%", height: "25%" }}
                   />
+
                 </div>
+
                 <span>{data.name}</span>
+
               </div>
-              </Carousel.Item>
+              // </Carousel.Item>
           ))}
-          </Carousel>
+              </Slider>
+
+          {/* </Carousel> */}
       </div>
     </>
   );

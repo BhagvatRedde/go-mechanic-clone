@@ -8,6 +8,7 @@ import { MechanicBenefits } from "../components/goMechanicBenefit/mechanicBenefi
 import MechanicWork from "../components/goMechanicWork/mechanicWork";
 import { StickyHeader } from "../components/stickyHeader/StickyHeader";
 import FestiveCarEssential from "../components/festiveCarEssential/FestiveCarEssential";
+import NewCards from "../components/cards/NewCards";
 
 export const Home = () => {
   return (
@@ -26,6 +27,7 @@ export const Home = () => {
         {/* Slider Components */}
         <MechanicWork />
         <MechanicBenefits />
+        {/* <NewCards/> */}
       </div>
     </div>
   );

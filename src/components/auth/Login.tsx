@@ -28,11 +28,13 @@ const style = {
 export default function Login({ open, setOpen, chooseCityName }: any) {
   const handleClose = () => setOpen(false);
   const [value, setValue] = useState("");
-  const [num, setNum] = useState(0);
+  const [num, setNum] = useState();
+  const [enteredotp,setEnteredOtp]=useState(0);
   let myNum:any;
   const continueHadnler = (ev:any) => {
     if (value.length == 12) {
       myNum = Math.floor(100000 + Math.random() * 900000);
+      setNum(myNum)
       alert(myNum);
       ev.preventDefault();
 
@@ -46,11 +48,14 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
 
    
   };
+  const otpHandler=(event:any)=>{
+    setEnteredOtp(event.target.value)
+  }
   const submitHandler=(ev:any)=>{
-    if (myNum){
+    console.log(num,enteredotp)
+    if (num == enteredotp){
       // console.log("HI")
       alert("Login Successfully")
-      ev.preventDefault();
     }else{
       // console.log("Nothing ")
       alert("OTP dose not match")
@@ -62,6 +67,7 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
   return (
     <div>
       <Modal
+        className={styles["login-modal"]}
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
@@ -102,6 +108,7 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
               ></Grid>
             </div>
             <form className={styles["mobile-no"]}>
+              <b>Enter Mobile No.</b>
               <PhoneInput
                 
                 country="india"
@@ -113,9 +120,10 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
               <button onClick={continueHadnler} className={styles["btn"]}>
                 Continue
               </button>
-              <form onClick={submitHandler}>
-                <input  className={styles["inp"]} />
-                <button className={styles["btn"]}>
+              <form >
+                <b>Enter Otp.</b>
+                <input  className={styles["inp"]} onChange={otpHandler}/>
+                <button className={styles["btn"]} onClick={submitHandler}>
                   Login
                 </button>
               </form>

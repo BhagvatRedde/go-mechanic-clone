@@ -1,6 +1,6 @@
 .custom-card img{
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   /* padding: 11%; */
   /* margin-right: 2em; */
 }
@@ -12,5 +12,15 @@
   color: black;
   border: 2ch;
 } */
+
+.carousel-item{
+  width: 25%;
+}
+.carousel-indicators{
+  background-color: black !important;
+}
+.carousel-control-next-icon{
+  background-color: black;
+}
 
 
