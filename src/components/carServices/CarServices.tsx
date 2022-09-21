@@ -1,8 +1,11 @@
 import React from "react";
-import { CarServicesData } from "./carServiceData";
+
 import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
+import { useSelector } from "react-redux";
 const CarServices = () => {
+  const AppData = useSelector((state: any) => state.data[0]);
+
   return (
     <div id="our-services">
       <h3>Car Services Available In Pune</h3>
@@ -19,18 +22,19 @@ const CarServices = () => {
         rowSpacing={{ md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        {CarServicesData.map((data, i) => (
-          <Grid item xs={4} sm={4} md={3} key={i}>
-            <div className={styles["car-service"]}>
-              <img
-                src={data.image}
-                alt="img"
-                style={{ width: "50%", height: "50%" }}
-              />
-              <div className="mt-2">{data.name}</div>
-            </div>
-          </Grid>
-        ))}
+        {AppData &&
+          AppData[0].CarServicesData?.map((data: any, i: number) => (
+            <Grid item xs={4} sm={4} md={3} key={i}>
+              <div className={styles["car-service"]}>
+                <img
+                  src={data.image}
+                  alt="img"
+                  style={{ width: "50%", height: "50%" }}
+                />
+                <div className="mt-2">{data.name}</div>
+              </div>
+            </Grid>
+          ))}
       </Grid>
       {/* ))} */}
     </div>

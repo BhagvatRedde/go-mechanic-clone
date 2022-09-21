@@ -14,7 +14,7 @@ import styles from "./AppHeader.module.css";
 import CityModal from "../cityModal/CityModal";
 import Login from "../auth/Login";
 
-export const AppHeader = () => {
+export const AppHeader = ({ bgColor }: any) => {
   const [state, setState] = useState(false);
   const [openMyModal,setOpenModal]=useState(false)
   const [selectedCity, setSelectedCity] = useState("Pune");
@@ -32,7 +32,7 @@ export const AppHeader = () => {
       <AppBar
         position="static"
         style={{
-          background: "transparent",
+          background: bgColor,
           boxShadow: "none",
           marginTop: ".8em",
         }}

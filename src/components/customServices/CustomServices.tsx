@@ -1,8 +1,7 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { Carousel, Stack } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import Slider from "react-slick";
-import { CarAccessories } from "../serviceModal/carBrands";
 import styles from "./CustomServices.module.css";
 
 // import Slider from 'react-slick';
@@ -20,6 +19,8 @@ const CustomServices = () => {
     slidesPerRow: 1,
     
   };
+  const AppData = useSelector((state: any) => state.data[0]);
+
   return (
     <>
       <div className="row mt-4">
@@ -38,9 +39,9 @@ const CustomServices = () => {
           {/* <Carousel 
           controls={true}
           > */}
-              <Slider  {...settings} >
+              <Slider {...settings} >
             
-          {CarAccessories.map((data) => (
+          {AppData[0]?.CustomServices?.map((data:any) => (
             //  <Carousel.Item  >
               <div className=" flex-column  text-center ">
                
