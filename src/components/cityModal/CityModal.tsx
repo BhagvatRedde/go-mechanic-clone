@@ -1,16 +1,13 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
-import Fade from "@mui/material/Fade";
 import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
-import { CitiesData } from "../serviceModal/carBrands";
+
 import logo from "../../assets/images/delhi.png";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { useSelector } from "react-redux";
 
 const style = {
   position: "absolute" as "absolute",
@@ -27,17 +24,10 @@ const style = {
 };
 
 export default function CityModal({ open, setOpen, chooseCityName }: any) {
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const handleClose = () => setOpen(false);
-  // const { AllData } = useSelector((state) => state);
-  const [City, setCity] = useState([]);
-  // console.log(AllData);
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/City")
-      .then((res: any) => setCity(res.data))
-      .catch((err: any) => console.log(err));
-    console.log(setCity);
-  }, [City]);
+
   return (
     <div>
       <Modal
@@ -74,26 +64,28 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
               columns={{ xs: 4, sm: 8, md: 5 }}
               sx={{ textAlign: "center" }}
             >
-              {City.map((data: any, i: any) => (
-                <Grid item xs={2} sm={4} md={1} key={i}>
-                  <div
-                    className="d-flex flex-column justify-content-center cursor-pointer"
-                    onClick={() => {
-                      chooseCityName(data.name);
-                      handleClose();
-                    }}
-                  >
-                    <div>
-                      <img
-                        src={data.image}
-                        alt="img"
-                        style={{ width: "35%", height: "35%" }}
-                      />
+              {AppData &&
+                AppData[0]?.City?.map((data: any, i: number) => (
+                  <Grid item xs={2} sm={4} md={1} key={i}>
+                    <div
+                      className="d-flex flex-column justify-content-center cursor-pointer"
+                      onClick={() => {
+                        chooseCityName(data.name);
+                        handleClose();
+                        console.log(AppData[0].City);
+                      }}
+                    >
+                      <div>
+                        <img
+                          src={logo}
+                          alt="icon"
+                          style={{ width: "35%", height: "35%" }}
+                        />
+                      </div>
+                      <span>{data.name}</span>
                     </div>
-                    <span>{data.name}</span>
-                  </div>
-                </Grid>
-              ))}
+                  </Grid>
+                ))}
             </Grid>
           </Box>
         </Collapse>

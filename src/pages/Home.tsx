@@ -1,5 +1,5 @@
 import styles from "./Home.module.css";
-
+import { useDispatch } from "react-redux";
 import { AppHeader } from "../components/header/AppHeader";
 import { ServiceModal } from "../components/serviceModal/ServiceModal";
 import CustomServices from "../components/customServices/CustomServices";
@@ -9,48 +9,51 @@ import MechanicWork from "../components/goMechanicWork/mechanicWork";
 import { StickyHeader } from "../components/stickyHeader/StickyHeader";
 import RatingDiv from "../components/ratingModule/ratingDiv";
 
-import { useEffect, useState } from "react";
-
 import axios from "axios";
 import { WhyChoose } from "../components/choose/WhyChoose";
 import { PriceTable } from "../components/priceTable/PriceTable";
 import { Footer } from "../components/footer/Footer";
 import { FooterEnd } from "../components/footer/FooterEnd";
 
+import { useEffect, useState } from "react";
+import { SaveData } from "../redux-store/action";
 export const Home = () => {
-  // const [Alldata, setAlldata] = useState([]);
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3000/Alldata")
-  //     .then((res) => setAlldata(res.data))
-  //     .catch((err: any) => console.log(err));
-  //   console.log(Alldata);
-  // }, [Alldata]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    axios
+      .get("http://localhost:3000/Alldata")
+      .then((res) => {
+        console.log(res.data);
+        dispatch(SaveData(res.data));
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <div>
-    <div>
-      <div className={styles["img-container"]}>
-        <div className="d-flex">
-          <AppHeader />
+      
+      <div>
+        <div className={styles["img-container"]}>
+          <div className="d-flex">
+            <AppHeader bgColor="transparent" />
+          </div>
+        </div>
+        <ServiceModal />
+        <div className={styles["home-content"]}>
+          <StickyHeader />
+          <CarServices />
+          <CustomServices />
+          {/* Slider Components */}
+          <MechanicWork />
+          <MechanicBenefits />
+          <RatingDiv />
+          <WhyChoose />
+          <PriceTable />
         </div>
       </div>
-      <ServiceModal />
-      <div className={styles["home-content"]}>
-        <StickyHeader />
-        <CarServices />
-        <CustomServices />
-        {/* Slider Components */}
-        <MechanicWork />
-        <MechanicBenefits />
-        <RatingDiv />
-        <WhyChoose />
-        <PriceTable />
-      </div>
-     
-    </div>
-    <div>
+      <div>
         <Footer />
-        <FooterEnd/>
+        <FooterEnd />
       </div>
     </div>
   );

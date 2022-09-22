@@ -1,7 +1,7 @@
 .service-modal {
   position: fixed;
   bottom: -4px;
-  right: 10px;
+  right: 2rem;
   padding: 3em;
   width: 30vw;
   height: 80vh;
@@ -47,6 +47,25 @@
 }
 
 .car-logo {
+  justify-items: center;
+  cursor: pointer;
   width: 70px;
-  height: 70px;
+  height: 60px;
+}
+.car-logo:hover {
+  transform: scale(1.1);
+}
+.car-text {
+  text-align: center;
+  justify-content: center;
+  font-size: smaller;
+  cursor: pointer;
+}
+.back-arrow {
+  margin-right: 1em;
+  height: 3em;
+  width: 3em;
+}
+.text-heading {
+  font-weight: bold;
 }

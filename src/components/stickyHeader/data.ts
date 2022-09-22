@@ -1,10 +1,34 @@
 export const StickyMenuData = [
-  "Our Services",
-  "Curated Custom Service",
-  "Monsoon Mist",
-  "GoMechanic Luxe",
-  "How GoMechanic Works?",
-  "GoMechanic Benefits",
-  "Rating & Reviews",
-  "Frequently asked questions",
+  {
+    title: "Our Services",
+    id: "our-services",
+  },
+  {
+    title: "Curated Custom Service",
+    id: "curated-customer-service",
+  },
+  {
+    title: "Monsoon Mist",
+    id: "monsoon-mist",
+  },
+  {
+    title: "GoMechanic Luxe",
+    id: "gomechanic-luxe",
+  },
+  {
+    title: "How GoMechanic Works?",
+    id: "gomechanic-work",
+  },
+  {
+    title: "GoMechanic Benefits",
+    id: "gomechanic-benefits",
+  },
+  {
+    title: "Rating & Reviews",
+    id: "rating-reviews",
+  },
+  {
+    title: "Frequently asked questions",
+    id: "frequently-ask-que",
+  },
 ];

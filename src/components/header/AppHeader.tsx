@@ -12,7 +12,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./AppHeader.module.css";
 import CityModal from "../cityModal/CityModal";
 
-export const AppHeader = () => {
+export const AppHeader = ({ bgColor }: any) => {
   const [state, setState] = useState(false);
   const [selectedCity, setSelectedCity] = useState("Pune");
   const chooseCityName = (city: string) => {
@@ -23,7 +23,7 @@ export const AppHeader = () => {
       <AppBar
         position="static"
         style={{
-          background: "transparent",
+          background: bgColor,
           boxShadow: "none",
           marginTop: ".8em",
         }}

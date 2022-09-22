@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Card, Box, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./ServiceModal.module.css";
-import { CarBrands, CarModels, FuelType } from "./carBrands";
-import carlogo from "../../assets/images/carLogos/Mahindra-logo.png";
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useSelector } from "react-redux";
+
+import { style } from "@mui/system";
+import { useNavigate } from "react-router-dom";
+
 export const ServiceModal = () => {
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -33,7 +39,7 @@ export const ServiceModal = () => {
     return true;
   };
   return (
-    <Card className={styles["service-modal"]}>
+    <Card className={styles["service-modal"]} sx={{ boxShadow: 5 }}>
       {!isSelectCar ? (
         <div>
           <h3>Experience The Best Car Services In Pune</h3>
@@ -68,7 +74,13 @@ export const ServiceModal = () => {
         </div>
       ) : !model.isCarModel ? (
         <div>
-          <span>Select Manufacturer</span>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setIsSelectCar(false)}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Manufacturer</span>
           <div className={styles["select-car"]}>
             <input type="search" placeholder="Search Brands" />
           </div>
@@ -85,32 +97,39 @@ export const ServiceModal = () => {
               spacing={{ xs: 1, md: 2 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              {CarBrands.map((data, i) => (
-                <Grid item xs={2} sm={4} md={4} key={i}>
-                  <div
-                    className="d-flex flex-column justify-content-center"
-                    onClick={() => {
-                      setSelectedCar({ ...selectedCar, brand: data.name });
-                      setModel({ ...model, isCarModel: true });
-                    }}
-                  >
-                    <div className={styles["car-logo"]}>
-                      <img
-                        src={data.icon}
-                        alt="icon"
-                        style={{ width: "100%", height: "100%" }}
-                      />
+              {AppData &&
+                AppData[0]?.CarBrands?.map((data: any, i: number) => (
+                  <Grid item xs={2} sm={4} md={4} key={i}>
+                    <div
+                      className={styles["car-text"]}
+                      onClick={() => {
+                        setSelectedCar({ ...selectedCar, brand: data.name });
+                        setModel({ ...model, isCarModel: true });
+                      }}
+                    >
+                      <div className={styles["car-logo"]}>
+                        <img
+                          src={data.icon}
+                          alt="icon"
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </div>
+                      <span>{data.name}</span>
                     </div>
-                    <span>{data.name}</span>
-                  </div>
-                </Grid>
-              ))}
+                  </Grid>
+                ))}
             </Grid>
           )}
         </div>
       ) : !model.isFuelType ? (
         <div>
-          <span>Select Model</span>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setModel({ ...model, isCarModel: false })}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Model</span>
           <div className={styles["select-car"]}>
             <input type="search" placeholder="Search Model" />
           </div>
@@ -127,13 +146,63 @@ export const ServiceModal = () => {
               spacing={{ xs: 1, md: 2 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              {CarModels.map((data, i) => (
+              {AppData &&
+                AppData[0]?.CarModels.map((data: any, i: number) => (
+                  <Grid item xs={2} sm={4} md={4} key={i}>
+                    <div
+                      className={styles["car-text"]}
+                      onClick={() => {
+                        setSelectedCar({ ...selectedCar, carModel: data.name });
+                        setModel({ ...model, isFuelType: true });
+                      }}
+                    >
+                      <div className={styles["car-logo"]}>
+                        <img
+                          src={data.icon}
+                          alt="icon"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                          }}
+                        />
+                      </div>
+                      <span>{data.name}</span>
+                    </div>
+                  </Grid>
+                ))}
+            </Grid>
+          )}
+        </div>
+      ) : (
+        <div>
+          <span className={styles["back-arrow"]}>
+            <ArrowBackIcon
+              fontSize="small"
+              onClick={() => setModel({ ...model, isFuelType: false })}
+            />
+          </span>
+          <span className={styles["text-heading"]}>Select Fuel</span>
+          <div className={styles["select-car"]}>
+            <input type="search" placeholder="Search Fuel Type" />
+          </div>
+
+          <Grid
+            container
+            spacing={{ xs: 1, md: 2 }}
+            columns={{ xs: 4, sm: 8, md: 12 }}
+          >
+            {AppData &&
+              AppData[0]?.FuelType.map((data: any, i: number) => (
                 <Grid item xs={2} sm={4} md={4} key={i}>
                   <div
-                    className="d-flex flex-column justify-content-center"
+                    className={styles["car-text"]}
                     onClick={() => {
-                      setSelectedCar({ ...selectedCar, carModel: data.name });
-                      setModel({ ...model, isFuelType: true });
+                      setSelectedCar({ ...selectedCar, fuelType: data.name });
+                      setIsSelectCar(false);
+                      setModel({ isCarModel: false, isFuelType: false });
+                      setYourSelectedCar(
+                        `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
+                      );
                     }}
                   >
                     <div className={styles["car-logo"]}>
@@ -147,45 +216,6 @@ export const ServiceModal = () => {
                   </div>
                 </Grid>
               ))}
-            </Grid>
-          )}
-        </div>
-      ) : (
-        <div>
-          <span>Select Fuel</span>
-          <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Fuel Type" />
-          </div>
-
-          <Grid
-            container
-            spacing={{ xs: 1, md: 2 }}
-            columns={{ xs: 4, sm: 8, md: 12 }}
-          >
-            {FuelType.map((data, i) => (
-              <Grid item xs={2} sm={4} md={4} key={i}>
-                <div
-                  className="d-flex flex-column justify-content-center"
-                  onClick={() => {
-                    setSelectedCar({ ...selectedCar, fuelType: data.name });
-                    setIsSelectCar(false);
-                    setModel({ isCarModel: false, isFuelType: false });
-                    setYourSelectedCar(
-                      `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
-                    );
-                  }}
-                >
-                  <div className={styles["car-logo"]}>
-                    <img
-                      src={data.icon}
-                      alt="icon"
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                  <span>{data.name}</span>
-                </div>
-              </Grid>
-            ))}
           </Grid>
         </div>
       )}

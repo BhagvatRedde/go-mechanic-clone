@@ -1,7 +1,9 @@
 .img-container {
-  width: 100vw;
-  height: 700px;
-  background-image: url("/src/assets/images/carService.png");
+  min-height: 46.875rem;
+  min-width: 100%;
+  background-image: url("/src/assets/images/go-mechanic-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .home-content {
   margin-left: 3em;

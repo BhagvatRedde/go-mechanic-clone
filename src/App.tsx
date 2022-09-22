@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Home } from "./pages/Home";
 import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
+import { Services } from "./pages/services/Services";
 import { useDispatch, useSelector } from "react-redux";
 import { requestUsers } from "./redux/action";
 
@@ -23,7 +24,7 @@ function App() {
 //   }, [AllData]);
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <PulseLoader
           className="text-center"
           color={"#D0021B"}
@@ -32,7 +33,10 @@ function App() {
         />
       ) : (
         <Home />
-      )}
+        // <Services />
+      )} */}
+      <Home />
+      {/* <Services /> */}
     </div>
   );
 }

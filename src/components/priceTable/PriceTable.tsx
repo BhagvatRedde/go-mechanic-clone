@@ -9,8 +9,8 @@ export const PriceTable = () => {
   return (
     <div>
       <h3>Car Services PriceList In Pune,India 2022</h3>
-      <table className="table table-striped">
-        <thead className="thead-color">
+      <table className="table">
+        <thead className="table-light">
           <tr>
             <th>Services Type</th>
             <th>Price Starts from Rs</th>
@@ -39,7 +39,7 @@ export const PriceTable = () => {
           }}
           className={styles["see-more"]}
         >
-          See more
+        SEE MORE
         </button>
       )}
       {showBtn && (
@@ -50,7 +50,7 @@ export const PriceTable = () => {
           }}
           className={styles["see-more"]}
         >
-          See Less
+          SEE LESS
         </button>
       )}
     </div>

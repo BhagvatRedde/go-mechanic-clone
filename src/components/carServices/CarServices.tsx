@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
-//import { CarServicesData } from "./carServiceData";
+//
 import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
+import { useSelector } from "react-redux";
 import axios from "axios";
-import { CarServicesData } from "./carServiceData";
+// import { CarServicesData } from "./carServiceData";
 const CarServices = () => {
-  // const [CarServicesData, setCarServicesData] = useState([]);
-  // useEffect(() => {
-  //   axios
-  //     .get("http://localhost:3000/CarServicesData")
-  //     .then((res) => setCarServicesData(res.data))
-  //     .catch((err: any) => console.log(err));
-  // }, [CarServicesData]);
+  const AppData = useSelector((state: any) => state.data[0]);
+
   return (
-    <div>
+    <div id="our-services">
       <h3>Car Services Available In Pune</h3>
       <p className={styles["heading-data"]}>
         Get Affordable and hassle-free periodic car service,car repair,wheel
@@ -24,20 +20,23 @@ const CarServices = () => {
       <Grid
         container
         spacing={{ xs: 1, md: 3 }}
+        columnSpacing={{ md: 0 }}
+        rowSpacing={{ md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        {CarServicesData.map((data: any, i: any) => (
-          <Grid item xs={4} sm={4} md={3} key={i}>
-            <div className={styles["car-service"]}>
-              <img
-                src={data.image}
-                alt="img"
-                style={{ width: "50%", height: "50%" }}
-              />
-              <div className="mt-2">{data.name}</div>
-            </div>
-          </Grid>
-        ))}
+        {AppData &&
+          AppData[0].CarServicesData?.map((data: any, i: number) => (
+            <Grid item xs={4} sm={4} md={3} key={i}>
+              <div className={styles["car-service"]}>
+                <img
+                  src={data.image}
+                  alt="img"
+                  style={{ width: "50%", height: "50%" }}
+                />
+                <div className="mt-2">{data.name}</div>
+              </div>
+            </Grid>
+          ))}
       </Grid>
       {/* ))} */}
     </div>

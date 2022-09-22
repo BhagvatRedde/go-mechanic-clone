@@ -2,10 +2,10 @@
   counter-reset: list;
   border-left: 2px solid lightgrey;
   margin: 2em;
-  padding-top: 1em;
-  /* margin-left: 6em; */
+  padding-top: 0.5em;
+  
   cursor: pointer;
-  /* padding: 0; */
+ 
 }
 
 .line li {
@@ -66,3 +66,4 @@ h3 {
   object-fit: cover;
   margin-left: auto;
 }
+
