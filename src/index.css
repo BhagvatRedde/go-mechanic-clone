@@ -25,6 +25,7 @@ html {
   -ms-overflow-style: none;
 }
 
-.slick-arrow slick-next{
-  background-color: black;
+.slick-next , .slick-prev{
+background-color: black !important;
 }
+
