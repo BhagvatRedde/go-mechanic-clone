@@ -1,0 +1,67 @@
+.feedback {
+  width: 26em;
+  height: 39em;
+  background-color: hsla(0, 0%, 91.8%, 0.56);
+  border-radius: 2px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-top: 2em;
+  box-sizing: inherit;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 12.5rem; */
+
+
+  /* margin-left: 3rem; */
+}
+.comma {
+  height: 50px;
+  width: 50px;
+  margin-top: -2em;
+}
+.feedback-main {
+  margin-top: 2em;
+}
+.feedback-name {
+  padding-left: 1em;
+}
+.feedback-icon {
+  text-align: left;
+  margin-left: 0.1em;
+}
+.feedback-title {
+  padding-top: 1em;
+}
+.feedback-info {
+  text-align: left;
+  margin-left: 2em;
+  margin-top: -1em;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.73;
+
+  margin-top: 0.1rem;
+  color: #4a4a4a;
+}
+.workshop-name {
+  font-weight: 500;
+  text-align: left;
+  color: gray;
+  padding-left: 2em;
+}
+.feedback-workshop {
+  float: left;
+  margin-left: 2.4em;
+}
+.feedback-socialName {
+  margin-left: 7em;
+  text-align: left;
+  color: gray;
+  /* padding-bottom: 20%; */
+  padding-bottom: 2em;
+  margin-bottom: 1em;
+}

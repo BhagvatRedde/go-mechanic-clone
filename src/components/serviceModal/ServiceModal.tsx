@@ -3,7 +3,7 @@ import { Card, Box, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./ServiceModal.module.css";
 import { CarBrands, CarModels, FuelType } from "./carBrands";
-import carlogo from "../../assets/images/carLogos/Mahindra-logo.png";
+
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -15,7 +15,10 @@ export const ServiceModal = () => {
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-
+  const handleChange = (e: any) => {
+    const { value } = e.target;
+    setSearch(value);
+  };
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -88,7 +91,8 @@ export const ServiceModal = () => {
             <input
               type="search"
               placeholder="Search Brands"
-              onChange={(e) => setSearch(e.target.value)}
+              // onChange={(e) => setSearch(e.target.value)}
+              onChange={handleChange}
             />
           </div>
           {loading ? (
@@ -99,7 +103,7 @@ export const ServiceModal = () => {
               size={20}
             />
           ) : (
-            <div style={{ overflowY: "scroll" }}>
+            <div className={styles["scroll-card"]}>
               <Grid
                 container
                 spacing={{ xs: 1, md: 2 }}
@@ -148,7 +152,7 @@ export const ServiceModal = () => {
             <input
               type="search"
               placeholder="Search Model"
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={handleChange}
             />
           </div>
           {loading ? (
@@ -209,7 +213,7 @@ export const ServiceModal = () => {
             <input
               type="search"
               placeholder="Search Fuel Type"
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={handleChange}
             />
           </div>
 

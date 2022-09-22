@@ -4,7 +4,7 @@ import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
 const CarServices = () => {
   return (
-    <div id="our-services">
+    <div>
       <h3>Car Services Available In Pune</h3>
       <p className={styles["heading-data"]}>
         Get Affordable and hassle-free periodic car service,car repair,wheel

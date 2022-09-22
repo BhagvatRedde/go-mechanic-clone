@@ -8,7 +8,8 @@
   z-index: 98;
 }
 .scroll-card {
-  overflow-y: auto !important;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
 }
 .select-car {
   text-transform: uppercase;

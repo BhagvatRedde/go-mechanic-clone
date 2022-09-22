@@ -4,7 +4,8 @@ import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Link from "@mui/material/Link";
 import { StickyMenuData } from "./data";
-import { HashLink } from "react-router-hash-link";
+// import { HashLink } from "react-router-hash-link";
+
 import styles from "./StickyHeader.module.css";
 export function StickyHeader() {
   const [value, setValue] = React.useState(0);
