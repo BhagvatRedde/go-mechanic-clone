@@ -7,6 +7,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { quetionAnswer } from "./quetion";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 
 export function GoQuetion() {
     const [expanded, setExpanded] = React.useState<string | false>(false);
@@ -56,6 +57,7 @@ export function GoQuetion() {
                     </div>
                 ))}
             </Grid>
+            <Dash_saperator />
         </div>
     );
 }

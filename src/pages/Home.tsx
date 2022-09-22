@@ -7,8 +7,13 @@ import CarServices from "../components/carServices/CarServices";
 import { MechanicBenefits } from "../components/goMechanicBenefit/mechanicBenefits";
 import MechanicWork from "../components/goMechanicWork/mechanicWork";
 import { StickyHeader } from "../components/stickyHeader/StickyHeader";
-import { OwnersFeedback } from "../components/ownersFeedback/OwnersFeedback";
+
 import { GoQuetion } from "../components/Quetions/GoQuetions";
+import { Dash_saperator } from "../components/dash-saperator/Dash_saperator";
+import OwnersFeedback from "../components/ownersFeedback/OwnersFeedback";
+
+
+
 
 export const Home = () => {
   return (
@@ -27,7 +32,8 @@ export const Home = () => {
         <MechanicWork />
         <MechanicBenefits />
         <OwnersFeedback /><GoQuetion />
-        
+        {/* <Dash_saperator /> */}
+
       </div>
     </div>
   );

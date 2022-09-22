@@ -2,6 +2,7 @@ import React from "react";
 import { MechanicWorkData } from "./mechanicWorkData";
 import styles from "./mechanicWork.module.css";
 import Grid from "@mui/material/Grid";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 const MechanicWork = () => {
   const Work = ({ items }: any) => (
     <ul className="col-md-8" id="gomechanic-work">
@@ -33,6 +34,7 @@ const MechanicWork = () => {
       >
         <Work items={MechanicWorkData} />;
       </Grid>
+      <Dash_saperator />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { CarServicesData } from "./carServiceData";
 import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 const CarServices = () => {
   return (
     <div>
@@ -33,6 +34,7 @@ const CarServices = () => {
         ))}
       </Grid>
       {/* ))} */}
+      <Dash_saperator />
     </div>
   );
 };

@@ -3,25 +3,22 @@ import styles from "./ownersFeedback.module.css";
 import { feedback } from "./feedback";
 import Grid from "@mui/material/Grid";
 import Slider from "react-slick";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 
-export function OwnersFeedback() {
+export default function OwnersFeedback() {
   const settings = {
-    className: "center",
-    centerMode: true,
-    infinite: false,
-    centerPadding: "-2000px",
+    dots: true,
+    // infinite: true,
+
+    speed: 500,
     slidesToShow: 2,
-    speed: 300,
-    rows: 1,
-    slidesPerRow: 7,
+    slidesToScroll: 1,
   };
   return (
     <div className={styles["feedback-main"]}>
       <h3>What Car Owners In Pune Say</h3>
 
-
       <Slider {...settings}>
-
         {feedback.map((data, i) => (
           <Grid item xs={2} sm={4} md={3} key={i}>
             <div className={styles["feedback"]}>
@@ -34,37 +31,45 @@ export function OwnersFeedback() {
 
                 <p className={styles["feedback-info"]}>{data.info}</p>
                 <div className={styles["feedback-icon"]}>
-                  <img
-                    src={data.icon}
-                    alt="img"
-                    style={{ width: "15%", height: "15%", marginLeft: "2em" }}
-                  />
-                  <span className={styles["feedback-name"]}>{data.name}</span>
+                  <div style={{ width: "50vh" }}>
+                    <div className="row">
+                      <div className="col-3">
+                        <img
+                          src={data.icon}
+                          alt="img"
+                          style={{ width: "80%", marginLeft: "2em" }}
+                        />
+                      </div>
+                      <div className="col-7 mt-3">
+                        <div className={styles["feedback-name"]} style={{ marginLeft: "-2em" }}>{data.name}</div>
+                      </div>
 
-                  <p className={styles["feedback-socialName"]}>
-                    {data.socialName}
-                  </p>
+                    </div>
+                    <div>
+                      <p className={styles["feedback-socialName"]}>
+                        {data.socialName}
+                      </p>
+                    </div>
+                  </div>
                 </div>
                 <hr
                   style={{
                     color: "gray",
-                    width: "25em",
+                    maxWidth: "28em",
+
                     alignmentBaseline: "central",
                   }}
                 />
                 <div className={styles["feedback-name"]}>
                   <h6 className={styles["workshop-name"]}>Workshop Name</h6>
-                  <p className={styles["feedback-workshop"]}>
-                    {data.workShop}
-                  </p>
+                  <p className={styles["feedback-workshop"]}>{data.workShop}</p>
                 </div>
               </div>
             </div>
           </Grid>
         ))}
       </Slider>
-
-
-    </div>
+      <Dash_saperator />
+    </div >
   );
 }
