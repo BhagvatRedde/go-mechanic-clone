@@ -6,8 +6,10 @@ import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 export const MechanicBenefits = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
+  const AppData = useSelector((state: any) => state.data[0]);
+
   return (
-    <div id="gomechanic-benefits">
+    <div id="gomechanic-benefits" id="gomechanic-benefits">
       <h3 className={styles["text-data"]}>GoMechanic Benefits</h3>
       <Grid
         container

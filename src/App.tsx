@@ -28,6 +28,13 @@ function App() {
       setLoading(false);
     }, 1000);
   }, []);
+ 
+//  const { AllData, isLoading } = useSelector((state) => state);
+//   const dispatch = useDispatch();
+
+//   useEffect(() => {
+//     dispatch(requestUsers(data));
+//   }, [AllData]);
   return (
     <div>
       {/* {loading ? (

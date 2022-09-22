@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Card, Box, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./ServiceModal.module.css";
-// import { CarBrands, CarModels, FuelType } from "./carBrands";
-
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";

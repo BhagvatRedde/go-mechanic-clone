@@ -20,6 +20,14 @@ import OwnersFeedback from "../components/ownersFeedback/OwnersFeedback";
 
 
 
+import axios from "axios";
+import { WhyChoose } from "../components/choose/WhyChoose";
+import { PriceTable } from "../components/priceTable/PriceTable";
+import { Footer } from "../components/footer/Footer";
+import { FooterEnd } from "../components/footer/FooterEnd";
+
+import { useEffect, useState } from "react";
+import { SaveData } from "../redux-store/action";
 export const Home = () => {
   const [cityName, setCityName] = useState("Pune");
   const dispatch = useDispatch();
@@ -39,22 +47,29 @@ export const Home = () => {
 
   return (
     <div>
-      <div className={styles["img-container"]}>
-        <div className="d-flex">
-          <AppHeader bgColor="transparent" getCityName={getCityName} />
+      
+      <div>
+        <div className={styles["img-container"]}>
+          <div className="d-flex">
+            <AppHeader bgColor="transparent" />
+          </div>
+        </div>
+        <ServiceModal />
+        <div className={styles["home-content"]}>
+          <StickyHeader />
+          <CarServices />
+          <CustomServices />
+          {/* Slider Components */}
+          <MechanicWork />
+          <MechanicBenefits />
+          <RatingDiv />
+          <WhyChoose />
+          <PriceTable />
         </div>
       </div>
-      <ServiceModal cityName={cityName} />
-      <div className={styles["home-content"]}>
-        <StickyHeader />
-        <CarServices cityName={cityName} />
-        <CustomServices />
-        {/* Slider Components */}
-        <MechanicWork />
-        <MechanicBenefits />
-        <OwnersFeedback /><GoQuetion />
-        {/* <Dash_saperator /> */}
-
+      <div>
+        <Footer />
+        <FooterEnd />
       </div>
     </div>
   );
