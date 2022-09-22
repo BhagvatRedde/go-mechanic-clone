@@ -3,6 +3,7 @@ import styles from "./mechanicWork.module.css";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 const MechanicWork = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
@@ -35,6 +36,7 @@ const MechanicWork = () => {
             ))}
         </ul>
       </Grid>
+      <Dash_saperator />
     </div>
   );
 };

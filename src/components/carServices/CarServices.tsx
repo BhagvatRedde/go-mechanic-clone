@@ -37,6 +37,7 @@ const CarServices = ({ cityName }: any) => {
           ))}
       </Grid>
       {/* ))} */}
+      <Dash_saperator />
     </div>
   );
 };

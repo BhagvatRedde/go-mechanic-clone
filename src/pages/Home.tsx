@@ -13,6 +13,13 @@ import { SaveData } from "../redux-store/action";
 
 import axios from "axios";
 
+import { GoQuetion } from "../components/Quetions/GoQuetions";
+import { Dash_saperator } from "../components/dash-saperator/Dash_saperator";
+import OwnersFeedback from "../components/ownersFeedback/OwnersFeedback";
+
+
+
+
 export const Home = () => {
   const [cityName, setCityName] = useState("Pune");
   const dispatch = useDispatch();
@@ -45,6 +52,9 @@ export const Home = () => {
         {/* Slider Components */}
         <MechanicWork />
         <MechanicBenefits />
+        <OwnersFeedback /><GoQuetion />
+        {/* <Dash_saperator /> */}
+
       </div>
     </div>
   );

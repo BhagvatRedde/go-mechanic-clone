@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Card, Box, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./ServiceModal.module.css";
+import { CarBrands, CarModels, FuelType } from "./carBrands";
+
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -16,6 +18,11 @@ export const ServiceModal = ({ cityName }: any) => {
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+  const handleChange = (e: any) => {
+    const { value } = e.target;
+    setSearch(value);
+  };
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -77,12 +84,20 @@ export const ServiceModal = ({ cityName }: any) => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setIsSelectCar(false)}
+              onClick={() => {
+                setIsSelectCar(false);
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Manufacturer</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Brands" />
+            <input
+              type="search"
+              placeholder="Search Brands"
+              // onChange={(e) => setSearch(e.target.value)}
+              onChange={handleChange}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -126,12 +141,19 @@ export const ServiceModal = ({ cityName }: any) => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isCarModel: false })}
+              onClick={() => {
+                setModel({ ...model, isCarModel: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Model</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Model" />
+            <input
+              type="search"
+              placeholder="Search Model"
+              onChange={handleChange}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -178,12 +200,19 @@ export const ServiceModal = ({ cityName }: any) => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isFuelType: false })}
+              onClick={() => {
+                setModel({ ...model, isFuelType: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Fuel</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Fuel Type" />
+            <input
+              type="search"
+              placeholder="Search Fuel Type"
+              onChange={handleChange}
+            />
           </div>
 
           <Grid
