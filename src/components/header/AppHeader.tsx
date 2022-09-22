@@ -12,11 +12,12 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./AppHeader.module.css";
 import CityModal from "../cityModal/CityModal";
 
-export const AppHeader = ({ bgColor }: any) => {
+export const AppHeader = ({ bgColor, getCityName }: any) => {
   const [state, setState] = useState(false);
   const [selectedCity, setSelectedCity] = useState("Pune");
   const chooseCityName = (city: string) => {
     setSelectedCity(city);
+    getCityName(city);
   };
   return (
     <>

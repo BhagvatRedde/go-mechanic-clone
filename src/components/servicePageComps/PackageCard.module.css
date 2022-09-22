@@ -1,0 +1,39 @@
+.card-container {
+  padding: 1rem;
+}
+.card-image {
+  width: 8.5rem;
+  height: 8.5rem;
+  margin-right: 1rem;
+}
+.service-desc {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.8em;
+  color: #4a4a4a;
+}
+.service-data ul {
+  font-size: 0.9rem;
+  column-count: 2;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+.bullet {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+.service-data h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.service-data {
+  width: 100%;
+}
+/* .list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1.125rem;
+  grid-column-gap: 0.625rem;
+} */

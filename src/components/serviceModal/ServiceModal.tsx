@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import { style } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 
-export const ServiceModal = () => {
+export const ServiceModal = ({ cityName }: any) => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   const [value, setValue] = useState("");
@@ -42,7 +42,7 @@ export const ServiceModal = () => {
     <Card className={styles["service-modal"]} sx={{ boxShadow: 5 }}>
       {!isSelectCar ? (
         <div>
-          <h3>Experience The Best Car Services In Pune</h3>
+          <h3>Experience The Best Car Services In {cityName}</h3>
           <p>Get instant quotes for your car service</p>
           <div
             className={styles["select-car"]}
