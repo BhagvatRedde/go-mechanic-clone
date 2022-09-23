@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Slider from "react-slick";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 import styles from "./CustomServices.module.css";
 
 // import Slider from 'react-slick';
@@ -21,7 +22,7 @@ const CustomServices = () => {
   };
   return (
     <>
-      <div className="row mt-4">
+      <div className="row mt-4 mb-4">
         <div className={`${styles["custom-card"]} col-md-2`}>
           <img src="images/customServices/miles.png"></img>
         </div>
@@ -32,7 +33,8 @@ const CustomServices = () => {
           <img src="images/customServices/accessories-1.png"></img>
         </div>
       </div>
-      <div className="mt-4" id="curated-customer-service">
+      <Dash_saperator />
+      <div className="mt-4 mb-4" id="curated-customer-service">
         <h2>Curated Custom Services</h2>
 
         <Slider {...settings}>
@@ -52,9 +54,8 @@ const CustomServices = () => {
               </div>
             ))}
         </Slider>
-
-        {/* </Carousel> */}
       </div>
+      <Dash_saperator />
     </>
   );
 };

@@ -2,20 +2,23 @@ import React, { useEffect, useState } from "react";
 import { Card, Box, Button, Grid } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./ServiceModal.module.css";
+import { CarBrands, CarModels, FuelType } from "./carBrands";
+
 import { CircleLoader, PulseLoader } from "react-spinners";
 import PhoneInput from "react-phone-input-2";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { useSelector } from "react-redux";
-
 import { style } from "@mui/system";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const ServiceModal = () => {
-  const AppData = useSelector((state: any) => state.data[0]);
-
+export const ServiceModal = ({ cityName }: any) => {
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("");
+  const handleChange = (e: any) => {
+    const { value } = e.target;
+    setSearch(value);
+  };
   useEffect(() => {
     setLoading(true);
     setTimeout(() => {
@@ -39,10 +42,10 @@ export const ServiceModal = () => {
     return true;
   };
   return (
-    <Card className={styles["service-modal"]} sx={{ boxShadow: 5 }}>
+    <Card className={styles["service-modal"]}>
       {!isSelectCar ? (
         <div>
-          <h3>Experience The Best Car Services In Pune</h3>
+          <h3>Experience The Best Car Services In {cityName}</h3>
           <p>Get instant quotes for your car service</p>
           <div
             className={styles["select-car"]}
@@ -77,12 +80,20 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setIsSelectCar(false)}
+              onClick={() => {
+                setIsSelectCar(false);
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Manufacturer</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Brands" />
+            <input
+              type="search"
+              placeholder="Search Brands"
+              // onChange={(e) => setSearch(e.target.value)}
+              onChange={handleChange}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -92,18 +103,21 @@ export const ServiceModal = () => {
               size={20}
             />
           ) : (
-            <Grid
-              container
-              spacing={{ xs: 1, md: 2 }}
-              columns={{ xs: 4, sm: 8, md: 12 }}
-            >
-              {AppData &&
-                AppData[0]?.CarBrands?.map((data: any, i: number) => (
+            <div className={styles["scroll-card"]}>
+              <Grid
+                container
+                spacing={{ xs: 1, md: 2 }}
+                columns={{ xs: 4, sm: 8, md: 12 }}
+              >
+                {CarBrands.filter((CarBrands) =>
+                  CarBrands.name.toLocaleLowerCase().includes(search)
+                ).map((data, i) => (
                   <Grid item xs={2} sm={4} md={4} key={i}>
                     <div
                       className={styles["car-text"]}
                       onClick={() => {
                         setSelectedCar({ ...selectedCar, brand: data.name });
+                        setSearch("");
                         setModel({ ...model, isCarModel: true });
                       }}
                     >
@@ -118,7 +132,8 @@ export const ServiceModal = () => {
                     </div>
                   </Grid>
                 ))}
-            </Grid>
+              </Grid>
+            </div>
           )}
         </div>
       ) : !model.isFuelType ? (
@@ -126,12 +141,19 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isCarModel: false })}
+              onClick={() => {
+                setModel({ ...model, isCarModel: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Model</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Model" />
+            <input
+              type="search"
+              placeholder="Search Model"
+              onChange={handleChange}
+            />
           </div>
           {loading ? (
             <PulseLoader
@@ -146,30 +168,32 @@ export const ServiceModal = () => {
               spacing={{ xs: 1, md: 2 }}
               columns={{ xs: 4, sm: 8, md: 12 }}
             >
-              {AppData &&
-                AppData[0]?.CarModels.map((data: any, i: number) => (
-                  <Grid item xs={2} sm={4} md={4} key={i}>
-                    <div
-                      className={styles["car-text"]}
-                      onClick={() => {
-                        setSelectedCar({ ...selectedCar, carModel: data.name });
-                        setModel({ ...model, isFuelType: true });
-                      }}
-                    >
-                      <div className={styles["car-logo"]}>
-                        <img
-                          src={data.icon}
-                          alt="icon"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                          }}
-                        />
-                      </div>
-                      <span>{data.name}</span>
+              {CarModels.filter((carModel) =>
+                carModel.name.toLocaleLowerCase().includes(search)
+              ).map((data: any, i: any) => (
+                <Grid item xs={2} sm={4} md={4} key={i}>
+                  <div
+                    className={styles["car-text"]}
+                    onClick={() => {
+                      setSelectedCar({ ...selectedCar, carModel: data.name });
+                      setSearch("");
+                      setModel({ ...model, isFuelType: true });
+                    }}
+                  >
+                    <div className={styles["car-logo"]}>
+                      <img
+                        src={data.icon}
+                        alt="icon"
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                        }}
+                      />
                     </div>
-                  </Grid>
-                ))}
+                    <span>{data.name}</span>
+                  </div>
+                </Grid>
+              ))}
             </Grid>
           )}
         </div>
@@ -178,12 +202,19 @@ export const ServiceModal = () => {
           <span className={styles["back-arrow"]}>
             <ArrowBackIcon
               fontSize="small"
-              onClick={() => setModel({ ...model, isFuelType: false })}
+              onClick={() => {
+                setModel({ ...model, isFuelType: false });
+                setSearch("");
+              }}
             />
           </span>
           <span className={styles["text-heading"]}>Select Fuel</span>
           <div className={styles["select-car"]}>
-            <input type="search" placeholder="Search Fuel Type" />
+            <input
+              type="search"
+              placeholder="Search Fuel Type"
+              onChange={handleChange}
+            />
           </div>
 
           <Grid
@@ -191,31 +222,33 @@ export const ServiceModal = () => {
             spacing={{ xs: 1, md: 2 }}
             columns={{ xs: 4, sm: 8, md: 12 }}
           >
-            {AppData &&
-              AppData[0]?.FuelType.map((data: any, i: number) => (
-                <Grid item xs={2} sm={4} md={4} key={i}>
-                  <div
-                    className={styles["car-text"]}
-                    onClick={() => {
-                      setSelectedCar({ ...selectedCar, fuelType: data.name });
-                      setIsSelectCar(false);
-                      setModel({ isCarModel: false, isFuelType: false });
-                      setYourSelectedCar(
-                        `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
-                      );
-                    }}
-                  >
-                    <div className={styles["car-logo"]}>
-                      <img
-                        src={data.icon}
-                        alt="icon"
-                        style={{ width: "100%", height: "100%" }}
-                      />
-                    </div>
-                    <span>{data.name}</span>
+            {FuelType.filter((fuelType) =>
+              fuelType.name.toLocaleLowerCase().includes(search)
+            ).map((data: any, i: any) => (
+              <Grid item xs={2} sm={4} md={4} key={i}>
+                <div
+                  className={styles["car-text"]}
+                  onClick={() => {
+                    setSelectedCar({ ...selectedCar, fuelType: data.name });
+                    setIsSelectCar(false);
+                    setModel({ isCarModel: false, isFuelType: false });
+                    setSearch("");
+                    setYourSelectedCar(
+                      `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
+                    );
+                  }}
+                >
+                  <div className={styles["car-logo"]}>
+                    <img
+                      src={data.icon}
+                      alt="icon"
+                      style={{ width: "100%", height: "100%" }}
+                    />
                   </div>
-                </Grid>
-              ))}
+                  <span>{data.name}</span>
+                </div>
+              </Grid>
+            ))}
           </Grid>
         </div>
       )}

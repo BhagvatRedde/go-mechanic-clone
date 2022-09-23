@@ -3,6 +3,7 @@ import styles from "./mechanicWork.module.css";
 import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 const MechanicWork = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
@@ -15,7 +16,7 @@ const MechanicWork = () => {
         columns={{ xs: 4, sm: 4, md: 8 }}
       >
         {/* <Work items={AppData} />; */}
-        <ul className="col-md-8" id="gomechanic-work">
+        <ul className={`${styles.line} col-md-8`} id="gomechanic-work">
           {AppData &&
             AppData[0]?.MechanicWorkData?.map((data: any, i: number) => (
               <li key={i} className="name-data d-flex ">
@@ -35,6 +36,7 @@ const MechanicWork = () => {
             ))}
         </ul>
       </Grid>
+      <Dash_saperator />
     </div>
   );
 };

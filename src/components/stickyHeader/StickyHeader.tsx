@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import styles from "./StickyHeader.module.css";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 export function StickyHeader() {
   const AppData = useSelector((state: any) => state.data[0]);
 
@@ -23,48 +24,52 @@ export function StickyHeader() {
   }
 
   return (
-    <Box
-      sx={{
-        flexGrow: 1,
-        maxWidth: { xs: 320, sm: 800 },
-        bgcolor: "#f6f6f6",
-        color: "#4a4a4a",
-        position: "sticky",
-      }}
-      className={`${styles["sticky-header"]} sticky-top`}
-    >
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        variant="scrollable"
-        scrollButtons
-        aria-label="visible arrows tabs example"
+    <>
+      <Box
         sx={{
-          [`& .${tabsClasses.scrollButtons}`]: {
-            "&.Mui-disabled": { opacity: 0.3 },
-          },
+          flexGrow: 1,
+          maxWidth: { xs: 320, sm: 800 },
+          bgcolor: "#f6f6f6",
+          color: "#4a4a4a",
+          position: "sticky",
+          marginBottom: "2em",
         }}
-        className={styles["sticky-tabs"]}
+        className={`${styles["sticky-header"]} sticky-top`}
       >
-        {AppData &&
-          AppData[0]?.StickyMenudata.map((data: any, index: number) => (
-            <Tab
-              label={data.title}
-              key={index}
-              sx={{
-                textTransform: "capitalize",
-                color: "#4a4a4a",
-                fontWeight: "600",
-                fontStretch: "normal",
-                fontStyle: "normal",
-                fontSize: ".9rem",
-              }}
-              onClick={() => {
-                scrollSmoothTo(data.id);
-              }}
-            />
-          ))}
-      </Tabs>
-    </Box>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons
+          aria-label="visible arrows tabs example"
+          sx={{
+            [`& .${tabsClasses.scrollButtons}`]: {
+              "&.Mui-disabled": { opacity: 0.3 },
+            },
+          }}
+          className={styles["sticky-tabs"]}
+        >
+          {AppData &&
+            AppData[0]?.StickyMenudata.map((data: any, index: number) => (
+              <Tab
+                label={data.title}
+                key={index}
+                sx={{
+                  textTransform: "capitalize",
+                  color: "#4a4a4a",
+                  fontWeight: "600",
+                  fontStretch: "normal",
+                  fontStyle: "normal",
+                  fontSize: ".9rem",
+                }}
+                onClick={() => {
+                  scrollSmoothTo(data.id);
+                }}
+              />
+            ))}
+        </Tabs>
+      </Box>
+      <Dash_saperator />
+    </>
   );
 }

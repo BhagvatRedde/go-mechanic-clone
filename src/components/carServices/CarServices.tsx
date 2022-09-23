@@ -3,12 +3,13 @@ import React from "react";
 import { Grid } from "@mui/material";
 import styles from "./carServices.module.css";
 import { useSelector } from "react-redux";
-const CarServices = () => {
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
+const CarServices = ({ cityName }: any) => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
     <div id="our-services">
-      <h3>Car Services Available In Pune</h3>
+      <h3>Car Services Available In {cityName}</h3>
       <p className={styles["heading-data"]}>
         Get Affordable and hassle-free periodic car service,car repair,wheel
         care services, Cashless insurance services claim and much more in Queen
@@ -37,6 +38,7 @@ const CarServices = () => {
           ))}
       </Grid>
       {/* ))} */}
+      <Dash_saperator />
     </div>
   );
 };

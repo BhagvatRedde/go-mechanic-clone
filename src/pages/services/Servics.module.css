@@ -1,4 +1,6 @@
 .home-content {
-  /* margin-left: 3em; */
-  width: 60vw;
+  margin-left: 2em;
+}
+.sliding-tabs {
+  width: 64vw;
 }

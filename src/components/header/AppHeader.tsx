@@ -6,7 +6,6 @@ import {
   Typography,
   Stack,
   Button,
-  ClickAwayListener,
 } from "@mui/material";
 import appLogo from "../../assets/images/app-logo.png";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
@@ -14,19 +13,18 @@ import styles from "./AppHeader.module.css";
 import CityModal from "../cityModal/CityModal";
 import Login from "../auth/Login";
 
-export const AppHeader = ({ bgColor }: any) => {
+export const AppHeader = ({ bgColor, getCityName }: any) => {
   const [state, setState] = useState(false);
-  const [openMyModal,setOpenModal]=useState(false)
+  const [openMyModal, setOpenModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState("Pune");
   const chooseCityName = (city: string) => {
     setSelectedCity(city);
+    getCityName(city);
   };
-
-  const handleClick =(e:any)=>{
+  const handleClick = (e: any) => {
     e.preventDefault();
     setOpenModal(true);
-    
-  }
+  };
   return (
     <>
       <AppBar
@@ -72,7 +70,7 @@ export const AppHeader = ({ bgColor }: any) => {
               <Typography className={styles["btn-typography"]}>More</Typography>
             </Button>
             <Button variant="contained" color="error" onClick={handleClick}>
-              <Typography className={styles["btn-typography"]} >
+              <Typography className={styles["btn-typography"]}>
                 Login
               </Typography>
             </Button>
@@ -84,8 +82,7 @@ export const AppHeader = ({ bgColor }: any) => {
           />
         </Toolbar>
       </AppBar>
-     <Login open={openMyModal} setopen={setOpenModal}/>
-     
+      <Login open={openMyModal} setopen={setOpenModal} />
     </>
   );
 };

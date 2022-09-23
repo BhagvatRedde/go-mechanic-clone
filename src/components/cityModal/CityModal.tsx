@@ -7,8 +7,6 @@ import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
 
-import logo from "../../assets/images/delhi.png";
-
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -77,7 +75,7 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
                     >
                       <div>
                         <img
-                          src={logo}
+                          src={data.image}
                           alt="icon"
                           style={{ width: "35%", height: "35%" }}
                         />

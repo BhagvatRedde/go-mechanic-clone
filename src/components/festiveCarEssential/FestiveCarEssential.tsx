@@ -1,52 +1,32 @@
-import React from 'react'
-import { festive } from '../serviceModal/carBrands';
-import { Grid } from '@mui/material';
+import React from "react";
+import { festive } from "../serviceModal/carBrands";
+import { Grid } from "@mui/material";
 import styles from "./FestiveCarEssential.module.css";
+import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 
 const FestiveCarEssential = () => {
   return (
     <>
-      <div className="mt-4">
+      <div className="mt-4" id="monsoon-mist">
         <h2>Festive Car Essential</h2>
         <div className="row mt-4">
-        <div className={`${styles["custom-card"]} col-md-1`}>
-          <img src="images/Festive Car Inspection/uci.jpg"></img>
-        </div>
-        <div className={`${styles["custom-card"]} col-md-1`}>
-          <img src="images/Festive Car Inspection/RSA service.jpg"></img>
-        </div>
-        <div className={`${styles["custom-card"]} col-md-1`}>
-          <img src="images/Festive Car Inspection/Festive 360.jpg"></img>
-        </div>
-        <div className={`${styles["custom-card"]} col-md-1`}>
-          <img src="images/Festive Car Inspection/Ac Service repair.jpg"></img>
+          <div className={`${styles["custom-card"]} col-md-1`}>
+            <img src="images/Festive Car Inspection/uci.jpg"></img>
+          </div>
+          <div className={`${styles["custom-card"]} col-md-1`}>
+            <img src="images/Festive Car Inspection/RSA service.jpg"></img>
+          </div>
+          <div className={`${styles["custom-card"]} col-md-1`}>
+            <img src="images/Festive Car Inspection/Festive 360.jpg"></img>
+          </div>
+          <div className={`${styles["custom-card"]} col-md-1`}>
+            <img src="images/Festive Car Inspection/Ac Service repair.jpg"></img>
+          </div>
         </div>
       </div>
-        {/* <Grid
-            container
-            spacing={{ xs: 1, md: 2 }}
-            columns={{ xs: 4, sm: 8, md: 28 }}
-          >
-            {festive.map((data, i) => (
-              <Grid item xs={2} sm={4} md={4} key={i}>
-                <div
-                  className="d-flex flex-column justify-content-center text-center   "
-                >
-                  <div className={`${styles["car-logo"]} col-md-12 `}>
-                    <img
-                      src={data.icon}
-                      alt="icon"
-                      style={{ width: "200%", height: "200%", margin:"1%"}}
-                    />
-                  </div>
-                  <span>{data.name}</span>
-                </div>
-              </Grid>
-            ))}   
-          </Grid> */}
-      </div>
+      <Dash_saperator />
     </>
-  )
-}
+  );
+};
 
 export default FestiveCarEssential;
