@@ -1,8 +1,10 @@
 import styles from "./Servics.module.css";
 import { AppHeader } from "../../components/header/AppHeader";
-import { ServiceTabs } from "../../components/servicePriceComp/ServiceTabs";
-import { PackageCard } from "../../components/servicePageComps/PackageCard";
+
+
+
 import RatingDiv from "../../components/ratingModule/ratingDiv";
+import ServiceTabs from "../../components/servicePriceComp/serviceTabs/ServiceTabs";
 
 
 export function Services() {
@@ -13,7 +15,7 @@ export function Services() {
       <div className={styles["sliding-tabs"]}>
         <ServiceTabs />
         <div className={styles["home-content"]}>
-          <PackageCard />
+
           <RatingDiv />
         </div>
       </div>
