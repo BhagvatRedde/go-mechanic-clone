@@ -42,14 +42,15 @@ export const Home = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div  >
+      <div className={styles["bodyDiv"]}>
+
         <div className={styles["img-container"]}>
           <div className="d-flex">
             <AppHeader bgColor="transparent" getCityName={getCityName} />
           </div>
         </div>
-        <ServiceModal cityName={cityName} />
+        <ServiceModal cityName={cityName}  />
         <div className={styles["home-content"]}>
           <StickyHeader />
           <CarServices cityName={cityName} />
@@ -66,7 +67,7 @@ export const Home = () => {
           <PriceTable />
         </div>
       </div>
-      <div>
+      <div  >
         <Footer />
         <FooterEnd />
       </div>

@@ -9,3 +9,15 @@
   margin-left: 3em;
   width: 60vw;
 }
+
+.bodyDiv{
+  height: 100vh;
+  overflow-y: scroll;
+  /* position: fixed; */
+}
+
+
+
+::-webkit-scrollbar{
+  display: none;
+}
