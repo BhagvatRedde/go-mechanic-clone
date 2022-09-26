@@ -4,3 +4,6 @@
 .sliding-tabs {
   width: 64vw;
 }
+* {
+  margin: 0;
+}

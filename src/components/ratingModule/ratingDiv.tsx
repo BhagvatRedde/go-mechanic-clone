@@ -1,6 +1,8 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import { Dash_saperator } from "../dash-saperator/Dash_saperator";
+import CountUp from "react-countup";
+import StarIcon from '@mui/icons-material/Star';
 import styles from "./rating.module.css";
 const RatingDiv = () => {
   return (
@@ -12,22 +14,23 @@ const RatingDiv = () => {
         className={styles["Benefit-data"]}
       >
         <div className={styles["font-style"]}>
-          <span>2million+</span>
+
+          <span> <CountUp end={20000} />+</span>
           <br />
           <span className={styles["sub-text"]}>Cars Serviced</span>
         </div>
         <div className={styles["font-style"]}>
-          <span>1million+</span>
+          <span><CountUp end={200000} />+</span>
           <br />
           <span className={styles["sub-text"]}>Happy Customer</span>
         </div>
         <div className={styles["font-style"]}>
-          <span>4.7</span>
+          <span><CountUp end={4.7} className="mt-3" /><StarIcon /></span>
           <br />
           <span className={styles["sub-text"]}>Average Rating</span>
         </div>
         <div className={styles["font-style"]}>
-          <span>800+</span>
+          <span><CountUp end={800} />+</span>
           <br />
           <span className={styles["sub-text"]}>Touch Point In India</span>
         </div>

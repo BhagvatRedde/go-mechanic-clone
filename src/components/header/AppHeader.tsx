@@ -57,6 +57,11 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
             </Typography>
             <KeyboardArrowDownIcon />
           </Stack>
+          {bgColor == "black" && (
+            <div className={styles["search-box"]}>
+              <input type="search" placeholder="Example: Periodic Services" />
+            </div>
+          )}
           <Stack direction="row" spacing={1} className={styles["header-menu"]}>
             <Button color="inherit">
               <Typography className={styles["btn-typography"]}>

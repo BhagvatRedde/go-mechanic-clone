@@ -32,6 +32,10 @@ const useStyles = makeStyles({
       backgroundColor: "rgba(231,60,51,.1)",
       borderRadius: "1.5em 1.5em 0 0",
     },
+    "& .css-ptiqhd-MuiSvgIcon-root": {
+      backgroundColor: "#e5e7e9",
+      borderRadius: "2em",
+    },
   },
 });
 interface TabPanelProps {
