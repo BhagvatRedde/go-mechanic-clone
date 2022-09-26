@@ -48,6 +48,12 @@ function App() {
         <Home />
         // <Services />
       )} */}
+      <PulseLoader
+        className="text-center"
+        color={"#D0021B"}
+        loading={loading}
+        size={20}
+      />
       {/* <Home /> */}
       <Services />
     </div>
