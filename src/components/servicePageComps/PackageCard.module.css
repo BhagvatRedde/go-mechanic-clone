@@ -21,7 +21,7 @@
 }
 .bullet {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #4a4a4a;
 }
 .service-data h5 {
@@ -31,9 +31,8 @@
 .service-data {
   width: 100%;
 }
-/* .list-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row-gap: 1.125rem;
-  grid-column-gap: 0.625rem;
-} */
+.time-taken {
+  background-color: #e5e7e9;
+  font-size: 0.7em;
+  padding: 0.6em;
+}

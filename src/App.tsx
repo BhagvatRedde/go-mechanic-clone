@@ -48,7 +48,7 @@ function App() {
         <Home />
         // <Services />
       )} */}
-      <Home />
+      {/* <Home /> */}
       <Services />
     </div>
   );
