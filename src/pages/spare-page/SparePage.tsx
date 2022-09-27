@@ -4,7 +4,8 @@ import styles from "./SparePage.module.css";
 
 const SparePage = () => {
   return (
-    <div className={styles[""]}>
+    <div className="flex ">
+
         <SparePageMain/>
     </div>
   )

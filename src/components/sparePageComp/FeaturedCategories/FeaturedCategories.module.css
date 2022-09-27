@@ -5,6 +5,7 @@
 .card-body {
  cursor: pointer;
  height: 200px;
+ width: 200px;
  display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,9 +20,7 @@
   color: black;
   text-align: center;
 }
-.image-box {
-  margin-left: 10px;
-}
+
 .line {height: 0.1429rem;
     /* width: 40px; */
     width: 4rem;
@@ -31,6 +30,8 @@
 .text-color-red {
   color: red;
   text-align: center;
+  margin-top: 1em;
+  font-weight: 600;
 }
 
 

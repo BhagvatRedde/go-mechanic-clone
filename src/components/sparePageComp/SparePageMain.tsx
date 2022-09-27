@@ -10,7 +10,7 @@ import TopDeals from "./TopDeals/TopDeals";
 const SparePageMain = () => {
 
   return (
-    <div className="mainApp">
+    <div className="mainApp flex">
       <NavBar />
       {/* <PaginationSlider/>
       <PaginationSliderSmall />

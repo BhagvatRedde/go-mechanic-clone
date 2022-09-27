@@ -12,8 +12,9 @@ const TopDeals = () => {
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
+          spaceBetween={200}
           slidesPerView={5}
+        
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
