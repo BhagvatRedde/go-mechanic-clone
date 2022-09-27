@@ -4,39 +4,16 @@ import { Pagination, Navigation, Autoplay, Grid } from "swiper";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
-import {
-  BodyParts,
-  Lighting,
-  Suspension,
-  AirConditioning,
-  BrakeSystem,
-  OilsAndFluids,
-  ClutchSystem,
-  Filters,
-  CarAccessories,
-  FuelSystem,
-  Fasteners,
-  CoolingSystem,
-  EngineParts,
-  Electrical,
-  Steering,
-  BeltAndChainDrive,
-  WheelsAndTyre,
-  WindscreenCleaningSystem,
-  Transmission,
-  InteriorsComfortAndSafety,
-  GasketAndSeals,
-  ExhaustSystem,
-} from "./images";
+import { allSpareParts, allPosters, allSmallPosters } from "./spareData";
 //
-const FilledButton = ({ text, event}: any ) => {
+const FilledButton = ({ text, event }: any) => {
   return (
     <span className="filledButton" onClick={() => event && event()}>
       {text}
     </span>
   );
 };
-const FloatingSearch = ({ display}: any ) => {
+const FloatingSearch = ({ display }: any) => {
   return (
     <div className="floatingSearch" style={{ display }}>
       <span className="floatingRect"></span>
@@ -60,7 +37,7 @@ const FloatingSearch = ({ display}: any ) => {
   );
 };
 
-const PaginationSlider = ({ allPosters }:any) => {
+const PaginationSlider = () => {
   return (
     <div className="paginationSlider">
       <Swiper
@@ -78,11 +55,11 @@ const PaginationSlider = ({ allPosters }:any) => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        {allPosters.map(({image, index}: any ) => {
+        {allPosters.map((data: any, i: number) => {
           return (
-            <span key={"slide" + index}>
-              <SwiperSlide key={index}>
-                <img src={image} alt="sliderImage" />
+            <span key={"slide" + i}>
+              <SwiperSlide key={i}>
+                <img src={data.icon} alt="sliderImage" />
               </SwiperSlide>
             </span>
           );
@@ -92,7 +69,7 @@ const PaginationSlider = ({ allPosters }:any) => {
   );
 };
 
-const PaginationSliderSmall = ({ allSmallPosters }: any ) => {
+const PaginationSliderSmall = () => {
   return (
     <div className="smallPaginationSlider">
       <Swiper
@@ -103,12 +80,12 @@ const PaginationSliderSmall = ({ allSmallPosters }: any ) => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        {allSmallPosters.map(({image, index}: any ) => {
+        {allSmallPosters.map((data:any, i: any) => {
           return (
-            <span key={"smallSlide" + index}>
-              <SwiperSlide key={index}>
+            <span key={"smallSlide" + i}>
+              <SwiperSlide key={i}>
                 <img
-                  src={image}
+                  src={data.icon}
                   className="smallSliderImage"
                   alt="sliderImage"
                 />
@@ -122,31 +99,6 @@ const PaginationSliderSmall = ({ allSmallPosters }: any ) => {
 };
 
 const SpareParts = () => {
-  let allSpareParts = [
-    { name: "Body Parts", icon: BodyParts },
-    { name: "Lighting", icon: Lighting },
-    { name: "Suspension", icon: Suspension },
-    { name: "Air Conditioning", icon: AirConditioning },
-    { name: "Brake System", icon: BrakeSystem },
-    { name: "Oils & Fluids", icon: OilsAndFluids },
-    { name: "Clutch System", icon: ClutchSystem },
-    { name: "Filters", icon: Filters },
-    { name: "Car Accessories", icon: CarAccessories },
-    { name: "Fuel System", icon: FuelSystem },
-    { name: "Fasteners", icon: Fasteners },
-    { name: "Cooling System", icon: CoolingSystem },
-    { name: "Engine Parts", icon: EngineParts },
-    { name: "Electrical", icon: Electrical },
-    { name: "Steering ", icon: Steering },
-    { name: "Belt & Chain Drive", icon: BeltAndChainDrive },
-    { name: "Wheels & Tyre", icon: WheelsAndTyre },
-    { name: "Windscreen Cleaning System", icon: WindscreenCleaningSystem },
-    { name: "Transmission", icon: Transmission },
-    { name: "Interiors Comfort & Safety", icon: InteriorsComfortAndSafety },
-    { name: "Gasket & Seals", icon: GasketAndSeals },
-    { name: "Exhaust System", icon: ExhaustSystem },
-  ];
-
   return (
     <div className="spearParts">
       <span className="title">Search by Categories</span>

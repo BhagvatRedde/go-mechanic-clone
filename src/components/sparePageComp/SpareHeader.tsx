@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { logo, menu, cart, mic, searchMenu, searchIcon, user } from "./images";
+
 import { FilledButton, FloatingSearch } from "./minorComponents";
 const SpareHeader = () => {
   const [focused, setFocused] = useState("none");

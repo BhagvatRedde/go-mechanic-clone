@@ -1,0 +1,15 @@
+.card-body {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fff;
+  -webkit-box-shadow: 0 0 4px rgb(0 0 0 / 20%);
+  border-radius: 5px;
+}
+.oem-box {
+  margin-bottom: 6%;
+  margin-top: 10%;
+}
