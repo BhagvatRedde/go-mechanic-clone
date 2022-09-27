@@ -11,14 +11,7 @@ export function AskedQuestions() {
 
     return (
         <>
-
-
-
-
             <F_Question data={questionAnswer} />
-
-
-
         </>
     );
 }
