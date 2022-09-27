@@ -52,9 +52,9 @@
   font-weight: 400;
   font-style: normal;
   line-height: 1.73;
-
   margin-top: 0.1rem;
   color: #4a4a4a;
+  position: relative;
 }
 .workshop-name {
   font-weight: 500;

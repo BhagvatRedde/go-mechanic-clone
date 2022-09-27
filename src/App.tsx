@@ -37,7 +37,7 @@ function App() {
   //   }, [AllData]);
   return (
     <div>
-      {/* {loading ? (
+      {loading ? (
         <PulseLoader
           className="text-center"
           color={"#D0021B"}
@@ -47,9 +47,9 @@ function App() {
       ) : (
         <Home />
         // <Services />
-      )} */}
+      )}
       {/* <Home /> */}
-      <Services />
+      {/* <Services /> */}
     </div>
   );
 }

@@ -24,6 +24,7 @@ import RatingDiv from "../components/ratingModule/ratingDiv";
 import FestiveCarEssential from "../components/festiveCarEssential/FestiveCarEssential";
 import Workshop from "../components/workshop/Workshop";
 import LuxCars from "../components/lux-cars.tsx/LuxCars";
+import Featured_buddies from "../components/Featured_buddies/Featured_buddies";
 export const Home = () => {
   const [cityName, setCityName] = useState("Pune");
   const dispatch = useDispatch();
@@ -62,6 +63,7 @@ export const Home = () => {
           <RatingDiv />
           <OwnersFeedback />
           <GoQuetion />
+          <Featured_buddies />
           <WhyChoose />
           <PriceTable />
         </div>
