@@ -7,12 +7,12 @@ export const Periodic = () => {
   return (
     <>
       {PackageCardData.map((data: any) => (
-        <>
+        <div className="mb-4">
           <div className={styles["card-header"]}>{data.header}</div>
           {data.content.map((content: any) => (
             <PackageCard data={content} />
           ))}
-        </>
+        </div>
       ))}
     </>
   );

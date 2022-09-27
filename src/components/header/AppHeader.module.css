@@ -13,8 +13,9 @@
   padding: 0.8125rem 1.25rem;
   border-radius: 6px;
   /* min-width: 522px; */
-  min-width: 20em;
+  min-width: 30em;
   height: 3em;
+  margin-right: 5em;
   -ms-flex-direction: row;
   flex-direction: row;
   -ms-flex-pack: start !important;

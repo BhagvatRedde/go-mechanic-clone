@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PackageCard } from "../../components/servicePageComps/PackageCard";
 import RatingDiv from "../../components/ratingModule/ratingDiv";
 import ServiceTabs from "../../components/servicePriceComp/serviceTabs/ServiceTabs";
+import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/CheckoutCard";
 
 export function Services() {
   const [cityName, setCityName] = useState("Pune");
@@ -13,12 +14,14 @@ export function Services() {
   return (
     <div>
       <AppHeader bgColor="black" getCityName={getCityName} />
-
-      <div className={styles["sliding-tabs"]}>
-        <ServiceTabs />
-        <div className={styles["home-content"]}>
-          <RatingDiv />
+      <div className="d-flex">
+        <div className={styles["sliding-tabs"]}>
+          <ServiceTabs />
         </div>
+        <CheckoutCard />
+      </div>
+      <div className={styles["home-content"]}>
+        <RatingDiv />
       </div>
     </div>
   );

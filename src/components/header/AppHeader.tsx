@@ -52,10 +52,12 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
               setState(true);
             }}
           >
-            <Typography className={styles["btn-typography"]}>
-              {selectedCity}
-            </Typography>
-            <KeyboardArrowDownIcon />
+            <Stack>
+              <Typography className={styles["btn-typography"]}>
+                {selectedCity}
+                <KeyboardArrowDownIcon />
+              </Typography>
+            </Stack>
           </Stack>
           {bgColor == "black" && (
             <div className={styles["search-box"]}>

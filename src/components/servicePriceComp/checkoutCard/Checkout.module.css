@@ -1,0 +1,15 @@
+.checkout-card {
+  position: sticky;
+  top: 0;
+  margin-top: 3em;
+  margin-left: 2.5em;
+  width: 31vw;
+  height: 75vh;
+}
+
+.trolly {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+}

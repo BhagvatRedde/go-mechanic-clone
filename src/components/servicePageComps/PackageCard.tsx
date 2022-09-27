@@ -1,14 +1,19 @@
-import React from "react";
 import { Card } from "@mui/material";
 import styles from "./PackageCard.module.css";
 import { PackageCardData } from "../servicePriceComp/serviceTypes/periodic/data";
+import { useState } from "react";
 export const PackageCard = ({ data }: any) => {
-  //   const [firstList, setFirstList] = useState();
+  const [listCount, setListCount] = useState(5);
+  const [showMore, setShowMore] = useState(true);
+  const viewItemsHandeler = (data: any) => {
+    setListCount(data.bullets.length);
+    setShowMore(false);
+  };
   return (
     <Card
       className={`${styles["card-container"]} rounded-0 shadow-none border`}
     >
-      <div className="d-flex">
+      <div className="d-flex ">
         <div>
           <img
             src={data.cardImage}
@@ -29,7 +34,7 @@ export const PackageCard = ({ data }: any) => {
           <div className={styles["service-desc"]}>{data.desc}</div>
           <div>
             <ul className="list-unstyled card-columns">
-              {data.bullets.map((item: any) => (
+              {data.bullets.slice(0, listCount).map((item: any) => (
                 <div>
                   <li className={`${styles["bullet-points"]} mb-2`}>
                     <img src={data.icon} alt="img" />
@@ -37,6 +42,14 @@ export const PackageCard = ({ data }: any) => {
                   </li>
                 </div>
               ))}{" "}
+              {showMore && data.bullets.length > 5 && (
+                <div
+                  onClick={() => viewItemsHandeler(data)}
+                  className={styles["show-more"]}
+                >
+                  +{data.bullets.length - 5} more View All
+                </div>
+              )}
             </ul>
           </div>
         </div>
