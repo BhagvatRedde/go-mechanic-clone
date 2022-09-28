@@ -14,7 +14,7 @@
   top: 5rem;
   width: 23.5rem;
   padding: 3rem;
-
+  cursor: pointer;
   border-top: solid 3px var(--primary);
 }
 .floatingRect {
@@ -26,6 +26,7 @@
   left: 50%;
   position: absolute;
   top: -0.6rem;
+
 }
 
 .floatingSearchData {
@@ -67,6 +68,7 @@
   width: 100vw;
   padding: 1.5rem 0;
   overflow: visible;
+  cursor: pointer;
 }
 
 .swiper-slide img {
@@ -84,6 +86,7 @@
 
 .smallSliderImage {
   height: 200px;
+  cursor: pointer;
 }
 .smallPaginationSlider .swiper-pagination * {
   border-radius: 0.2rem !important;
@@ -101,6 +104,7 @@
   border-radius: 1rem;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .singleSparePart .spearPartIcon {
   width: 120px;

@@ -1,18 +1,35 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./SpareForm.module.css";
 const SpareForm = () => {
   const AppData = useSelector((state: any) => state.data[0]);
-  const [manufacture, setManufacture] = useState([]);
-  const [model, setModel] = useState([]);
-  const [year, setYear] = useState([]);
-  const [varient, setvarient] = useState([]);
+  const [manufacture, setManufacture] = useState();
+  const [modal, setModal] = useState();
+  const [yearrange, setYearRange] = useState();
+  const [variant, setVariant] = useState();
 
-  useEffect(() => {
-    setManufacture(manufacture);
-  }, []);
+  function manufactureHandler(e:any)
+  {
+    setManufacture(e.target.value)
+  }
 
-  const handleManufact = () => {};
+  function modalHandler(e: any)
+  {
+    setModal(e.target.value)
+  }
+  
+  function yearRangeHandler(e: any) {
+    setYearRange(e.target.value)
+  }
+  function variantHandler(e: any) {
+    setYearRange(e.target.value)
+  }
+  // const []
+
+  // useEffect(() => {
+  //   setManufacture(manufacture);
+  // }, []);
+
   return (
     <div className="container">
       <h1 className={styles["font-size"]}>Find the right Spare Parts</h1>
@@ -21,6 +38,7 @@ const SpareForm = () => {
           <div className={`${styles["dropdown"]}  col-2`}>
             <select
               className={`${styles["sel"]} form-control`}
+              onChange={manufactureHandler}
             >
               <option selected>Select Manufacture</option>
               {AppData &&
@@ -31,9 +49,12 @@ const SpareForm = () => {
                 ))}
             </select>
           </div>
-
           <div className={`${styles["dropdown"]}  col-2`}>
-            <select className={`${styles["sel"]} form-control`}>
+            <select
+              className={`${styles["sel"]} form-control`}
+              onChange={modalHandler}
+              disabled={manufacture ? false : true}
+            >
               <option selected>Select Model</option>
               {AppData &&
                 AppData[0].selectModel?.map((data: any, i: number) => (
@@ -43,9 +64,12 @@ const SpareForm = () => {
                 ))}
             </select>
           </div>
-
           <div className={`${styles["dropdown"]} col-2`}>
-            <select className={`${styles["sel"]} form-control`}>
+            <select
+              className={`${styles["sel"]} form-control`}
+              onChange={yearRangeHandler}
+              disabled={modal ? false : true}
+            >
               <option selected>Select Year Range</option>
               {AppData &&
                 AppData[0].yearRange?.map((data: any, i: number) => (
@@ -56,7 +80,11 @@ const SpareForm = () => {
             </select>
           </div>
           <div className={`${styles["dropdown"]} col-2`}>
-            <select className={`${styles["sel"]} form-control`}>
+            <select
+              className={`${styles["sel"]} form-control`}
+              onChange={variantHandler}
+              disabled={yearrange ? false : true}
+            >
               <option selected>Select Variant</option>
               {AppData &&
                 AppData[0].varient?.map((data: any, i: number) => (
@@ -66,7 +94,13 @@ const SpareForm = () => {
                 ))}
             </select>
           </div>
-          <button className={`${styles["search-btn"]}`}>Search</button>
+          <button
+            className={`${styles["search-btn"] }`}
+            disabled={variant ? false : true}
+            role='button'
+          >
+            Search
+          </button>
         </div>
       </form>
     </div>

@@ -1,6 +1,7 @@
 .form-box {
   background-color: #fde3e6;
   padding: 1em;
+  padding-left: 3em;
   margin: 1em;
 }
 .font-size {
@@ -17,8 +18,20 @@
   text-align: center;
   color: white;
   font-weight: 800;
+  margin-left: 8em;
+
+}
+
+:hover.search-btn{
+  background-color:  rgb(235, 92, 92);
 }
 
 .sel {
   height: 3em;
+  /* cursor: pointer; */
+  margin-left: 5em;
+}
+
+.dropdown{
+  cursor: pointer;
 }
