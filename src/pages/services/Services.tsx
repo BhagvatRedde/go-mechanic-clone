@@ -8,8 +8,12 @@ import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/Che
 
 export function Services() {
   const [cityName, setCityName] = useState("Pune");
+  const [checkoutData, setCheckoutData] = useState([]);
   const getCityName = (city: string) => {
     setCityName(city);
+  };
+  const checkoutDataHandler = (data: any) => {
+    setCheckoutData(data);
   };
   return (
     <div>

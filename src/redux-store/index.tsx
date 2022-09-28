@@ -12,6 +12,7 @@ const Reducer = (state = initailState, action: any) => {
       return {
         data: [...state.data, data],
       };
+
     default:
       return state;
   }

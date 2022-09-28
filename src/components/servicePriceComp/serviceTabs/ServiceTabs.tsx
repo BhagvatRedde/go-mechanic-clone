@@ -18,6 +18,7 @@ import { Inspection } from "../serviceTypes/inspection/Inspection";
 import { Windshield } from "../serviceTypes/windshield/Windshield";
 import { Suspension } from "../serviceTypes/suspension/Suspension";
 import { ClutchBody } from "../serviceTypes/clutchBody/ClutchBody";
+import { CheckoutCard } from "../checkoutCard/CheckoutCard";
 const useStyles = makeStyles({
   tabs: {
     "& .MuiTabs-indicator": {
@@ -88,7 +89,6 @@ export default function ServiceTabs() {
           aria-label="basic tabs example"
           variant="scrollable"
           className={classes.tabs}
-          // scrollButtons="auto"
         >
           {AppData &&
             AppData[0]?.ServiceTabsData?.map((data: any, i: number) => (

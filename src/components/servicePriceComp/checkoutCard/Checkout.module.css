@@ -13,3 +13,18 @@
   align-items: center;
   text-align: center;
 }
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 0.85em;
+}
+.item-row h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.item-hr {
+  width: 80%;
+  margin: 0.2em auto;
+}
