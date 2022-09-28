@@ -18,7 +18,7 @@ export default function Indicator({ data }: any) {
         <div className={styles["feedback-main"]}>
 
             {data.map((data1: any, i: number) => (<>
-                <h3>{data1.header}</h3>
+                <h4>{data1.header}</h4>
                 <Slider {...settings}>
                     {data1.content.map((data: any, i: number) => (
                         <Grid item xs={2} sm={4} md={3} key={i}>

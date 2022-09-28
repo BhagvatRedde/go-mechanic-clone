@@ -30,8 +30,8 @@ export const customerQuotes = [
      The executive explained me about how things work in GoMechanic. After an hour the valet came to my house for the pickup after handing over my keys. I explained to him about the issues I was facing. 
     I got every single update on my phone via their website.`,
         social: "https://twitter.com/i/flow/login",
-        socialName: "Twitter",
-        icon: "socialMedia/twitter.png",
+        socialName: "Google",
+        icon: "socialMedia/google.png",
         name: "Jeet Kaur Singha",
         workShop: "GoMechanic- Shivajinagar, Pune",
       },
@@ -41,8 +41,8 @@ export const customerQuotes = [
      Yes, of course! I tried GoMechanic and it is the best car servicing website! I have tried their competitors as well but let me tell you these people provide you with the best car service in town. 
     Great going team GoMechanic!!`,
         social: "https://twitter.com/i/flow/login",
-        socialName: "Twitter",
-        icon: "socialMedia/twitter.png",
+        socialName: "Facebook",
+        icon: "socialMedia/facebok.png",
         name: "Kuran Shamli",
         workShop: "GoMechanic- Bavdhan, Pune",
       },
@@ -52,8 +52,8 @@ export const customerQuotes = [
     I was worried about where to take the service. I went to choose GoMechanic service and they assigned me one person who was explaining each and every step of my car's servicing process to me. 
     Great knowledge I must say! The service was perfect.`,
         social: "https://twitter.com/i/flow/login",
-        socialName: "Twitter",
-        icon: "socialMedia/twitter.png",
+        socialName: "facebook",
+        icon: "socialMedia/facebook.png",
         name: "Kirti Shemgal",
         workShop: "GoMechanic- Industrial Area, Pune",
       },

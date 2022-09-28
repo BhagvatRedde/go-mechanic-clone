@@ -34,6 +34,7 @@ export function F_Question({ data }: any) {
                             <Accordion
                                 expanded={expanded === data.id}
                                 onChange={handleChange(data.id)}
+
                             >
                                 <AccordionSummary
                                     expandIcon={<ExpandMoreIcon />}

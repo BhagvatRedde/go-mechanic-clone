@@ -1,0 +1,34 @@
+.reviews-main {
+  padding: 16px;
+
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 0.3125rem;
+  background-color: #f6f6f6;
+  border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.15);
+  margin-top: 2em;
+  width: 100%;
+}
+.public-time {
+  font-size: 0.65rem;
+  margin-left: auto;
+}
+.review-info {
+  display: grid;
+  margin: 1rem 0 0;
+  text-align: justify;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: normal;
+}
+.review-name {
+  font-size: 1rem;
+  color: #2e3a59;
+  font-weight: 600;
+}
+.review-img {
+  /* heigh?t: 100%; */
+  border: 1px solid #eee;
+  border-radius: 50%;
+}
