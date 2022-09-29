@@ -63,7 +63,7 @@ export function Reviews({ data }: any) {
 
                     {!btn && (
                         <>
-                            <span style={{ marginRight: "1em" }}>SEE MORE</span>
+                            <span className={styles["seemore-seeless"]}>See less</span>
                             <ArrowCircleDownIcon
                                 fontSize="medium"
                                 onClick={() => {
@@ -78,7 +78,7 @@ export function Reviews({ data }: any) {
                     )}
                     {btn && (
                         <>
-                            <span style={{ marginRight: "1em" }}>SEE LESS</span>
+                            <span className={styles["seemore-seeless"]}>See less</span>
                             <ArrowCircleUpIcon
                                 onClick={() => {
                                     setReview(3);
@@ -94,10 +94,10 @@ export function Reviews({ data }: any) {
 
                 </div>
 
-
+                <Dash_saperator />
             </div>
 
-            <Dash_saperator />
+
         </>
     );
 }

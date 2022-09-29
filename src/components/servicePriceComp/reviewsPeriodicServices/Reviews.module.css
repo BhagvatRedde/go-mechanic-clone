@@ -34,3 +34,12 @@
   border: 1px solid #eee;
   border-radius: 50%;
 }
+.seemore-seeless {
+  margin-right: 0.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 20px;
+  font-weight: 600;
+}
