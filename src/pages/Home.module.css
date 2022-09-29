@@ -13,9 +13,13 @@
 .bodyDiv{
   height: 100vh;
   overflow-y: scroll;
-  /* position: fixed; */
+
 }
 
+.floatingDiv{
+  position: absolute;
+ 
+}
 
 
 ::-webkit-scrollbar{

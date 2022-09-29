@@ -43,14 +43,17 @@ export const Home = () => {
 
   return (
     <div>
-      <div>
-        <div className={styles["img-container"]}>
+      <div className={styles["bodyDiv"]}>
+        <div className={`${styles["img-container"]}`}>
           <div className="d-flex">
             <AppHeader bgColor="transparent" getCityName={getCityName} />
           </div>
         </div>
-        <ServiceModal cityName={cityName} />
-        <div className={styles["home-content"]}>
+        <ServiceModal
+          cityName={cityName}
+          className={`${styles["floatingDiv"]}`}
+        />
+        <div className={`${styles["home-content"]}`}>
           <StickyHeader />
           <CarServices cityName={cityName} />
           <CustomServices />
@@ -66,7 +69,7 @@ export const Home = () => {
           <PriceTable />
         </div>
       </div>
-      <div>
+      <div className={`${styles["footer-main"]}`}>
         <Footer />
         <FooterEnd />
       </div>

@@ -2,6 +2,8 @@ import React from "react";
 import FeaturedCategories from "./FeaturedCategories/FeaturedCategories";
 import { PaginationSlider, PaginationSliderSmall, SpareParts } from "./minorComponents";
 import { OemBrand } from "./OemBrand/OemBrand";
+import { OesBrands } from "./oesBrands/OesBrands";
+import { SpareOffer } from "./offer/SpareOffer";
 import NavBar from "./SpareHeader";
 import SpareForm from "./sparesForm/SpareForm";
 import "./style/style.css";
@@ -21,7 +23,9 @@ const SparePageMain = () => {
       <SpareParts/>
       <FeaturedCategories />
       <OemBrand />
-      <TopDeals/>
+      <TopDeals />
+      <OesBrands />
+      <SpareOffer/>
       
     </div>
   );

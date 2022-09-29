@@ -13,8 +13,13 @@ const FeaturedCategories = () => {
 
   return (
     <div className="container">
-      <div><h4>Featured Categories</h4><span>specifically curated for you</span></div>
-      <div className={styles["slider-box"]}>
+      <div className={`${styles["Feat-categories"]}`}>
+
+      <div>
+        <h4>Featured Categories</h4>
+        <span>specifically curated for you</span>
+      </div>
+      <div className={`${styles["slider-box "]}`}>
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -43,7 +48,8 @@ const FeaturedCategories = () => {
               </SwiperSlide>
             ))}
         </Swiper>
-      </div>
+        </div>
+        </div>
     </div>
   );
 };

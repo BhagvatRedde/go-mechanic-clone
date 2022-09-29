@@ -6,14 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import styles from "./OemBrand.module.css";
+import styles from "./OesBrands.module.css";
 
-export const OemBrand = () => {
+export const OesBrands = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
-    <div className={`${styles["oem-box"]} container `}>
-      <h4> Popular OEM Brands</h4>
+    <div className="container">
+      <div className={styles["oem-box"]}></div>
+        <h4 className={styles["slider-box"]}> Our Trusted OES Brands</h4>
       <div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -26,9 +27,9 @@ export const OemBrand = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {AppData &&
-            AppData[0].OEMBrands?.map((data: any, i: number) => (
+            AppData[0].OESBrands?.map((data: any, i: number) => (
               <SwiperSlide>
-                <div className={styles["card-body"]}>
+                <div className={styles["oes-body"]}>
                   <div className={styles["text-color-red"]}>{data.text}</div>
 
                   <div className={styles["text-color"]}>{data.name}</div>
