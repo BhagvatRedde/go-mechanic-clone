@@ -7,23 +7,25 @@
   margin-left: 0.3125rem;
   background-color: #f6f6f6;
   border: 0.0625rem solid hsla(0, 0%, 60.8%, 0.15);
-  margin-top: 2em;
+  margin-top: 0.5em;
   width: 100%;
 }
 .public-time {
   font-size: 0.65rem;
   margin-left: auto;
+  margin-top: 3.5em;
+  float: right;
 }
 .review-info {
   display: grid;
-  margin: 1rem 0 0;
+
   text-align: justify;
   font-weight: 500;
   font-size: 14px;
   line-height: normal;
 }
 .review-name {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #2e3a59;
   font-weight: 600;
 }
