@@ -1,17 +1,16 @@
 .service-modal {
-  position:absolute;
+  position: fixed;
   bottom: -4px;
   right: 2rem;
   padding: 3em;
   width: 30vw;
   height: 80vh;
-  overflow-y: scroll;
-  /* z-index: 98; */
+  z-index: 98;
 }
-/* .scroll-card {
+.scroll-card {
   overflow-x: hidden;
   overflow-y: scroll !important;
-} */
+}
 .select-car {
   text-transform: uppercase;
   border: 1px solid gray;

@@ -1,19 +1,32 @@
 import styles from "./Servics.module.css";
 import { AppHeader } from "../../components/header/AppHeader";
-import { ServiceTabs } from "../../components/servicePriceComp/ServiceTabs";
+import { useState } from "react";
 import { PackageCard } from "../../components/servicePageComps/PackageCard";
+import RatingDiv from "../../components/ratingModule/ratingDiv";
+import ServiceTabs from "../../components/servicePriceComp/serviceTabs/ServiceTabs";
+import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/CheckoutCard";
 
 export function Services() {
+  const [cityName, setCityName] = useState("Pune");
+  const [checkoutData, setCheckoutData] = useState([]);
+  const getCityName = (city: string) => {
+    setCityName(city);
+  };
+  const checkoutDataHandler = (data: any) => {
+    setCheckoutData(data);
+  };
   return (
-    <>
-      <AppHeader bgColor="black" />
-
-      <div className={styles["sliding-tabs"]}>
-        <ServiceTabs />
-        <div className={styles["home-content"]}>
-          <PackageCard />
+    <div>
+      <AppHeader bgColor="black" getCityName={getCityName} />
+      <div className="d-flex">
+        <div className={styles["sliding-tabs"]}>
+          <ServiceTabs />
         </div>
+        <CheckoutCard />
       </div>
-    </>
+      <div className={styles["home-content"]}>
+        <RatingDiv />
+      </div>
+    </div>
   );
 }
