@@ -1,10 +1,14 @@
 import styles from "./Servics.module.css";
 import { AppHeader } from "../../components/header/AppHeader";
-import { useState } from "react";
-import { PackageCard } from "../../components/servicePageComps/PackageCard";
+
+
+
 import RatingDiv from "../../components/ratingModule/ratingDiv";
 import ServiceTabs from "../../components/servicePriceComp/serviceTabs/ServiceTabs";
-import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/CheckoutCard";
+import { HondaAmaze } from "../../components/servicePriceComp/customerQuotes/HondaAmaze/HondaAmaze";
+import { AskedQuestions } from "../../components/servicePriceComp/AskedQuetions/AskedQuetions";
+import Key_Specs from "../../components/servicePriceComp/keySpecs/Key_Specs";
+import { Reviews } from "../../components/servicePriceComp/reviewsPeriodicServices/Reviews";
 
 export function Services() {
   const [cityName, setCityName] = useState("Pune");
