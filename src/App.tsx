@@ -8,6 +8,7 @@ import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
 import { Services } from "./pages/services/Services";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
+import SparePage from "./pages/spare-page/SparePage";
 function App() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -49,7 +50,9 @@ function App() {
         // <Services />
       )} */}
       {/* <Home /> */}
-      <Services />
+      <SparePage/>
+            {/* <Services /> */}
+      {/* <Services /> */}
     </div>
   );
 }

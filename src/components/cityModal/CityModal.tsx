@@ -64,19 +64,13 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
             >
               {AppData &&
                 AppData[0]?.City?.map((data: any, i: number) => (
-                  <Grid
-                    item
-                    xs={2}
-                    sm={4}
-                    md={1}
-                    key={i}
-                    sx={{ cursor: "pointer" }}
-                  >
+                  <Grid item xs={2} sm={4} md={1} key={i}>
                     <div
-                      className="d-flex flex-column justify-content-center"
+                      className="d-flex flex-column justify-content-center cursor-pointer"
                       onClick={() => {
                         chooseCityName(data.name);
                         handleClose();
+                        console.log(AppData[0].City);
                       }}
                     >
                       <div>

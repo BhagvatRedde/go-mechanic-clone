@@ -30,11 +30,11 @@ export const Home = () => {
   useEffect(() => {
     axios
       .get("http://localhost:3000/Alldata")
-      .then((res) => {
+      .then((res:any) => {
         console.log(res.data);
         dispatch(SaveData(res.data));
       })
-      .catch((err) => console.log(err));
+      .catch((err:any) => console.log(err));
   }, []);
 
   const getCityName = (city: string) => {
@@ -43,14 +43,17 @@ export const Home = () => {
 
   return (
     <div>
-      <div>
-        <div className={styles["img-container"]}>
+      <div className={styles["bodyDiv"]}>
+        <div className={`${styles["img-container"]}`}>
           <div className="d-flex">
             <AppHeader bgColor="transparent" getCityName={getCityName} />
           </div>
         </div>
-        <ServiceModal cityName={cityName} />
-        <div className={styles["home-content"]}>
+        <ServiceModal
+          cityName={cityName}
+          className={`${styles["floatingDiv"]}`}
+        />
+        <div className={`${styles["home-content"]}`}>
           <StickyHeader />
           <CarServices cityName={cityName} />
           <CustomServices />
@@ -66,7 +69,7 @@ export const Home = () => {
           <PriceTable />
         </div>
       </div>
-      <div>
+      <div className={`${styles["footer-main"]}`}>
         <Footer />
         <FooterEnd />
       </div>
