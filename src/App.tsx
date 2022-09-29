@@ -50,8 +50,8 @@ function App() {
         // <Services />
       )} */}
       {/* <Home /> */}
-      <SparePage/>
-            {/* <Services /> */}
+      {/* <SparePage/> */}
+      <Services />
       {/* <Services /> */}
     </div>
   );
