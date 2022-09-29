@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/home/Home";
 import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
 import { Services } from "./pages/services/Services";
 import axios from "axios";
@@ -49,9 +49,8 @@ function App() {
         <Home />
         // <Services />
       )} */}
-      {/* <Home /> */}
-      {/* <SparePage/> */}
-      <Services />
+      <Home />
+      {/* <SparePage /> */}
       {/* <Services /> */}
     </div>
   );

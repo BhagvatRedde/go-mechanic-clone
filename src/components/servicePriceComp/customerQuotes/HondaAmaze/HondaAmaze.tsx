@@ -1,10 +1,10 @@
 import React from "react";
-import Indicator from "../../../indicatorComponent/Indicator";
+import Indicator from "../../../reusable/indicatorComponent/Indicator";
 import { customerQuotes } from "./data";
 export const HondaAmaze = () => {
-    return (
-        <>
-            <Indicator data={customerQuotes} />
-        </>
-    )
-}
+  return (
+    <>
+      <Indicator data={customerQuotes} />
+    </>
+  );
+};

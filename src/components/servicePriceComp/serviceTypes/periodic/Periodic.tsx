@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PackageCardData } from "./data";
-import { PackageCard } from "../../../servicePageComps/PackageCard";
+import { PackageCard } from "../../../reusable/servicePriceCard/PackageCard";
 import styles from "../ServiceTypes.module.css";
 import EngineModal from "./engineModal/EngineModal";
 

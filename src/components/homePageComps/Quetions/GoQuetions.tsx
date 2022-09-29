@@ -1,11 +1,11 @@
 import React from "react";
+import { quetionAnswer } from "./quetion";
 import { F_Question } from "../../reusable/F_Question/F_Question";
-import { questionAnswer } from "./question";
 
-export function AskedQuestions() {
+export function GoQuetion() {
   return (
     <>
-      <F_Question data={questionAnswer} />
+      <F_Question data={quetionAnswer} />
     </>
   );
 }
