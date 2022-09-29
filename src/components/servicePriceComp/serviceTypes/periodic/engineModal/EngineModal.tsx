@@ -8,7 +8,9 @@ import Modal from "@mui/material/Modal";
 import { Card, Slide } from "@mui/material";
 import { oilContent } from "./data";
 import styles from "./EngineModal.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { AddCheckoutData } from "../../../../../redux-store/action";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -23,10 +25,36 @@ const style = {
 };
 
 export default function EngineModal({ open, setOpen, data }: any) {
-  //   const [open, setOpen] = React.useState(false);
-  //   const handleOpen = () => setOpen(true);
-  const [price, setPrice] = useState(0);
+  const dispatch = useDispatch();
+  const [rowItem, setRowItem] = useState({
+    title: "",
+    type: "",
+    code: "",
+    price: 0,
+    originalPrice: 0,
+    totalPrice: 0,
+  });
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    const totalPrice =
+      Math.round(data.price - data.price * (data.discount / 100)) +
+      rowItem.price;
+    setRowItem({ ...rowItem, totalPrice: totalPrice });
+  }, [totalPrice, rowItem.price]);
+  // let totalPrice: any;
+
   const handleClose = () => setOpen();
+  const totalPriceHandler = (dataPrice: any, dataDiscount: any) => {
+    const totalPrice =
+      Math.round(dataPrice - dataPrice * (dataDiscount / 100)) + rowItem.price;
+    setTotalPrice(totalPrice);
+    // return totalPrice;
+  };
+
+  const sendCheckoutData = () => {
+    console.log(rowItem);
+    dispatch(AddCheckoutData(rowItem));
+  };
 
   return (
     <div>
@@ -63,7 +91,16 @@ export default function EngineModal({ open, setOpen, data }: any) {
                     type="radio"
                     name="engine"
                     value={item.price}
-                    onChange={() => setPrice(item.price)}
+                    onChange={() =>
+                      setRowItem({
+                        ...rowItem,
+                        title: data.title,
+                        originalPrice: data.price,
+                        type: item.type,
+                        code: item.code,
+                        price: item.price,
+                      })
+                    }
                   />
                 </div>
               </Card>
@@ -75,11 +112,12 @@ export default function EngineModal({ open, setOpen, data }: any) {
           </div>
           <div className="d-flex justify-content-between m-2">
             <div className={styles["total-price"]}>
-              Total Rs.{" "}
-              {Math.round(data.price - data.price * (data.discount / 100)) +
-                price}
+              Total Rs. {/* {totalPriceHandler(data.price, data.discount)} */}
+              {rowItem.totalPrice}
             </div>
-            <button className="btn btn-danger">+ADD</button>
+            <button className="btn btn-danger" onClick={sendCheckoutData}>
+              +ADD
+            </button>
           </div>
         </Box>
       </Modal>

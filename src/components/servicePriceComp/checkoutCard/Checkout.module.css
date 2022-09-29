@@ -16,15 +16,20 @@
 .item-row {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   font-size: 0.85em;
 }
-.item-row h6 {
+.item-row-title {
   font-size: 1em;
-  font-weight: 600;
+  font-weight: 700;
 }
 .item-hr {
-  width: 80%;
+  width: 85%;
   margin: 0.2em auto;
+}
+.type-code {
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #8e8383;
 }

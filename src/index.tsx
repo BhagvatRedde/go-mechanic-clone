@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { legacy_createStore as createStore } from "redux";
+import { createStore } from "redux";
 import Reducer from "./redux-store";
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
