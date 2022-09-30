@@ -85,8 +85,11 @@
 }
 
 .smallSliderImage {
-  height: 200px;
+  /* height: 200px; */
   cursor: pointer;
+  /* width: 200px;
+  height: 240px; */
+  border-radius: 5%;
 }
 .smallPaginationSlider .swiper-pagination * {
   border-radius: 0.2rem !important;

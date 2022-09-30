@@ -11,7 +11,7 @@
   margin-top: 40px;
 }
 .first-div {
-  margin-left: 1%;
+  /* margin-left: 1%; */
 }
 .sub-link {
   color: white;
@@ -35,7 +35,7 @@
   margin-left: 10rem;
 }
 .para-2 {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   color: white;
   font-size: small;
   font-weight: 600;
@@ -63,4 +63,6 @@
   bottom: 0;
 
 }
-
+.image-position{
+  margin-top: 10%;
+}

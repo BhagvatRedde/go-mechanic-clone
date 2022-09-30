@@ -15,7 +15,7 @@ const RatingDiv = () => {
       >
         <div className={styles["font-style"]}>
           <span>
-            {" "}
+       
             <CountUp end={20000} />+
           </span>
           <br />
