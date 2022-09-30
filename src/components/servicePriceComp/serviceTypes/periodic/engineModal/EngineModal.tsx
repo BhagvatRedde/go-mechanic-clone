@@ -41,19 +41,17 @@ export default function EngineModal({ open, setOpen, data }: any) {
       rowItem.price;
     setRowItem({ ...rowItem, totalPrice: totalPrice });
   }, [totalPrice, rowItem.price]);
-  // let totalPrice: any;
 
   const handleClose = () => setOpen();
   const totalPriceHandler = (dataPrice: any, dataDiscount: any) => {
     const totalPrice =
       Math.round(dataPrice - dataPrice * (dataDiscount / 100)) + rowItem.price;
     setTotalPrice(totalPrice);
-    // return totalPrice;
   };
 
   const sendCheckoutData = () => {
-    console.log(rowItem);
     dispatch(AddCheckoutData(rowItem));
+    setOpen(!open);
   };
 
   return (

@@ -1,6 +1,7 @@
 interface IAppState {
   data: any[];
-  checkout: any[];
+  // checkout: any[];
+  checkout: any;
 }
 
 const initailState: IAppState = {
@@ -19,7 +20,8 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
       const data2 = action.payload;
       return {
         ...state,
-        checkout: [...state.checkout, data2],
+        // checkout: [...state.checkout, data2],
+        checkout: data2,
       };
     default:
       return state;

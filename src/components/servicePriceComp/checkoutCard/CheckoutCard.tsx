@@ -3,10 +3,9 @@ import { Card } from "@mui/material";
 import styles from "./Checkout.module.css";
 import { useSelector } from "react-redux";
 export const CheckoutCard = () => {
-  const checkoutData = useSelector((state: any) => state.checkout);
-  useEffect(() => {
-    console.log(checkoutData);
-  }, [checkoutData]);
+  // const checkoutData = useSelector((state: any) => state.checkout);
+  const data = useSelector((state: any) => state.checkout);
+  useEffect(() => {}, [data]);
 
   return (
     <Card
@@ -28,30 +27,35 @@ export const CheckoutCard = () => {
         <img src="images/servicePage/checkoutCard/trolly.svg" alt="trolly" />
         <p className="mt-2">Go ahead and book a service for your car.</p>
       </div> */}
-      {checkoutData &&
+      {/* {checkoutData &&
         checkoutData?.map((data: any) => (
-          <>
-            <div className={styles["item-row"]}>
-              <div className="d-flex flex-column">
-                <span className={styles["item-row-title"]}>{data.title}</span>
-                <div className={styles["type-code"]}>
-                  <span className="me-2">{data.code}</span>
-                  <span>{data.type}</span>
-                </div>
-              </div>
-              <div>
-                <span className="mx-2">
-                  <s>₹ {data.originalPrice + data.price} </s>
-                </span>
-                <span>₹{data.totalPrice}</span>
-                <span className="mx-2">
-                  <img src="images/servicePage/checkoutCard/cancel.svg" />
-                </span>
+          <> */}
+      {data != null && (
+        <>
+          <div className={styles["item-row"]}>
+            <div className="d-flex flex-column">
+              <span className={styles["item-row-title"]}>{data.title}</span>
+              <div className={styles["type-code"]}>
+                <span className="me-2">{data.code}</span>
+                <span>{data.type}</span>
               </div>
             </div>
-            <hr className={styles["item-hr"]} />
-          </>
-        ))}
+            <div>
+              <span className="mx-2">
+                <s>₹ {data.originalPrice + data.price} </s>
+              </span>
+              <span>₹{data.totalPrice}</span>
+              <span className="mx-2">
+                <img src="images/servicePage/checkoutCard/cancel.svg" />
+              </span>
+            </div>
+          </div>
+          <hr className={styles["item-hr"]} />
+        </>
+      )}
+
+      {/* </>
+        ))} */}
     </Card>
   );
 };
