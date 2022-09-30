@@ -9,6 +9,7 @@ import { Services } from "./pages/services/Services";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
 import SparePage from "./pages/spare-page/SparePage";
+import Routing from "./routes/Routing";
 function App() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -49,9 +50,10 @@ function App() {
         <Home />
         // <Services />
       )} */}
-      <Home />
+      {/* <Home /> */}
       {/* <SparePage /> */}
       {/* <Services /> */}
+      <Routing/>
     </div>
   );
 }

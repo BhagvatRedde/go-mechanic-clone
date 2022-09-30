@@ -15,6 +15,7 @@ export const ServiceModal = ({ cityName }: any) => {
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
+  const navigate=useNavigate()
   const handleChange = (e: any) => {
     const { value } = e.target;
     setSearch(value);
@@ -65,6 +66,9 @@ export const ServiceModal = ({ cityName }: any) => {
             variant="contained"
             color="error"
             style={{ width: "100%", marginBottom: "1em", padding: "0.8em" }}
+            onClick={() => {
+              navigate("/services");
+            }}
           >
             <span className={styles["check-price-btn"]}>
               CHECK PRICES FOR FREE
