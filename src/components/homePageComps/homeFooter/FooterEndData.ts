@@ -2,7 +2,8 @@ export const FooterEndData = [
   {
     text: "3rd Floor Landmark Tower,Moti Vihar Ashok,",
     text2: "south city1 Sector41 Gurgram Hariyana.",
-    text3: "@ 2016-2022 Targetone Innovations Private Limited",
+    
+
     sub:[
       {
         image: "images/footerIcon/facebook.png",
@@ -48,9 +49,7 @@ export const FooterEndData = [
     value: "7.00AM-9.00PM(IST)",
   },
 
-  // {
-  //   text3: "@ 2016-2022 Targetone Innovations Private Limited",
-  // },
+ 
 ];
 // export const FooterEndData = [
 //   {

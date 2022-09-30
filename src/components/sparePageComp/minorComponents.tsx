@@ -71,6 +71,7 @@ const PaginationSlider = () => {
 
 const PaginationSliderSmall = () => {
   return (
+    <div className="container">
     <div className="smallPaginationSlider">
       <Swiper
         slidesPerView={4}
@@ -88,6 +89,7 @@ const PaginationSliderSmall = () => {
                   src={data.icon}
                   className="smallSliderImage"
                   alt="sliderImage"
+                  style={{ width: "90%", height: "100%" }}
                 />
               </SwiperSlide>
             </span>
@@ -95,11 +97,13 @@ const PaginationSliderSmall = () => {
         })}
       </Swiper>
     </div>
+    </div>
   );
 };
 
 const SpareParts = () => {
   return (
+    <div className="container">
     <div className="spearParts">
       <span className="title">Search by Categories</span>
       <Swiper
@@ -131,6 +135,7 @@ const SpareParts = () => {
           );
         })}
       </Swiper>
+    </div>
     </div>
   );
 };

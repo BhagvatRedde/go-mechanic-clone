@@ -1,6 +1,4 @@
-.offer-container {
-  margin-left: 2.2em;
-}
+
 .offer-body {
   cursor: pointer;
   display: flex;
@@ -41,11 +39,19 @@
   height: 28px;
   border-radius: 6px;
 }
-.offerDiv-container{
+/* .offerDiv-container{
 
   width: 120vw;
-}
+} */
 .text-image-container{
     display: flex;
     
+}
+.Feat-categories {
+  background: linear-gradient(
+      0deg,
+      rgba(81, 149, 224, 0.12),
+      rgba(81, 149, 224, 0.12)
+    ),
+    #fff;
 }

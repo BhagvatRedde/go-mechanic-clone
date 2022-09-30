@@ -1,25 +1,27 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import styles from "./OemBrand.module.css";
-
-export const OemBrand = () => {
+import { useSelector } from "react-redux";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
+import styles from "./OurBlog.module.css";
+const OurBlog = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
     <div className="container">
-      <div className={styles["oem-box"]}></div>
-        <h4 className={styles["slider-box"]}> Popular OEM Brands</h4>
       <div>
+   
+      <h4> From Our Blog</h4>
+   
         <Swiper
+          // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={20}
-          slidesPerView={6}
+          slidesPerView={4}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
@@ -27,16 +29,14 @@ export const OemBrand = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {AppData &&
-            AppData[0].OEMBrands?.map((data: any, i: number) => (
+            AppData[0].OurBlog?.map((data: any, i: any) => (
               <SwiperSlide>
-                <div className={styles["oem-body"]}>
-                  <div className={styles["text-color-red"]}>{data.text}</div>
-
-                  <div className={styles["text-color"]}>{data.name}</div>
+                <div className={styles["feat-body"]}>
+                 
                   <img
                     src={data.image}
                     alt="img"
-                    style={{ width: "80%", height: "80%" }}
+                    style={{ width: "100%", height: "100%" }}
                     className={styles["image-box"]}
                   />
                 </div>
@@ -45,5 +45,9 @@ export const OemBrand = () => {
         </Swiper>
       </div>
     </div>
+ 
   );
 };
+
+export default OurBlog;
+

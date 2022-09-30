@@ -25,6 +25,8 @@ import FestiveCarEssential from "../../components/homePageComps/festiveCarEssent
 import Workshop from "../../components/homePageComps/workshop/Workshop";
 import LuxCars from "../../components/homePageComps/lux-cars.tsx/LuxCars";
 import Featured_buddies from "../../components/homePageComps/Featured_buddies/Featured_buddies";
+import HomeFooter from "../../components/homePageComps/homeFooter/HomeFooter";
+import HomeFooterEnd from "../../components/homePageComps/homeFooter/HomeFooterEnd";
 export const Home = () => {
   const [cityName, setCityName] = useState("Pune");
   const dispatch = useDispatch();
@@ -72,8 +74,8 @@ export const Home = () => {
         </div>
       </div>
       <div className={`${styles["footer-main"]}`}>
-        <Footer />
-        <FooterEnd />
+        <HomeFooter/>
+        <HomeFooterEnd />
       </div>
     </div>
   );
