@@ -10,7 +10,11 @@ import { oilContent } from "./data";
 import styles from "./EngineModal.module.css";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { AddCheckoutData } from "../../../../../redux-store/action";
+import {
+  AddCheckoutData,
+  RemoveServiceData,
+} from "../../../../../redux-store/action";
+import { useSelector } from "react-redux";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -25,6 +29,7 @@ const style = {
 };
 
 export default function EngineModal({ open, setOpen, data }: any) {
+  const checkoutData = useSelector((state: any) => state.checkout);
   const dispatch = useDispatch();
   const [rowItem, setRowItem] = useState({
     title: "",
@@ -49,7 +54,10 @@ export default function EngineModal({ open, setOpen, data }: any) {
     setTotalPrice(totalPrice);
   };
 
-  const sendCheckoutData = () => {
+  const sendCheckoutData = (title: any) => {
+    // if (checkoutData.title) {
+    dispatch(RemoveServiceData(title));
+    if (checkoutData) console.log(checkoutData);
     dispatch(AddCheckoutData(rowItem));
     setOpen(!open);
   };
@@ -113,7 +121,10 @@ export default function EngineModal({ open, setOpen, data }: any) {
               Total Rs. {/* {totalPriceHandler(data.price, data.discount)} */}
               {rowItem.totalPrice}
             </div>
-            <button className="btn btn-danger" onClick={sendCheckoutData}>
+            <button
+              className="btn btn-danger"
+              onClick={() => sendCheckoutData(data.title)}
+            >
               +ADD
             </button>
           </div>

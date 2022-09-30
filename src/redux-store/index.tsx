@@ -1,7 +1,7 @@
 interface IAppState {
   data: any[];
   // checkout: any[];
-  checkout: any;
+  checkout: any[];
 }
 
 const initailState: IAppState = {
@@ -20,9 +20,31 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
       const data2 = action.payload;
       return {
         ...state,
-        // checkout: [...state.checkout, data2],
-        checkout: data2,
+        checkout: [...state.checkout, data2],
+        // checkout: data2,
       };
+    case "RemoveService":
+      const data3 = action.payload;
+      const objWithIdIndex = state.checkout.findIndex(
+        (obj) => obj.title === data3
+      );
+      const newData = state.checkout.splice(objWithIdIndex, 1);
+      // const newData = state.checkout.filter(
+      //   (event) => event.title !== action.payload
+      // );
+      console.log(newData);
+      return {
+        ...state,
+        checkout: [...state.checkout, newData[0]],
+        // checkout: data2,
+      };
+    // return {
+    //   ...state,
+    //   checkout: state.checkout.filter(
+    //     (event) => event.title !== action.payload
+    //   ),
+    // };
+
     default:
       return state;
   }

@@ -18,7 +18,6 @@ function App() {
     axios
       .get("http://localhost:3000/Alldata")
       .then((res) => {
-        console.log(res.data);
         dispatch(SaveData(res.data));
       })
       .catch((err) => console.log(err));
