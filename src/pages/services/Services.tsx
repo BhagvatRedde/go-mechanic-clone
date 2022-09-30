@@ -9,6 +9,9 @@ import Key_Specs from "../../components/servicePriceComp/keySpecs/Key_Specs";
 import { Reviews } from "../../components/servicePriceComp/reviewsPeriodicServices/Reviews";
 import { useState } from "react";
 import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/CheckoutCard";
+import { WhyHonda } from "../../components/servicePriceComp/whyChooseForBrand/WhyHonda";
+import { SwiperComp } from "../../components/reusable/Swiper/SwiperComp";
+
 
 export function Services() {
   const [cityName, setCityName] = useState("Pune");
@@ -30,7 +33,9 @@ export function Services() {
             <HondaAmaze />
             <AskedQuestions />
             <Key_Specs />
+            <WhyHonda />
             <Reviews />
+            <SwiperComp />
           </div>
         </div>
         <CheckoutCard />
