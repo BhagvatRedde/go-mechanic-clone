@@ -11,6 +11,9 @@ import { useState } from "react";
 import { CheckoutCard } from "../../components/servicePriceComp/checkoutCard/CheckoutCard";
 import { WhyHonda } from "../../components/servicePriceComp/whyChooseForBrand/WhyHonda";
 import { SwiperComp } from "../../components/reusable/Swiper/SwiperComp";
+import { PopularServices } from "../../components/servicePriceComp/Populars/PopularServices";
+import { PopularRegion } from "../../components/servicePriceComp/popularRegion/PopularRegion";
+import { HowDone } from "../../components/servicePriceComp/HowItWorks/HowDone";
 
 
 export function Services() {
@@ -30,12 +33,14 @@ export function Services() {
           <ServiceTabs />
           <div className={styles["home-content"]}>
             <RatingDiv />
+            <HowDone/>
             <HondaAmaze />
             <AskedQuestions />
             <Key_Specs />
             <WhyHonda />
             <Reviews />
-            <SwiperComp />
+            <PopularServices />
+            <PopularRegion />
           </div>
         </div>
         <CheckoutCard />
