@@ -12,6 +12,7 @@ export const Periodic = () => {
     setOilContent(content);
     setHeader(header);
     setOpen(!open);
+    console.log(content);
   };
   return (
     <>
@@ -24,8 +25,9 @@ export const Periodic = () => {
                 data={content}
                 onClickHandler={() => onClickHandler(content, data.header)}
                 open={open}
+                header={data.header}
               />
-              {open && header == "Scheduled Packages" && (
+              {open && (
                 <EngineModal
                   open={open}
                   setOpen={onClickHandler}

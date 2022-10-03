@@ -32,6 +32,7 @@ export default function EngineModal({ open, setOpen, data }: any) {
   const checkoutData = useSelector((state: any) => state.checkout);
   const dispatch = useDispatch();
   const [rowItem, setRowItem] = useState({
+    id: "",
     title: "",
     type: "",
     code: "",
@@ -48,15 +49,11 @@ export default function EngineModal({ open, setOpen, data }: any) {
   }, [totalPrice, rowItem.price]);
 
   const handleClose = () => setOpen();
-  const totalPriceHandler = (dataPrice: any, dataDiscount: any) => {
-    const totalPrice =
-      Math.round(dataPrice - dataPrice * (dataDiscount / 100)) + rowItem.price;
-    setTotalPrice(totalPrice);
-  };
 
   const sendCheckoutData = (title: any) => {
     // if (checkoutData.title) {
-    dispatch(RemoveServiceData(title));
+    console.log(title);
+    // dispatch(RemoveServiceData("engine"));
     if (checkoutData) console.log(checkoutData);
     dispatch(AddCheckoutData(rowItem));
     setOpen(!open);
@@ -97,16 +94,18 @@ export default function EngineModal({ open, setOpen, data }: any) {
                     type="radio"
                     name="engine"
                     value={item.price}
-                    onChange={() =>
+                    onChange={() => {
                       setRowItem({
                         ...rowItem,
+                        id: "engine",
                         title: data.title,
                         originalPrice: data.price,
                         type: item.type,
                         code: item.code,
                         price: item.price,
-                      })
-                    }
+                      });
+                      dispatch(RemoveServiceData("engine"));
+                    }}
                   />
                 </div>
               </Card>

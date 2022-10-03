@@ -39,7 +39,7 @@ export const CheckoutCard = () => {
               </div>
               <div>
                 <span className="mx-2">
-                  <s>₹ {data.originalPrice + data.price} </s>
+                  <s>₹ {data.originalPrice} </s>
                 </span>
                 <span>₹{data.totalPrice}</span>
                 <span className="mx-2">
