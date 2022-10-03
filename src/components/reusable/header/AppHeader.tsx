@@ -22,11 +22,13 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
     setSelectedCity(city);
     getCityName(city);
   };
+  const newTabHandler = () => {
+    window.open("/spares","_blank");
+  }
   const handleClick = (e: any) => {
     e.preventDefault();
     setOpenModal(true);
   };
-  const navigate = useNavigate();
   return (
     <>
       <AppBar
@@ -70,9 +72,7 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
             <Button color="inherit">
               <Typography className={styles["btn-typography"]}>
                 <span
-                  onClick={() => {
-                    navigate("/spares");
-                  }}
+                  onClick={newTabHandler}
                 >
                   Spare
                 </span>

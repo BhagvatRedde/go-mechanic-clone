@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
 import { Grid, Stack } from "@mui/material";
+import styles from "../cityModal/CityModal.module.css"
 
 const style = {
   position: "absolute" as "absolute",
@@ -29,6 +30,17 @@ export default function CityModal({ open, setOpen, chooseCityName }: any) {
   return (
     <div>
       <Modal
+        // aria-labelledby="transition-modal-title"
+        // aria-describedby="transition-modal-description"
+        // open={open}
+        // onClose={handleClose}
+        // closeAfterTransition
+        // BackdropComponent={Backdrop}
+        // BackdropProps={{
+        //   timeout: 100,
+        // }}
+
+        className={styles["login-modal"]}
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
