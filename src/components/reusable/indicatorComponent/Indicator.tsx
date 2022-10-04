@@ -9,7 +9,7 @@ export default function Indicator({ data }: any) {
   const settings = {
     dots: true,
     // infinite: true,
-
+    autoplaySpeed: 1500,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -19,7 +19,7 @@ export default function Indicator({ data }: any) {
       {data.map((data1: any, i: number) => (
         <>
           <h4>{data1.header}</h4>
-          <Slider {...settings}>
+          <Slider {...settings} autoplay>
             {data1.content.map((data: any, i: number) => (
               <Grid item xs={2} sm={4} md={3} key={i}>
                 <div className={styles["feedback"]}>

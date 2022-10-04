@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-import React from "react";
 import { Dash_saperator } from "../dash-saperator/Dash_saperator";
 import CountUp from "react-countup";
 import StarIcon from "@mui/icons-material/Star";
