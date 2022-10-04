@@ -9,6 +9,8 @@ import {
   RemoveServiceData,
 } from "../../../redux-store/action";
 export const PackageCard = ({ data, ...rest }: any) => {
+  const [open, setOpen] = useState(false);
+  const [addedToCart, setAddedToCart] = useState(false);
   const [listCount, setListCount] = useState(5);
   const [showMore, setShowMore] = useState(true);
   const [isItemAdded, setIsItemAdded] = useState(false);
@@ -38,6 +40,10 @@ export const PackageCard = ({ data, ...rest }: any) => {
     setShowMore(false);
   };
 
+  const firstHandler = () => {
+    setOpen(!open);
+  };
+
   const secondHandler = (title1: any) => {
     console.log("yes");
     const totalPrice =
@@ -54,18 +60,12 @@ export const PackageCard = ({ data, ...rest }: any) => {
       totalPrice: totalPrice,
     });
     setIsItemAdded(true);
+    setAddedToCart(true);
     if (checkoutData) console.log(checkoutData);
     // dispatch(AddCheckoutData(rowItem));
     console.log(rowItem);
   };
 
-  const sendCheckoutData = (title: any) => {
-    // if (checkoutData.title) {
-    dispatch(RemoveServiceData(title));
-    if (checkoutData) console.log(checkoutData);
-    dispatch(AddCheckoutData(rowItem));
-    // setOpen(!open);
-  };
   return (
     <>
       <Card
@@ -122,26 +122,35 @@ export const PackageCard = ({ data, ...rest }: any) => {
             )}`}</span>
           </div>
           <div>
-            <button
-              className="btn btn-outline-danger rounded-0"
-              onClick={
-                rest.header == "Scheduled Packages"
-                  ? rest.onClickHandler
-                  : () => secondHandler(data.title)
-              }
-            >
-              + ADD TO CART
-            </button>
+            {!addedToCart ? (
+              <button
+                className="btn btn-outline-danger rounded-0"
+                onClick={
+                  rest.header == "Scheduled Packages"
+                    ? // ? rest.onClickHandler
+                      firstHandler
+                    : () => secondHandler(data.title)
+                }
+              >
+                + ADD TO CART
+              </button>
+            ) : (
+              <div className={styles["added-tocart"]}>
+                <img src="images/servicePage/tickIcon.svg" />
+                <span>Added To Cart</span>
+              </div>
+            )}
           </div>
         </div>
       </Card>
-      {/* {rest.open && (
+      {open && (
         <EngineModal
-          open={rest.open}
-          setOpen={rest.onClickHandler}
+          open={open}
+          setOpen={firstHandler}
           data={data}
+          setAddedToCart={setAddedToCart}
         />
-      )} */}
+      )}
     </>
   );
 };

@@ -53,3 +53,11 @@
 .show-more:hover {
   transform: scale(1.1);
 }
+.added-tocart img {
+  height: 0.5em;
+}
+.added-tocart span {
+  color: #9b9b9b;
+  font-size: 0.8em;
+  margin-left: 0.5em;
+}

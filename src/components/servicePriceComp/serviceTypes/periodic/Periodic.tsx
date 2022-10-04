@@ -27,13 +27,13 @@ export const Periodic = () => {
                 open={open}
                 header={data.header}
               />
-              {open && (
+              {/* {open && (
                 <EngineModal
                   open={open}
                   setOpen={onClickHandler}
                   data={oilContent}
                 />
-              )}
+              )} */}
             </>
           ))}
         </div>

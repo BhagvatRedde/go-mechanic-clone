@@ -28,7 +28,12 @@ const style = {
   zIndex: 1,
 };
 
-export default function EngineModal({ open, setOpen, data }: any) {
+export default function EngineModal({
+  open,
+  setOpen,
+  data,
+  setAddedToCart,
+}: any) {
   const checkoutData = useSelector((state: any) => state.checkout);
   const dispatch = useDispatch();
   const [rowItem, setRowItem] = useState({
@@ -53,6 +58,7 @@ export default function EngineModal({ open, setOpen, data }: any) {
   const sendCheckoutData = (title: any) => {
     // if (checkoutData.title) {
     console.log(title);
+    setAddedToCart(true);
     // dispatch(RemoveServiceData("engine"));
     if (checkoutData) console.log(checkoutData);
     dispatch(AddCheckoutData(rowItem));
