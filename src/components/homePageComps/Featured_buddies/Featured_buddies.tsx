@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Featured.module.css";
 import StarIcon from "@mui/icons-material/Star";
 import Grid from "@mui/material/Grid";
+import Rating from '@mui/material/Rating';
 import Slider from "react-slick";
 import { Dash_saperator } from "../../reusable/dash-saperator/Dash_saperator";
 import { featured } from "./featured";
@@ -34,11 +35,11 @@ export default function Featured_buddies() {
                       />
                     </div>
                     <div className="col-md-6">
-                      <h2 className={styles["featured-title"]}>{data.title}</h2>
-                      <div style={{ marginLeft: "1em", marginBottom: "1em" }}>
-                        {data.star.map(() => (
-                          <StarIcon color="warning" />
-                        ))}
+                      <h5 className={styles["featured-title"]}>{data.title}</h5>
+                      <div style={{}}>
+                        {/* {data.star.map(() => ( */}
+                        <Rating name="half-rating" defaultValue={2.9} precision={0.5} size="small" readOnly />
+                        {/* ))} */}
                       </div>
                       <ul className="">
                         {data.bullets.map((item: any) => (

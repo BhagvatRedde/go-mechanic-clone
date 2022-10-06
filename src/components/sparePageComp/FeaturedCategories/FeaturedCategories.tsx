@@ -12,19 +12,20 @@ const FeaturedCategories = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
-    <div className="container">
-      <div className={`${styles["Feat-categories"]}`}>
+    <div className={styles["Feat-categories"]}>
+      <div className="container">
+      <div className={`${styles["content"]}`}>
 
-      <div>
+   
         <h4>Featured Categories</h4>
         <span>specifically curated for you</span>
-      </div>
+  
       <div className={`${styles["slider-box "]}`}>
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={20}
-          slidesPerView={7}
+          spaceBetween={0}
+          slidesPerView={6}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
@@ -48,6 +49,7 @@ const FeaturedCategories = () => {
               </SwiperSlide>
             ))}
         </Swiper>
+        </div>
         </div>
         </div>
     </div>

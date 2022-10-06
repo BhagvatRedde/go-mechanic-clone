@@ -42,7 +42,7 @@ export const customerQuotes = [
     Great going team GoMechanic!!`,
         social: "https://twitter.com/i/flow/login",
         socialName: "Facebook",
-        icon: "socialMedia/facebok.png",
+        icon: "socialMedia/facebook.png",
         name: "Kuran Shamli",
         workShop: "GoMechanic- Bavdhan, Pune",
       },

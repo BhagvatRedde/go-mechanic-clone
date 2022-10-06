@@ -8,7 +8,7 @@ export const reviewData = [
         time: "Published 3 months ago",
         review: `I always choose the Standard Service package for my car. It's a pretty good deal.
        Many points are checked to make sure everything is in top condition.`,
-        star: [1, 1, 1, 1, 1],
+        star: [1, 1, 1, 1],
       },
       {
         Image: "reviewImages/N.png",
@@ -16,7 +16,7 @@ export const reviewData = [
         time: "Published 3 months ago",
         review: `My car brakes felt pretty low. Got the brake disc cleaned and a new set of brake pads was also installed. 
         Everything was fine after that.`,
-        star: [1, 1, 1, 1, 1],
+        star: [1, 1, 1],
       },
       {
         Image: "reviewImages/N.png",
@@ -32,7 +32,7 @@ export const reviewData = [
         time: "Published 3 months ago",
         review: `My car brakes felt pretty low. Got the brake disc cleaned and a new set of brake pads was also installed. 
         Everything was fine after that.`,
-        star: [1, 1, 1, 1, 1],
+        star: [1, 1, 1, 1],
       },
       {
         Image: "reviewImages/S.png",
@@ -64,7 +64,7 @@ export const reviewData = [
         time: "Published 3 months ago",
         review: `Some noises were coming while applying brakes in my car, got the discs inspected & resurfaced at GoMechanic, sounds were gone after that.
          Superb job!`,
-        star: [1, 1, 1, 1, 1],
+        star: [1, 1, 1, 1],
       },
       {
         Image: "reviewImages/D.png",
@@ -125,7 +125,7 @@ export const reviewData = [
         title: "Robin Koren",
         time: "Published 3 months ago",
         review: `My Car service is great. It's working very smooth after car service...`,
-        star: [1, 1, 1, 1, 1],
+        star: [1, 1, 1, 1],
       },
     ],
   },

@@ -13,13 +13,10 @@
 }
 
 .featured-title {
-  font-size: 21px;
   font-weight: 600;
   font-style: bold;
   width: max-content;
 
-  letter-spacing: 0.179px;
-  letter-spacing: 0.0112rem;
   color: #282828;
 }
 .featured-img {

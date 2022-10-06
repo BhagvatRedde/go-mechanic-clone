@@ -8,8 +8,8 @@ export const SpareOffer = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
-    <div className={styles["offerDiv-container"]}>
-      <div className={styles["offer-container"]}>
+    <div className={styles["Feat-categories"]}>
+      <div className="container">
         <h4> Offers</h4>
         <div>
           <Swiper

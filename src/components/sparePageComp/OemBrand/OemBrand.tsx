@@ -12,8 +12,9 @@ export const OemBrand = () => {
   const AppData = useSelector((state: any) => state.data[0]);
 
   return (
-    <div className={`${styles["oem-box"]} container `}>
-      <h4> Popular OEM Brands</h4>
+    <div className="container">
+      <div className={styles["oem-box"]}></div>
+        <h4 className={styles["slider-box"]}> Popular OEM Brands</h4>
       <div>
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -28,7 +29,7 @@ export const OemBrand = () => {
           {AppData &&
             AppData[0].OEMBrands?.map((data: any, i: number) => (
               <SwiperSlide>
-                <div className={styles["card-body"]}>
+                <div className={styles["oem-body"]}>
                   <div className={styles["text-color-red"]}>{data.text}</div>
 
                   <div className={styles["text-color"]}>{data.name}</div>
