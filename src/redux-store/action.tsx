@@ -10,3 +10,8 @@ export const RemoveServiceData = (data: any) => ({
   type: "RemoveService",
   payload: data,
 });
+
+export const SetIsBtnActive = (data: any) => ({
+  type: "IsBtnActive",
+  payload: data,
+});

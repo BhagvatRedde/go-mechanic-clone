@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   AddCheckoutData,
   RemoveServiceData,
+  SetIsBtnActive,
 } from "../../../redux-store/action";
 export const PackageCard = ({ data, ...rest }: any) => {
   const [open, setOpen] = useState(false);
@@ -15,6 +16,8 @@ export const PackageCard = ({ data, ...rest }: any) => {
   const [showMore, setShowMore] = useState(true);
   const [isItemAdded, setIsItemAdded] = useState(false);
   const checkoutData = useSelector((state: any) => state.checkout);
+  const AppData = useSelector((state: any) => state.data[0]);
+
   const dispatch = useDispatch();
   const [rowItem, setRowItem] = useState({
     id: "",
@@ -39,7 +42,9 @@ export const PackageCard = ({ data, ...rest }: any) => {
     setListCount(data.bullets.length);
     setShowMore(false);
   };
-
+  useEffect(() => {
+    if (isItemAdded) console.log(AppData[0].PackageCardData);
+  }, [isItemAdded]);
   const firstHandler = () => {
     setOpen(!open);
   };
@@ -60,7 +65,10 @@ export const PackageCard = ({ data, ...rest }: any) => {
       totalPrice: totalPrice,
     });
     setIsItemAdded(true);
+
+    dispatch(SetIsBtnActive([data.title, rest.type]));
     setAddedToCart(true);
+    console.log(rest.rawData.content[0].isAddedToCart);
     if (checkoutData) console.log(checkoutData);
     // dispatch(AddCheckoutData(rowItem));
     console.log(rowItem);

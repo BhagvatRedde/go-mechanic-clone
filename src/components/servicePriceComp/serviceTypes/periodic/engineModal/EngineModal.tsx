@@ -61,8 +61,11 @@ export default function EngineModal({
     setAddedToCart(true);
     // dispatch(RemoveServiceData("engine"));
     if (checkoutData) console.log(checkoutData);
+    dispatch(RemoveServiceData("engine"));
     dispatch(AddCheckoutData(rowItem));
+
     setOpen(!open);
+    console.log(rowItem);
   };
 
   return (
@@ -110,7 +113,6 @@ export default function EngineModal({
                         code: item.code,
                         price: item.price,
                       });
-                      dispatch(RemoveServiceData("engine"));
                     }}
                   />
                 </div>

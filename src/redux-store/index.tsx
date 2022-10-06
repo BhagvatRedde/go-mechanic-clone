@@ -1,3 +1,4 @@
+import update from "immutability-helper";
 interface IAppState {
   data: any[];
   // checkout: any[];
@@ -12,6 +13,7 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
   switch (action.type) {
     case "SAVE":
       const data = action.payload;
+      console.log(data);
       return {
         ...state,
         data: [...state.data, data],
@@ -26,14 +28,48 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
     case "RemoveService":
       const data3 = action.payload;
       const objWithIdIndex = state.checkout.findIndex(
-        (obj) => obj.id === data3
+        (obj) => obj.title === data3
       );
-      const newData = state.checkout.splice(objWithIdIndex, 1);
+      const newData = state.checkout.filter((item) => item.id !== data3);
+      // const newData = state.checkout.splice(objWithIdIndex, 1);
 
       console.log(newData);
+      console.log(data3);
       return {
         ...state,
-        checkout: [...state.checkout],
+        checkout: newData,
+      };
+    case "IsBtnActive":
+      const item: any = action.payload;
+      // const PackageCardData: any = "PackageCardData";
+      console.log(item);
+
+      // return update(state, (draft) =>
+      //   draft.data[0][0]?.PackageCardData[0]?.CarSpa.map((data: any) => {
+      //     return state;
+      //   })
+      // );
+
+      return {
+        ...state,
+        data: [
+          ...state.data,
+          {
+            ...state.data[0][0]?.PackageCardData,
+            PackageCardData: [
+              state.data[0][0]?.PackageCardData[0]?.CarSpa?.map(
+                (data2: any) => {
+                  console.log(data2.content);
+
+                  return {
+                    ...data2,
+                    content: [{ ...data2.content, isAddedToCart: true }],
+                  };
+                }
+              ),
+            ],
+          },
+        ],
       };
 
     default:
