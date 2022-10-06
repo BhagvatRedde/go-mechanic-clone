@@ -8,21 +8,21 @@ const SpareForm = () => {
   const [yearrange, setYearRange] = useState();
   const [variant, setVariant] = useState();
 
-  function manufactureHandler(e:any)
-  {
-    setManufacture(e.target.value)
+
+
+  function manufactureHandler(e: any) {
+    setManufacture(e.target.value);
   }
 
-  function modalHandler(e: any)
-  {
-    setModal(e.target.value)
+  function modalHandler(e: any) {
+    setModal(e.target.value);
   }
-  
+
   function yearRangeHandler(e: any) {
-    setYearRange(e.target.value)
+    setYearRange(e.target.value);
   }
   function variantHandler(e: any) {
-    setYearRange(e.target.value)
+    setYearRange(e.target.value);
   }
   // const []
 
@@ -42,11 +42,14 @@ const SpareForm = () => {
             >
               <option selected>Select Manufacture</option>
               {AppData &&
-                AppData[0].Selectmenu?.map((data: any, i: number) => (
-                  <option key={i} value={data.value}>
-                    {data.name}
-                  </option>
-                ))}
+                AppData[0].Selectmenu?.map((data: any, i: number) => {
+                  // console.log(data.id);
+                  return (
+                    <option key={i} value={data.id}>
+                      {data.name}
+                    </option>
+                  );
+                })}
             </select>
           </div>
           <div className={`${styles["dropdown"]}  col-2`}>
@@ -57,11 +60,13 @@ const SpareForm = () => {
             >
               <option selected>Select Model</option>
               {AppData &&
-                AppData[0].selectModel?.map((data: any, i: number) => (
-                  <option key={i} value={data.value}>
-                    {data.name}
-                  </option>
-                ))}
+                AppData[0].selectModel?.map(
+                  (data: any, i: number) => (
+                    <option key={i} value={data.value}>
+                      {data.name}
+                    </option>
+                  )
+                )}
             </select>
           </div>
           <div className={`${styles["dropdown"]} col-2`}>
@@ -95,9 +100,9 @@ const SpareForm = () => {
             </select>
           </div>
           <button
-            className={`${styles["search-btn"] }`}
+            className={`${styles["search-btn"]}`}
             disabled={variant ? false : true}
-            role='button'
+            role="button"
           >
             Search
           </button>

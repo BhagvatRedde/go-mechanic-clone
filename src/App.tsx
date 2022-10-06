@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import logo from "./logo.svg";
 import "./App.css";
-import { Home } from "./pages/home/Home";
-import { BeatLoader, CircleLoader, PulseLoader } from "react-spinners";
-import { Services } from "./pages/services/Services";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
-import SparePage from "./pages/spare-page/SparePage";
 import Routing from "./routes/Routing";
 function App() {
   const [loading, setLoading] = useState(false);
