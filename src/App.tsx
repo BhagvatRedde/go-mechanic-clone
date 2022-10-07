@@ -13,7 +13,6 @@ function App() {
     axios
       .get("http://localhost:3000/Alldata")
       .then((res) => {
-        console.log(res.data);
         dispatch(SaveData(res.data));
       })
       .catch((err) => console.log(err));
@@ -26,7 +25,6 @@ function App() {
     }, 1000);
   }, []);
 
- 
   return (
     <div>
       {/* {loading ? (
@@ -37,10 +35,12 @@ function App() {
           size={20}
         />
       ) : (
-      <Routing/>
-       
+        <Home />
+        // <Services />
       )} */}
-
+      {/* <Home /> */}
+      {/* <SparePage /> */}
+      {/* <Services /> */}
       <Routing />
     </div>
   );

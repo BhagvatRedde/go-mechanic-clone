@@ -29,40 +29,35 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
   const handleClose = () => setOpen(false);
   const [value, setValue] = useState("");
   const [num, setNum] = useState();
-  const [enteredotp,setEnteredOtp]=useState(0);
-  let myNum:any;
-  const continueHadnler = (ev:any) => {
+  const [enteredotp, setEnteredOtp] = useState(0);
+  let myNum: any;
+  const continueHadnler = (ev: any) => {
     if (value.length == 12) {
       myNum = Math.floor(100000 + Math.random() * 900000);
-      setNum(myNum)
+      setNum(myNum);
       alert(myNum);
       ev.preventDefault();
-
-    }
-     else {
+    } else {
       alert("Please enter Valid No.");
-      ev.preventDefault();
-    return false;
-
-    } 
-
-   
-  };
-  const otpHandler=(event:any)=>{
-    setEnteredOtp(event.target.value)
-  }
-  const submitHandler=(ev:any)=>{
-    console.log(num,enteredotp)
-    if (num == enteredotp){
-      // console.log("HI")
-      alert("Login Successfully")
-    }else{
-      // console.log("Nothing ")
-      alert("OTP dose not match")
       ev.preventDefault();
       return false;
     }
-  }
+  };
+  const otpHandler = (event: any) => {
+    setEnteredOtp(event.target.value);
+  };
+  const submitHandler = (ev: any) => {
+    console.log(num, enteredotp);
+    if (num == enteredotp) {
+      // console.log("HI")
+      alert("Login Successfully");
+    } else {
+      // console.log("Nothing ")
+      alert("OTP dose not match");
+      ev.preventDefault();
+      return false;
+    }
+  };
 
   return (
     <div>
@@ -95,7 +90,7 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
 
               <Stack sx={{ marginBottom: "2em" }}>
                 <Typography id="transition-modal-description">
-                  Enter your phone no. to continue <br/>
+                  Enter your phone no. to continue <br />
                   Start with +91
                 </Typography>
               </Stack>
@@ -110,19 +105,18 @@ export default function Login({ open, setOpen, chooseCityName }: any) {
             <form className={styles["mobile-no"]}>
               <b>Enter Mobile No.</b>
               <PhoneInput
-                
                 country="india"
                 placeholder="+91 Enter mobile number"
                 value={value}
                 onChange={setValue}
               />
-          
+
               <button onClick={continueHadnler} className={styles["btn"]}>
                 Continue
               </button>
-              <form >
+              <form>
                 <b>Enter Otp.</b>
-                <input  className={styles["inp"]} onChange={otpHandler}/>
+                <input className={styles["inp"]} onChange={otpHandler} />
                 <button className={styles["btn"]} onClick={submitHandler}>
                   Login
                 </button>
