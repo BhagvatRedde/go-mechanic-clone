@@ -2,8 +2,28 @@ import * as React from "react";
 import Grid from "@mui/material/Grid";
 import styles from "./HowItWorks.module.css";
 import { Dash_saperator } from "../../reusable/dash-saperator/Dash_saperator";
+import { Box, Modal, Typography } from "@mui/material";
+import { waranty } from "./data";
 
 export const HowDone = () => {
+    const style = {
+        position: "absolute" as "absolute",
+        top: "55%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        width: "65%",
+        bgcolor: "background.paper",
+
+        outline: "none",
+
+        zIndex: 1,
+    }
+
+
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
     return (
         <div>
 
@@ -36,8 +56,73 @@ export const HowDone = () => {
                 </div>
 
             </Grid>
-            <div className={styles["knowMore"]}>know more</div>
+            <div className={styles["knowMore"]} onClick={handleOpen}>know more</div>
+
+            <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style}>
+                    {waranty.map((data1: any, i: number) => (
+                        <div className={styles["modal-header"]}>
+                            <Typography id="modal-modal-title" variant="h6" component="h2" style={{ fontWeight: 700, marginBottom: "0.5em", marginLeft: "1em" }}>
+                                GoMechanic Warranty
+                            </Typography>
+                            <div className={`${styles[""]}row d-flex `}
+                                style={{ backgroundColor: " #5195e1", width: "100 %" }}>
+                                <div className="col-md-5"  >
+                                    <div>
+                                        < p className={styles["modal-cap"]} >GoMechanic Service Warranty</p>
+
+                                    </div>
+
+                                </div>
+                                <div className="col-md-5" style={{
+                                    backgroundColor: " #5195e1"
+                                }} >
+
+                                </div>
+                                <div className="col-md-2">
+                                    <img
+
+                                        className={styles["model-img"]}
+                                        src={"/FeaturedImage/secondone.png"}
+                                        alt="img"
+                                        style={{ width: "100%" }}
+                                    />
+                                </div>
+                            </div>
+                            <>
+                                <div >
+                                    {data1.desc.map((data: any, i: number) => (
+                                        <ul className={styles["ul-list"]}>
+                                            <li className={styles["li-list"]}>{data.para1}</li>
+                                            <div className={styles["div-list"]}>{data.para2}</div>
+                                        </ul>
+                                    ))}
+                                </div>
+
+                                <div className={styles["dash"]} >
+
+                                </div>
+                                <div>
+                                    {data1.terms.map((data: any, i: number) => (<>
+                                        <p className={styles["list-caption"]}>{data.header}</p>
+                                        <ul className={styles["ul-list2"]}>
+                                            <li className={styles["li-list2"]}>{data.para1}</li>
+                                            <li className={styles["li-list2"]}>{data.para2}</li>
+
+                                        </ul></>
+                                    ))}
+                                </div>
+                            </>
+                        </div>
+                    ))}
+                </Box >
+            </Modal >
             <Dash_saperator />
-        </div>
+        </div >
     );
 };

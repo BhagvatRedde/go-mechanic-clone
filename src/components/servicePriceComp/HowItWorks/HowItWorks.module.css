@@ -9,6 +9,7 @@
   margin-top: -40px;
   position: relative;
   width: 55.8em;
+  color: white;
 }
 .hr-line {
   height: 0.1429rem;
@@ -58,4 +59,81 @@
 .model-img {
   float: right;
   margin-top: -1em;
+}
+.modal-header {
+  font-size: 22px;
+  line-height: 0.86;
+  letter-spacing: 0.2px;
+  text-align: left;
+  margin-top: 21px;
+  cursor: pointer;
+}
+.modal-cap {
+  font-size: 22px;
+  letter-spacing: normal;
+  color: #fff;
+
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 23px;
+  width: max-content;
+  font-weight: 600;
+  line-height: 1.2;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+}
+.ul-list {
+  list-style-image: url(https://websiteasset.s3.ap-south-1.amazonaws.com/New+Website/components/detailPage/+Font.png);
+}
+.li-list {
+  cursor: text;
+  margin-top: 17px;
+  font-size: 16px;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.69;
+  letter-spacing: 0.14px;
+  text-align: left;
+  color: #4a4a4a;
+}
+.div-list {
+  position: relative;
+  top: -2px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9b9b9b;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+}
+.dash {
+  width: 100%;
+  height: 7px;
+  background-color: #f2f4f6;
+}
+.ul-list2 {
+  list-style-image: url(https://websiteasset.s3.ap-south-1.amazonaws.com/New+Website/components/detailPage/FontCross.png);
+}
+.li-list2 {
+  color: #9b9b9b;
+  position: relative;
+  top: -2px;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.list-caption {
+  font-size: 18px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.67;
+  letter-spacing: 0.04px;
+  text-align: left;
+  color: #282828;
+  padding: 25px 17px 0;
 }
