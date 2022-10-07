@@ -11,7 +11,7 @@ export default function Featured_buddies() {
   const settings = {
     dots: true,
     // infinite: true,
-
+    autoplaySpeed: 1500,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -21,7 +21,7 @@ export default function Featured_buddies() {
       {featured.map((data1: any, i: number) => (
         <>
           <h3>{data1.header}</h3>
-          <Slider {...settings}>
+          <Slider {...settings} autoplay>
             {data1.content.map((data: any, i: number) => (
               <Grid item xs={2} sm={4} md={3} key={i}>
                 <div className={styles["feedback-main"]}>
