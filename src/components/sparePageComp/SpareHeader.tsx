@@ -4,6 +4,11 @@ import { logo, menu, cart, mic, searchMenu, searchIcon, user } from "./images";
 import { FilledButton, FloatingSearch } from "./minorComponents";
 const SpareHeader = () => {
   const [focused, setFocused] = useState("none");
+  const menuitem = () => {
+    alert(
+      "Add menu event in modale"
+    )
+  }
   return (
     <>
       <span className="newMessage">
@@ -31,7 +36,7 @@ const SpareHeader = () => {
             />
             <span className="icons">
               <img src={mic} className="mic" alt="mic" />
-              <img src={searchMenu} className="searchMenu" alt="searchMenu" />
+              <img src={searchMenu} className="searchMenu" alt="searchMenu" onClick={menuitem}/>
             </span>
             <FloatingSearch display={focused} />
           </span>
