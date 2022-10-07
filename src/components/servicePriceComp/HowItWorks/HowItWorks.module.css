@@ -11,14 +11,16 @@
   width: 55.8em;
   color: white;
 }
-.hr-line {
+.hr {
   height: 0.1429rem;
-  border: none;
+  border: solid;
   /* width: 40px; */
-  width: 2.8rem;
-  background-color: #fff;
-  color: #fff;
+  width: 2.5rem;
+  border-color: #fff;
   margin: 10px 0;
+}
+.hr-secondary {
+  background-color: #fff;
 }
 
 .main {
@@ -36,7 +38,7 @@
   margin-top: 2em;
 }
 .caption-p {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: normal;
@@ -47,7 +49,6 @@
   width: max-content;
 }
 .caption2-p {
-  font-size: 14px;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: 0.16px;

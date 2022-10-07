@@ -37,7 +37,7 @@ export const HowDone = () => {
                     <div className="col-md-5" style={{}} >
                         <div >
                             <p className={styles["caption-p"]}>GoMechanic Service Warranty</p>
-                            <hr className={styles["hr-line"]} />
+                            <hr className={styles["hr"]} />
                         </div>
                         <div className={styles["caption2-p"]}>1 Month Replacement Warranty On Oil, Filters & Brakes</div>
                     </div>
