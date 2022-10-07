@@ -71,7 +71,7 @@ export const SwiperComp = ({ data }: any) => {
                                     <Paper
                                         style={{ fontStyle: "normal", borderRadius: 1, textShadow: "2px gray" }}
                                         className={classes.paper}
-                                        sx={{ marginLeft: "0.5em", padding: "0.5em" }}
+                                        sx={{ marginLeft: "0.5em", padding: "0.5em", cursor: "pointer" }}
                                     >
                                         {data.item}</Paper>
 
