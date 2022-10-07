@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import { Dash_saperator } from "../../reusable/dash-saperator/Dash_saperator";
 import styles from "./CustomServices.module.css";
@@ -8,6 +9,7 @@ import styles from "./CustomServices.module.css";
 
 const CustomServices = () => {
   const AppData = useSelector((state: any) => state.data[0]);
+  const navigate = useNavigate();
 
   const settings = {
     loop: false,
@@ -23,7 +25,7 @@ const CustomServices = () => {
   return (
     <>
       <div className="row mt-4 mb-4">
-        <div className={`${styles["custom-card"]} col-md-2`}>
+        <div className={`${styles["custom-card"]} col-md-2`} onClick={()=>{navigate("/miles-membership");}}>
           <img src="images/customServices/miles.png"></img>
         </div>
         <div className={`${styles["custom-card"]} col-md-2`}>

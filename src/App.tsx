@@ -9,6 +9,7 @@ import { Services } from "./pages/services/Services";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
 import SparePage from "./pages/spare-page/SparePage";
+import Routing from "./routes/Routing";
 function App() {
   const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
@@ -17,7 +18,6 @@ function App() {
     axios
       .get("http://localhost:3000/Alldata")
       .then((res) => {
-        console.log(res.data);
         dispatch(SaveData(res.data));
       })
       .catch((err) => console.log(err));
@@ -30,12 +30,6 @@ function App() {
     }, 1000);
   }, []);
 
-  //  const { AllData, isLoading } = useSelector((state) => state);
-  //   const dispatch = useDispatch();
-
-  //   useEffect(() => {
-  //     dispatch(requestUsers(data));
-  //   }, [AllData]);
   return (
     <div>
       {/* {loading ? (
@@ -51,7 +45,8 @@ function App() {
       )} */}
       {/* <Home /> */}
       {/* <SparePage /> */}
-      <Services />
+      {/* <Services /> */}
+      <Routing />
     </div>
   );
 }

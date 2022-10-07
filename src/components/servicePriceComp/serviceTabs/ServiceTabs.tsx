@@ -82,7 +82,16 @@ export default function ServiceTabs() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider", boxShadow: 2 }}>
+      <Box
+        sx={{
+          borderBottom: 1,
+          borderColor: "divider",
+          boxShadow: 2,
+          backgroundColor: "white",
+          position: "sticky",
+          top: 0,
+        }}
+      >
         <Tabs
           value={value}
           onChange={handleChange}

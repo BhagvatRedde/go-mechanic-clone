@@ -12,6 +12,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import styles from "./AppHeader.module.css";
 import CityModal from "../cityModal/CityModal";
 import Login from "../auth/Login";
+import { useNavigate } from "react-router-dom";
 
 export const AppHeader = ({ bgColor, getCityName }: any) => {
   const [state, setState] = useState(false);
@@ -21,6 +22,9 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
     setSelectedCity(city);
     getCityName(city);
   };
+  const newTabHandler = () => {
+    window.open("/spares","_blank");
+  }
   const handleClick = (e: any) => {
     e.preventDefault();
     setOpenModal(true);
@@ -67,7 +71,11 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
           <Stack direction="row" spacing={1} className={styles["header-menu"]}>
             <Button color="inherit">
               <Typography className={styles["btn-typography"]}>
-                Spare
+                <span
+                  onClick={newTabHandler}
+                >
+                  Spare
+                </span>
               </Typography>
             </Button>
             <Button color="inherit">
