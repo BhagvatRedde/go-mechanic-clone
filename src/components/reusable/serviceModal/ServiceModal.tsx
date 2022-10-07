@@ -15,7 +15,7 @@ export const ServiceModal = ({ cityName }: any) => {
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const handleChange = (e: any) => {
     const { value } = e.target;
     setSearch(value);

@@ -25,6 +25,9 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
   const newTabHandler = () => {
     window.open("/spares","_blank");
   }
+
+  const navigate = useNavigate();
+
   const handleClick = (e: any) => {
     e.preventDefault();
     setOpenModal(true);
@@ -46,7 +49,14 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
             color="inherit"
             aria-label="logo"
           >
-            <img src={appLogo} alt="logo" className={styles["app-logo"]} />
+            <img
+              src={appLogo}
+              alt="logo"
+              className={styles["app-logo"]}
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </IconButton>
           <Stack
             sx={{ flexGrow: 1 }}
@@ -71,11 +81,7 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
           <Stack direction="row" spacing={1} className={styles["header-menu"]}>
             <Button color="inherit">
               <Typography className={styles["btn-typography"]}>
-                <span
-                  onClick={newTabHandler}
-                >
-                  Spare
-                </span>
+                <span onClick={newTabHandler}>Spare</span>
               </Typography>
             </Button>
             <Button color="inherit">
