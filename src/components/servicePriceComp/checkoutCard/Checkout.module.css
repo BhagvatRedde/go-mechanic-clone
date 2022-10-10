@@ -1,6 +1,6 @@
 .checkout-card {
   position: sticky;
-  top: 0;
+  top: 2em;
   margin-top: 3em;
   margin-left: 2.5em;
   width: 31vw;
@@ -33,8 +33,36 @@
   font-weight: 600;
   color: #8e8383;
 }
+.checkout-container {
+  position: relative;
+}
 .subTotal {
-  margin-left: 2em;
-  position: fixed;
-  bottom: 0;
+  margin: 0 1em 1em 1em;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 99;
+}
+.subTotal p {
+  font-size: 0.8em;
+  color: #9b9b9b;
+}
+
+.checkout-btn {
+  width: 100%;
+  background-color: #e73c33;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.checkout-btn span {
+  padding: 0.8em 1em;
+  color: white;
+}
+.row-container {
+  max-height: 9em;
+  overflow-y: scroll;
 }

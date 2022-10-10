@@ -27,9 +27,7 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
       };
     case "RemoveService":
       const data3 = action.payload;
-      const objWithIdIndex = state.checkout.findIndex(
-        (obj) => obj.title === data3
-      );
+
       const newData = state.checkout.filter((item) => item.id !== data3);
       // const newData = state.checkout.splice(objWithIdIndex, 1);
 
@@ -39,6 +37,19 @@ const Reducer = (state: IAppState = initailState, action: any): IAppState => {
         ...state,
         checkout: newData,
       };
+    case "RemoveRow":
+      const removedRow = action.payload;
+
+      const newData2 = state.checkout.filter(
+        (item) => item.title !== removedRow
+      );
+      // const newData = state.checkout.splice(objWithIdIndex, 1);
+
+      return {
+        ...state,
+        checkout: newData2,
+      };
+
     case "IsBtnActive":
       const item: any = action.payload;
       // const PackageCardData: any = "PackageCardData";

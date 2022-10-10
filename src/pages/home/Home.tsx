@@ -74,7 +74,7 @@ export const Home = () => {
         </div>
       </div>
       <div className={`${styles["footer-main"]}`}>
-        <HomeFooter/>
+        <HomeFooter />
         <HomeFooterEnd />
       </div>
     </div>

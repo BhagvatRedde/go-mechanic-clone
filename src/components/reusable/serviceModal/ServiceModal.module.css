@@ -9,6 +9,7 @@
 }
 .scroll-card {
   overflow-x: hidden;
+  height: 100%;
   overflow-y: scroll !important;
 }
 .select-car {
