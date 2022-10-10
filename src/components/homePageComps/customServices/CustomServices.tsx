@@ -28,7 +28,7 @@ const CustomServices = () => {
         <div className={`${styles["custom-card"]} col-md-2`} onClick={()=>{navigate("/miles-membership");}}>
           <img src="images/customServices/miles.png"></img>
         </div>
-        <div className={`${styles["custom-card"]} col-md-2`}>
+        <div className={`${styles["custom-card"]} col-md-2`} onClick={() => { navigate("/extended-warranty");}}>
           <img src="images/customServices/warranty.png"></img>
         </div>
         <div className={`${styles["custom-card"]} col-md-2`}>

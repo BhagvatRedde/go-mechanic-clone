@@ -49,3 +49,7 @@ html {
   border: none;
   outline: none;
 }
+
+.marquee{
+  background-color: #effaeb;
+}

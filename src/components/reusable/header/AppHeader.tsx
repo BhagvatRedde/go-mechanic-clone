@@ -23,8 +23,8 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
     getCityName(city);
   };
   const newTabHandler = () => {
-    window.open("/spares","_blank");
-  }
+    window.open("/spares", "_blank");
+  };
 
   const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ export const AppHeader = ({ bgColor, getCityName }: any) => {
         style={{
           background: bgColor,
           boxShadow: "none",
-          marginTop: ".8em",
+          // marginTop: ".8em",
         }}
       >
         <Toolbar>

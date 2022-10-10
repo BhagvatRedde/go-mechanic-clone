@@ -1,0 +1,37 @@
+.custom-card img {
+  height: 21vmax;
+  width: 21vmax;
+  cursor: pointer;
+}
+.custom-card {
+  margin-right: 8.5em;
+}
+
+.warranty-subdiv {
+  width: 65vw;
+  /* position:static; */
+  margin-top: 7em
+}
+.text{
+    text-align: center;
+    margin-top: 2%;
+}
+
+.tag{
+      margin-left: 20px;
+      font-weight: 100;
+}
+.m-tag{
+    background-color: #effaeb;
+}
+.greendot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50% !important;
+    background-color: #3a9b14;
+    -webkit-box-shadow: 0 0 0 5px #cbe9bf;
+    box-shadow: 0 0 0 5px #cbe9bf;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
