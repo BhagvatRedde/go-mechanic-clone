@@ -11,12 +11,12 @@ export const Windshield = () => {
     <>
       {AppData &&
         AppData[0]?.PackageCardData[0]?.WindShield?.map((data: any) => (
-          <>
+          <div className="mb-4">
             <div className={styles["card-header"]}>{data.header}</div>
             {data.content.map((content: any) => (
               <PackageCard data={content} />
             ))}
-          </>
+          </div>
         ))}
     </>
   );
