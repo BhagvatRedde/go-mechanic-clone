@@ -59,4 +59,122 @@ export const customerQuotes = [
       },
     ],
   },
+  {
+    header: "Customer Quotes On Honda Amaze CNG AC Service & Repair In Pune",
+    content: [
+      {
+        title: "GoMechanic is superb",
+        info: `GoMechanic is surely a place you need to visit for your next car service. 
+        I was really confused with so many brands available online for car servicing. I went to the GoMechanic website and they transferred my request to their workshop near me. 
+        The infrastructure of the workshop was really great`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Twitter",
+        icon: "socialMedia/twitter.png",
+        name: "Shantanu Khelgade",
+        workShop: "GoMechanic- Vitthal Nagar, Pune",
+      },
+      {
+        title: " Truly Amazing",
+        info: `As summers were approaching,
+         I started my car AC to check if it was working fine and to my surprise, it wasn’t cooling well. Immediately called up Sahil from GoMechanic. He arranged a pick up from my home, diagnosed and updated me over the phone.
+         The service included a minor AC recharge and I was all set to go. Truly amazing.`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Twitter",
+        icon: "socialMedia/twitter.png",
+        name: "Tushar Kopde",
+        workShop: "GoMechanic- Warje, Pune",
+      },
+      {
+        title: " Thanks, GoMechanic",
+        info: `Quite unusually, my car was overheating while running the AC. 
+        I was so fed up, that I used to switch off the AC during peak summers which was troublesome for me. 
+        Gave GoMechanic a call and all and they narrowed down the problem to a faulty compressor. They replaced the unit with an OEM one and no more sweaty car journeys for me. Thanks, GoMechanic!`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Google",
+        icon: "socialMedia/google.png",
+        name: "Jeet Kaur Singha",
+        workShop: "GoMechanic- Shivajinagar, Pune",
+      },
+      {
+        title: "Really convenient for me",
+        info: `For some reason, my car AC stopped working and I had no clue why. I got in touch with GoMechanic and according to them, there was a leak in my AC system. 
+        Their diagnosis was spot-on as now the car cools really good. They got the car from my home and delivered it back and it was really convenient for me.`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Facebook",
+        icon: "socialMedia/facebook.png",
+        name: "Kuran Shamli",
+        workShop: "GoMechanic- Bavdhan, Pune",
+      },
+      {
+        title: "No-nonsense service provider",
+        info: `I had no scope with my 12-year old Hyundai Santro. GoMechanic sent me to their workshop. 
+        It's in the name! The name assured me that I still had some scope!
+         They repaired my car for so cheap I couldn't even imagine I could get my Santro repaired for this cheap. GoMechanic rocks`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "facebook",
+        icon: "socialMedia/facebook.png",
+        name: "Kirti Shemgal",
+        workShop: "GoMechanic- Industrial Area, Pune",
+      },
+    ],
+  },
+  {
+    header: "Customer Quotes On Maruti Suzuki WagonR CNG Batteries In Pune",
+    content: [
+      {
+        title: "I am very impressed",
+        info: `The battery on my WagonR recently got discharged.
+         I am using additional auxiliary lights on my car. GoMechanic helped me find the appropriate battery type, especially for my car. The mechanics were professional and did proper load testing on my car.
+         I am very impressed and I recommend GoMechanic.`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Twitter",
+        icon: "socialMedia/twitter.png",
+        name: "Shantanu Khelgade",
+        workShop: "GoMechanic- Vitthal Nagar, Pune",
+      },
+      {
+        title: " Kudos GoMechanic",
+        info: `My father is retired and uses his car very rarely, as a result, 
+        the battery on his car died. I made a quick call to GoMechanic and they scheduled a doorstep battery replacement that was too free of cost. My father didn't have to even move out of his house.
+         This is a convenient service, taken to the next level. Kudos GoMechanic!`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Twitter",
+        icon: "socialMedia/twitter.png",
+        name: "Tushar Kopde",
+        workShop: "GoMechanic- Warje, Pune",
+      },
+      {
+        title: " Free installation is great!",
+        info: `The battery on my 2012 WagonR just died. I usually go to a dealer and pick the battery of my choice. But, this time, I gave GoMechanic a shot as my friends were very impressed with their services.
+         They had the manufacturer recommended battery in stock (for my 2012 WagonR) and I got a free installation which is great!`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Google",
+        icon: "socialMedia/google.png",
+        name: "Jeet Kaur Singha",
+        workShop: "GoMechanic- Shivajinagar, Pune",
+      },
+      {
+        title: "Superb service",
+        info: `I was preparing my car for a long road trip and the car required a new battery.
+         I needed the battery the next day as I didn't want to risk breaking down in the middle of the road. Called GoMechanic and ordered the specific battery and got it delivered the next morning.
+         Superb service, I must say!.`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "Facebook",
+        icon: "socialMedia/facebook.png",
+        name: "Kuran Shamli",
+        workShop: "GoMechanic- Bavdhan, Pune",
+      },
+      {
+        title: "Genuine with dealer warranty",
+        info: `I own a 4-year-old WagonR which I use strictly for office commuting. 
+        The factory-fitted battery lasted good but was needing replacement. I chose GoMechanic battery replacement service as they offered free doorstep installation. It was very convenient and easy for me.
+         The battery is genuine and comes with dealer warranty.`,
+        social: "https://twitter.com/i/flow/login",
+        socialName: "facebook",
+        icon: "socialMedia/facebook.png",
+        name: "Kirti Shemgal",
+        workShop: "GoMechanic- Industrial Area, Pune",
+      },
+    ],
+  },
 ];

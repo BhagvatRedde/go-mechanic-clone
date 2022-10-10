@@ -71,13 +71,16 @@ function a11yProps(index: number) {
   };
 }
 
-export default function ServiceTabs() {
+export default function ServiceTabs({ passIndexHandler }:any) {
   const [value, setValue] = React.useState(0);
   const AppData = useSelector((state: any) => state.data[0]);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    console.log(newValue);
+    passIndexHandler(newValue);
     setValue(newValue);
   };
+
   const classes = useStyles();
 
   return (

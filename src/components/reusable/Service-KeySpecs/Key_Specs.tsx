@@ -1,10 +1,10 @@
 import * as React from "react";
 import styles from "./KeySpecs.module.css";
 import { Dash_saperator } from "../../reusable/dash-saperator/Dash_saperator";
-import { Key_SpecsData } from "./data";
+
 import { Grid } from "@mui/material";
 
-export default function Key_Specs() {
+export default function Key_Specs({ data }: any) {
   return (
     <>
       <div style={{ marginTop: "2em" }}>
@@ -17,7 +17,7 @@ export default function Key_Specs() {
           columns={{ xs: 4, sm: 4, md: 12 }}
         >
           <div className="d-flex mt-4">
-            {Key_SpecsData.map((data: any, i: number) => (
+            {data.map((data: any, i: number) => (
               <table className={styles["key-table"]}>
                 <tbody className={styles["key-table-tbody"]}>
                   <tr className={`${styles["key-table-tr"]}`}>

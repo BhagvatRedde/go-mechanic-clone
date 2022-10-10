@@ -4,10 +4,10 @@ import React from "react";
 import { whyChooseGomechanic } from "./Data";
 
 import { BigData } from "../../reusable/bigDataComp/BigData";
-export const WhyChoose = () => {
+export const WhyChoose = ({ passedIndex }: any) => {
   return (
     <>
-      <BigData data={whyChooseGomechanic} />
+      <BigData data={whyChooseGomechanic[passedIndex]} />
     </>
   );
 };

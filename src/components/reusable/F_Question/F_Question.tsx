@@ -19,45 +19,45 @@ export function F_Question({ data }: any) {
 
   return (
     <div className={styles["quetion-main"]} id="frequently-ask-que">
-      {data.map((data1: any, i: number) => (
-        <>
-          <h3 className="mt-3 mb-5">{data1.header}</h3>
+      {/* {data.map((data1: any, i: number) => ( */}
+      <>
+        <h3 className="mt-3 mb-5">{data.header}</h3>
 
-          <Grid
-            container
-            spacing={{ xs: 1, md: 3 }}
-            columnSpacing={{ md: 0 }}
-            rowSpacing={{ md: 3 }}
-            columns={{ xs: 4, sm: 4, md: 12 }}
-          >
-            {data1.content.map((data: any, i: number) => (
-              <div className="mt-2 mb-0">
-                <Accordion
-                  expanded={expanded === data.id}
-                  onChange={handleChange(data.id)}
+        <Grid
+          container
+          spacing={{ xs: 1, md: 3 }}
+          columnSpacing={{ md: 0 }}
+          rowSpacing={{ md: 3 }}
+          columns={{ xs: 4, sm: 4, md: 12 }}
+        >
+          {data.content.map((data: any, i: number) => (
+            <div className="mt-2 mb-0">
+              <Accordion
+                expanded={expanded === data.id}
+                onChange={handleChange(data.id)}
+              >
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1bh-content"
+                  id="panel1bh-header"
+                  style={{ background: "#eaeaea" }}
                 >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon />}
-                    aria-controls="panel1bh-content"
-                    id="panel1bh-header"
-                    style={{ background: "#eaeaea" }}
+                  <Typography
+                    className={styles["quetions"]}
+                    sx={{ fontWeight: "bold" }}
                   >
-                    <Typography
-                      className={styles["quetions"]}
-                      sx={{ fontWeight: "bold" }}
-                    >
-                      {data.quetion}
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails style={{ background: "#f6f6f6" }}>
-                    <Typography>{data.answer}</Typography>
-                  </AccordionDetails>
-                </Accordion>
-              </div>
-            ))}
-          </Grid>
-        </>
-      ))}
+                    {data.quetion}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails style={{ background: "#f6f6f6" }}>
+                  <Typography>{data.answer}</Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          ))}
+        </Grid>
+      </>
+      {/* ))} */}
       <Dash_saperator />
     </div>
   );

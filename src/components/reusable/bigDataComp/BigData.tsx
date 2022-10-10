@@ -6,7 +6,8 @@ import { Dash_saperator } from "../../reusable/dash-saperator/Dash_saperator";
 export const BigData = ({ data }: any) => {
     return (
         <div>
-            {data.map((data: any, i: number) => (<>
+            {/* {data.map((data: any, i: number) => ( */}
+            <>
                 <h3 className={styles["heading-data"]}>{data.MainHeading}</h3>
                 <div className={styles["choose-container"]}>
                     {data.content.map((data: any, i: any) => (
@@ -25,7 +26,7 @@ export const BigData = ({ data }: any) => {
                         </div>
                     ))}
                 </div></>
-            ))}
+            {/* ))} */}
 
 
             <Dash_saperator />

@@ -29,6 +29,7 @@ import HomeFooter from "../../components/homePageComps/homeFooter/HomeFooter";
 import HomeFooterEnd from "../../components/homePageComps/homeFooter/HomeFooterEnd";
 export const Home = () => {
   const [cityName, setCityName] = useState("Pune");
+  const [passedIndex, setPassedIndex] = useState(0);
   const dispatch = useDispatch();
   useEffect(() => {
     axios
@@ -43,6 +44,10 @@ export const Home = () => {
   const getCityName = (city: string) => {
     setCityName(city);
   };
+  const passIndexHandler = (index: number) => {
+    console.log(index)
+    setPassedIndex(index);
+  }
 
   return (
     <div>
@@ -66,15 +71,15 @@ export const Home = () => {
           <MechanicWork />
           <MechanicBenefits />
           <RatingDiv />
-          <OwnersFeedback />
-          <GoQuetion />
+          <OwnersFeedback passedIndex={passedIndex} />
+          <GoQuetion passedIndex={passedIndex} />
           <Featured_buddies />
-          <WhyChoose />
+          <WhyChoose passedIndex={passedIndex} />
           <PriceTable />
         </div>
       </div>
       <div className={`${styles["footer-main"]}`}>
-        <HomeFooter/>
+        <HomeFooter />
         <HomeFooterEnd />
       </div>
     </div>
