@@ -10,8 +10,10 @@ import axios from "axios";
 import { SaveData } from "./redux-store/action";
 import SparePage from "./pages/spare-page/SparePage";
 import Routing from "./routes/Routing";
+import { SecureCheckout } from "./components/servicePriceComp/checkoutCard/secureCheckout/SecureCheckout";
 function App() {
   const [loading, setLoading] = useState(false);
+  const [selectedCar, setSelectedCar] = useState();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,6 +32,9 @@ function App() {
     }, 1000);
   }, []);
 
+  const selectedCarHandler = (data: any) => {
+    setSelectedCar(data);
+  };
   return (
     <div>
       {/* {loading ? (
@@ -46,7 +51,11 @@ function App() {
       {/* <Home /> */}
       {/* <SparePage /> */}
       {/* <Services /> */}
-      <Routing />
+      {/* <Routing
+        selectedCarHandler={selectedCarHandler}
+        selectedCar={selectedCar}
+      /> */}
+      <SecureCheckout />
     </div>
   );
 }

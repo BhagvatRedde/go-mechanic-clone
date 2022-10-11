@@ -75,3 +75,9 @@ html {
 .swiper-button-next {
   display: none !important;
 }
+.react-tel-input .form-control {
+  border-radius: 0;
+}
+.special-label {
+  display: none;
+}

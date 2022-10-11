@@ -7,7 +7,7 @@ import {
   RemoveCheckoutRow,
   RemoveServiceData,
 } from "../../../redux-store/action";
-export const CheckoutCard = () => {
+export const CheckoutCard = ({ selectedCar }: any) => {
   // const checkoutData = useSelector((state: any) => state.checkout);
   const checkoutData = useSelector((state: any) => state.checkout);
   const dispatch = useDispatch();
@@ -21,12 +21,14 @@ export const CheckoutCard = () => {
         sx={{ boxShadow: 12, borderRadius: 0 }}
       >
         <div className="text-center">
-          <img src="images/carModels/model1.jpeg" alt="img" />
+          <img src={selectedCar.img} alt="img" />
         </div>
         <div className="d-flex justify-content-between mx-2">
           <div className="d-flex">
-            <h5 className="mx-2">Hyundai i10</h5>
-            <span>Petrol</span>
+            <h5 className="mx-2">
+              {selectedCar.brand} {selectedCar.model}
+            </h5>
+            <span>{selectedCar.fuel} </span>
           </div>
           <span className="">CHANGE</span>
         </div>

@@ -15,8 +15,7 @@ import { PopularServices } from "../../components/servicePriceComp/Populars/Popu
 import { PopularRegion } from "../../components/servicePriceComp/popularRegion/PopularRegion";
 import { HowDone } from "../../components/servicePriceComp/HowItWorks/HowDone";
 
-
-export function Services() {
+export function Services({ selectedCar }: any) {
   const [cityName, setCityName] = useState("Pune");
   const [checkoutData, setCheckoutData] = useState([]);
   const getCityName = (city: string) => {
@@ -33,7 +32,7 @@ export function Services() {
           <ServiceTabs />
           <div className={styles["home-content"]}>
             <RatingDiv />
-            <HowDone/>
+            <HowDone />
             <HondaAmaze />
             <AskedQuestions />
             <Key_Specs />
@@ -43,7 +42,7 @@ export function Services() {
             <PopularRegion />
           </div>
         </div>
-        <CheckoutCard />
+        <CheckoutCard selectedCar={selectedCar} />
       </div>
     </div>
   );
