@@ -1,3 +1,6 @@
+.warranty-maindiv {
+  display: flex;
+}
 .custom-card img {
   height: 21vmax;
   width: 21vmax;
@@ -10,28 +13,217 @@
 .warranty-subdiv {
   width: 65vw;
   /* position:static; */
-  margin-top: 7em
+  margin-top: 7em;
+  height: 100vh;
+  overflow-y: scroll;
+  /* position: relative; */
 }
-.text{
-    text-align: center;
-    margin-top: 2%;
+.text {
+  text-align: center;
+  margin-top: 2%;
 }
 
-.tag{
-      margin-left: 20px;
-      font-weight: 100;
+.tag {
+  margin-left: 20px;
+  font-weight: 100;
 }
-.m-tag{
-    background-color: #effaeb;
+.m-tag {
+  background-color: #effaeb;
 }
 .greendot {
-    height: 10px;
-    width: 10px;
-    border-radius: 50% !important;
-    background-color: #3a9b14;
-    -webkit-box-shadow: 0 0 0 5px #cbe9bf;
-    box-shadow: 0 0 0 5px #cbe9bf;
-    margin-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50% !important;
+  background-color: #3a9b14;
+  -webkit-box-shadow: 0 0 0 5px #cbe9bf;
+  box-shadow: 0 0 0 5px #cbe9bf;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main-card {
+  margin: 15px;
+}
+.check-card {
+  display: flex;
+  margin: 10px;
+}
+.authorized {
+  width: 10rem;
+  height: 10rem;
+}
+.card-title {
+  margin: 16px;
+  font-weight: 600;
+}
+.card-price {
+  margin-left: 16px;
+  font-weight: 600;
+}
+.card-para {
+  font-size: smaller;
+  color: grey;
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-left: 6%;
+}
+
+.card-data {
+  font-size: 0.875rem;
+  margin-bottom: 10px !important;
+  font-weight: 600;
+}
+.card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #cbe9bf;
+  margin: 10px;
+}
+.footer-text {
+  color: #3a9b14;
+  font-weight: 600;
+  margin-left: 5%;
+}
+.arrow {
+  background-color: #3a9b14;
+  border-radius: 50%;
+  width: 19px;
+  margin-right: 8px;
+  margin-bottom: 2px;
+}
+
+.card-btn {
+  border: 1.5px solid #e73c33;
+  color: red;
+  background-color: #fff;
+  width: 76.8px;
+  width: 4.8rem;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  border-radius: 0.1875rem;
+  font-size: 16px;
+  padding: 7px 6px;
+  margin-left: 85%;
+  position: relative;
+  cursor: pointer;
+}
+
+.third-div {
+  margin-top: 6em;
+  margin-left: 1em;
+  height: 100vh;
+  overflow-y: scroll;
+  /* position: fixed; */
+}
+
+.step-card {
+  width: 32vw;
+  height: 20vh;
+}
+
+.li-item {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #fdebeb;
+  color: #e73c33;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+._li {
+  list-style: none;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.line {
+  height: 40px;
+  width: 3px;
+  margin-left: 14px;
+  background-color: #e73c33;
+  margin-top: 5px;
+  margin-bottom: -10px;
+}
+
+.para {
+  margin-left: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.milestone {
+  margin-top: 3em;
+}
+.subcard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1ftr 1ftr;
+  /* grid-row-gap: 0.3rem; */
+  grid-row-gap: 0.625rem;
+  grid-column-gap: 0.625rem;
+}
+.subcard {
+  width: 15vw;
+  height: 22vh;
+  border: none !important;
+}
+
+.sub-image {
+  /* height: 2vh; */
+  width: 50px;
+  margin: 7% 0 0 7%;
+}
+.sub-tilte {
+  margin-left: 10%;
+}
+
+.sub-para {
+  color: grey;
+  font-weight: 500;
+  margin-left: 7%;
+  margin-bottom: 7%;
+}
+
+.graph-title{
+  font-weight: 600;
+    font-size: 24.992px;
+    font-size: 1.562rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    color: #1a1a1a;
+    margin: 0 0 3px;
+    padding-top: 1rem;
+}
+
+.graph-para{
+      font-weight: 500;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+    color: #666;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e6e6e6;
+    margin: 0 0 1rem;
+}
+
+.graph{
+  margin-left: 15px;
+}
+
+.graph-image{
+      width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
