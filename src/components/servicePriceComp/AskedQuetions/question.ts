@@ -255,4 +255,233 @@ export const questionAnswer = [
       },
     ],
   },
+  {
+    header: "Frequently Asked Questions (FAQs) on Detailing Services",
+    content: [
+      {
+        id: "panel1",
+        quetion:
+          "I have a few scratches and paint fade on my Maruti Suzuki. Which service should I book?",
+        answer: `You can choose our rubbing/polishing service which will get rid all the surface scratches and swirl marks from your Maruti Suzuki. However, if the scratches are deep, we recommend getting the panel dented and painted. You can choose from any of our 
+        specialised auto body workshops located near you in Pune.`,
+      },
+      {
+        id: "panel2",
+        quetion:
+          "How often should I get a Rubbing/Polishing service for my Maruti Suzuki? ",
+        answer: `A rubbing/polishing service will preserve and protect the paint-work of your Maruti Suzuki. It also adds a layer of protection over the clear coat. We recommend getting a
+         rubbing/polishing service every 3-4 months to maintain that showroom shine.`,
+      },
+      {
+        id: "panel3",
+        quetion:
+          "What is the difference between Dry Cleaning and Interior Detail Cleaning?",
+        answer: `If your Maruti Suzuki has a dirty dashboard, filthy carpets or foul odour, we recommend our dry cleaning package which includes complete seats and upholstery shampoo with vacuum cleaning and dashboard polishing. For general maintenance, get the interior detail cleaning service done every month. It includes 
+        interior dry-washing and vacuum cleaning with dashboard and trim polishing.`,
+      },
+      {
+        id: "panel4",
+        quetion:
+          "Which products do you use for car care services like rubbing, waxing, polishing etc? ?",
+        answer: `We use only the best car care products from 3M and Wurth for your Maruti Suzuki which offer excellent performance and great results.
+         With GoMechanic, you get the best car care treatment at the best prices in Pune`,
+      },
+      {
+        id: "panel5",
+        quetion:
+          "What is the difference between Teflon coating vs Anti-rust coating?",
+        answer: ` Teflon coating for your Maruti Suzuki is a paint protection treatment, 
+        chemically synthesised from a fluoropolymer which bonds to the paint offering a brilliant shine, doing away with the problem of corrosion and wear and tear. Anti-Rust coating is a car underbody protection treatment, which is applied to the underbody of the car. A thick 2-3mm of a rubberised silicone-polyether layer is applied to the under-body to give it enhanced protection against hard rust and paint chips. Book a service today and get 
+        a complete underbody rust and corrosion treatment at attractive prices in Pune.`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "How much time does the comprehensive cleaning service take on my Maruti Suzuki WagonR?",
+        answer: `GoMechanic’s comprehensive cleaning service is a complete all-inclusive car interior care package. The service time for your Maruti Suzuki WagonR is approximately 1-2 hours.`,
+      },
+      {
+        id: "panel7",
+        quetion:
+          "What is the best service for a faded dashboard on my Maruti Suzuki WagonR",
+        answer: `Dashboard polishing and detailing service included in the dry cleaning package will take care of any faded plastic and trims giving the dashboard on your Maruti Suzuki WagonR a brand new shine.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Car Inspections",
+    content: [
+      {
+        id: "panel1",
+        quetion: "Which engine oil do you use in a scheduled car service?",
+        answer: `We only use the best engine oil approved by for your WagonR . We use Mobil 5W-30 Engine oil that enhances engine performance and efficiency, providing superior protection 
+        against wear and tear giving your car engine a longer life.`,
+      },
+      {
+        id: "panel2",
+        quetion:
+          "Are there any extra/added charges apart from the described rates for my WagonR service? ",
+        answer: `Absolutely not. When you book a car service for your WagonR , you only pay for the service you opted.
+         No last minute surprises, no hidden costs.`,
+      },
+      {
+        id: "panel3",
+        quetion: "How much time does it take for my WagonR car service?",
+        answer: `The service time for your WagonR depends on the service package you choose. A standard service takes 4-5 hours whereas, a comprehensive service takes at least 
+        5-6 hours through most of our workshops across Pune .`,
+      },
+      {
+        id: "panel4",
+        quetion: " What if I face any issue after the service of my WagonR ?",
+        answer: `At GoMechanic, we are all for a fulfilled customer experience. When you book with us, you get 1 month/1000 kms unconditional warranty on your WagonR car service. On top of that, our 24x7 proactive customer 
+        support will tend to your issue with the highest priority.`,
+      },
+      {
+        id: "panel5",
+        quetion:
+          "When should I go for a standard service or a comprehensive service?",
+        answer: ` A standard car service package for your WagonR includes all the basic services and inspections and is required after every 10,000 kms. Whereas, a comprehensive service for your WagonR is a more elaborate package with complete top-to-bottom car servicing, replacements and maintenance and 
+        is mandated after every 40,000 kms from the odometer reading.`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "What makes GoMechanic unique compared to Maruti Suzuki authorised serviced centre?",
+        answer: `Easy, Efficient and Economical;
+         That is GoMechanic. Book through our app, website or paytm; your car service is at your fingertips.1-month warranty on car service, upto 40% savings, FREE pick-up and drop service and genuine spares. We make sure you get more than what 
+        authorised service centres have to offer.`,
+      },
+      {
+        id: "panel7",
+        quetion:
+          "Do you use genuine MGP spare parts for my Maruti Suzuki WagonR car service?",
+        answer: ` We use 100% genuine OEM/OES spare
+         parts for you Maruti Suzuki WagonR car service. OEM spares are original parts without the automaker’s branding and are manufactured using the same machinery and precision as the original hence, 
+        guarantee perfect fit, finish and function.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Windshields & Lights",
+    content: [
+      {
+        id: "panel1",
+        quetion: "What kind of car glass does GoMechanic use for replacement?",
+        answer: `At GoMechanic Pune, we use only ARAI certified glasses for your Maruti Suzuki WagonR glass replacement service to 
+        provide you with the best-in-class glass replacement.`,
+      },
+      {
+        id: "panel2",
+        quetion: "What all is included in a windshield replacement service? ",
+        answer: `The windshield replacement service at GoMechanic Pune includes replacing the cracked/broken windshield with a new ARAI approved windshield using the best sealant and 
+        adhesives available across all GoMechanic workshops.`,
+      },
+      {
+        id: "panel3",
+        quetion: "How long does it take to replace a windshield? ",
+        answer: `We strive to deliver our best in the least possible time. However, it may take upto 6 hours to carry out the windshield replacement process in order to ensure the quality and 
+        endurance of the new glass on your Maruti Suzuki WagonR .`,
+      },
+      {
+        id: "panel4",
+        quetion:
+          "How soon can I use my vehicle after a rear windshield replacement?",
+        answer: `We advise you to wait at least 24 hours after a windshield replacement to allow the sealant to cure 
+        causing the glass to seal and bond permanently to the frame.`,
+      },
+      {
+        id: "panel5",
+        quetion: "Does the glass replacement service come with a warranty?",
+        answer: ` All the glass fitments done at GoMechanic Pune come
+         with a standard fitment warranty of 1 month. No questions asked.`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "I can’t visit the workshop to drop my car. Can GoMechanic help?",
+        answer: `Yes, we provide free doorstep pickup and drop with all our services. We ensure that your 
+        experience is completely contactless considering the need of the hour.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Suspension & Fitments",
+    content: [
+      {
+        id: "panel1",
+        quetion: "Does GoMechanic offers warranty on a Horn Replacement?",
+        answer: `Yes, you get a 1-Month Network warranty on the Horn Replacement, which can be availed at
+         any GoMechanic service centre near you.`,
+      },
+      {
+        id: "panel2",
+        quetion: " What car service does GoMechanic recommend? ",
+        answer: `One of the main reasons for tight steering might be a faulty or worn-out steering rack. GoMechanic suggests opting for a 
+        Steering Rack Repair Service in such instances.`,
+      },
+      {
+        id: "panel3",
+        quetion:
+          "What is included in the Suspension & Fitments Service for Maruti Suzuki WagonR ?",
+        answer: `Suspension & Fitments Services includes the Front Shock Absorber Replacement, Rear Shock Absorber Replacement, Engine Mounting Replacement, Horn Replacement,
+         EPS Module Repair, Steering Rack Repair and much more. .`,
+      },
+      {
+        id: "panel4",
+        quetion:
+          "Does GoMechanic use authentic spare parts for Horn Replacement Service?",
+        answer: `GoMechanic uses 100% genuine OEM/OES spare parts for all the replacement services. We perform the Relay/Coupler fault check, Wiring Malfunction Check and Opening & 
+        Fitting of the Bumper to provide you with a seamless service.`,
+      },
+      {
+        id: "panel5",
+        quetion: "I am feeling a bumpy ride on my Maruti Suzuki WagonR",
+        answer: ` The bumpy ride happens because of the faulty suspension. GoMechanic suggests the Suspension Services, which includes Front Shock Absorber Replacement and Rear Shock Absorber Replacement. The complete suspension
+         care will help you get your car back in good condition.`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "If I cannot deliver my car to the service centre myself, can GoMechanic help me here?",
+        answer: `Yes, GoMechanic offers a Free Doorstep Pickup & Drop Service. Don’t worry! The experts will reach out to you at your preferred time.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Clutch & Body Parts",
+    content: [
+      {
+        id: "panel1",
+        quetion: "What kind of car glass does GoMechanic use for replacement?",
+        answer: `At GoMechanic Pune, we use only ARAI certified glasses for your WagonR glass replacement service to provide
+         you with the best-in-class glass replacement.`,
+      },
+      {
+        id: "panel2",
+        quetion: " What all is included in a windshield replacement service?",
+        answer: `The windshield replacement service at GoMechanic Pune includes replacing the cracked/broken windshield with a new ARAI approved windshield using the best sealant and 
+        adhesives available across all GoMechanic workshops.`,
+      },
+      {
+        id: "panel3",
+        quetion: "How long does it take to replace a windshield?",
+        answer: `We strive to deliver our best in the least possible time. However, it may take upto 6 hours to carry out the windshield replacement process in order to ensure
+         the quality and endurance of the new glass on your WagonR.`,
+      },
+      {
+        id: "panel4",
+        quetion: "Does the glass replacement service come with a warranty?",
+        answer: `All the glass fitments done at GoMechanic Pune come with a standard fitment
+         warranty of 1 month. No questions asked.`,
+      },
+      {
+        id: "panel5",
+        quetion:
+          "I can’t visit the workshop to drop my car. Can GoMechanic help?",
+        answer: ` Yes, we provide free doorstep pickup and 
+        drop with all our services. We ensure that your experience is completely contactless considering the need of the hour.
+        `,
+      },
+    ],
+  },
 ];

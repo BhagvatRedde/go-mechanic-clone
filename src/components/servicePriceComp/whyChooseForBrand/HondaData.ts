@@ -261,4 +261,208 @@ export const HondaData = [
       },
     ],
   },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Car Spa & Cleaning In Pune",
+
+    content: [
+      {
+        heading: "Car care services in Pune",
+        para: `Car cleaning service is the best way to remove all the dust, dirt, mud and other unsightly build-ups from your car.
+        Interior car care is a crucial service that de-contaminates and sanitizes the interior, upholstery, seats, carpet etc.
+        Washing and waxing will help protect the delicate paintwork on your car. Regular car care will go a long way in keeping your car as new as day one.
+        `,
+      },
+      {
+        heading: "Maruti Suzuki WagonR CNG care services offered",
+        sub: [
+          {
+            subheading:
+              "Choose from a category of finest car services, available at your nearest GoMechanic workshop in Pune. ",
+            para: " Interior and exterior cleaning services",
+          },
+          {
+            subheading: "Detailing Service Inclusions: ",
+            para: "Rubbing and polishing services,Tyre dressing and alloy cleaning ",
+          },
+        ],
+      },
+      {
+        heading: "Premium car care products",
+        para: `Every GoMechanic workshop across Pune uses the highest quality, specially formulated, PH neutral car care products from global brands like 3M, Würth and Xxtra Armor to
+         give your Maruti Suzuki WagonR the best possible shine.`,
+      },
+      {
+        heading: "Specialised car care equipment",
+        para: `Professional Maruti Suzuki WagonR cleaning and detailing
+         require speciality tools and machines. That is why every GoMechanic workshop in Pune is equipped with Industry grade buffing and polishing machines, automatic pressure washers and other car care tools along with special car 
+        care products are put to use to get the best results.`,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Car Inspections In Pune",
+
+    content: [
+      {
+        heading: "Custom Car Services in Pune",
+        para: `Squealing brakes? Electrical issues? 
+        Noisy suspension? Just tell us your requirements and get a call back within 2 hrs with a personalised quotation 
+        exclusively for your car at the best GoMechanic Workshops in Pune.
+        `,
+      },
+      {
+        heading: "Custom Car Services offered",
+        sub: [
+          {
+            subheading:
+              "Choose from a category of finest car services, available at your nearest GoMechanic workshop in Pune. ",
+            para: " Clutch plate replacement service, Steering system repairs",
+          },
+          {
+            subheading: "Detailing Service Inclusions: ",
+            para: "Rubbing and polishing services,Tyre dressing and alloy cleaning ",
+          },
+        ],
+      },
+      {
+        heading: "Industry-rated top notch equipment",
+        para: `At every GoMechanic workshop in Pune, we employ only the cutting edge in industry standard car service equipment. From automatic AC gas recharging apparatus, laser automated wheel balancing/alignment machine, OBD2 diagnostic scanner, 
+        ECU programming devices and specialised tools specific to your car.`,
+      },
+      {
+        heading: "Warranty on car services",
+        para: `When you choose GoMechanic, you get the GoMechanic Advantage. Your Maruti Suzuki WagonR service is assured under our 1000kms/1 month warranty
+         policy anywhere in Pune. Now, book with confidence.`,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Windshields & Lights In Pune",
+
+    content: [
+      {
+        heading: "Windshield & Glass Replacement in Pune",
+        para: `Windshield & Glass Replacement Services offered by GoMechanic 
+        Pune enables you to get your Maruti Suzuki WagonR windshield and glasses replaced without facing any hassle. We at GoMechanic Pune use only ARAI certified glasses
+         for your Maruti Suzuki WagonR windshield & glass replacement services..
+        `,
+      },
+      {
+        heading: "Custom Car Services offered",
+        sub: [
+          {
+            subheading: "Windshield & Glass Replacement Services Inclusions: ",
+            para: " Front Windshield Replacement",
+          },
+          {
+            subheading: "Detailing Service Inclusions: ",
+            para: "Rear Windshield Replacement, Door Glass Replacement",
+          },
+        ],
+      },
+      {
+        heading: "Specialised Tools & Equipment",
+        para: `All the GoMechanic workshops across Pune have specialised tools, 
+        modern equipment and best-in-class glass adhesives which ensure that the windshield or glass replacement on your Maruti Suzuki WagonR is done perfectly and lasts long. Our trained mechanics also ensure that the glass fits well in place and 
+        test it for its endurance before delivering your vehicle.`,
+      },
+      {
+        heading: "Warranty on Detailing Services",
+        para: `All the windshield and glass replacements done at GoMechanic 
+        Pune come with a standard 1-Month warranty on fitment.`,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Suspension & Fitments In Pune",
+
+    content: [
+      {
+        heading: "Suspension & Fitments Services Offered",
+        para: `GoMechanic in Pune provides a bunch of Suspension & Fitment Services for your Maruti Suzuki 
+        WagonR to make sure that your car remains in the best condition.
+        `,
+      },
+      {
+        heading: "Suspension & Fitments Services Inclusions",
+        sub: [
+          {
+            subheading: "The Suspension & Fitments Services include: ",
+            para: " Front Shock Absorber Replacement Service, Mud Flaps Service ",
+          },
+          {
+            subheading: "Faulty Steering System ",
+            para: `A faulty steering system can increase
+             the chances of major accidents, malfunctions and other mishappenings. The symptoms are the stiff steering wheel, loose steering wheel, noises while turning, steering wheel vibration while cornering and many more. If you see any of the symptoms mentioned above, 
+            visit the nearby car service centre.`,
+          },
+          {
+            subheading: "Suspension Issues",
+            para: ` Are you feeling a bumpy ride in your Maruti Suzuki WagonR 
+            while travelling or realising the wheel alignment is wrong? If yes, then the poor suspension can be an issue. Suspension is one of the most important components in the car. It helps keep your car stable and makes your travel smooth and comfortable. If you feel a bump while driving or realise that one side of the car is bending more than the other,
+             then visit the car service centre for your car service.`,
+          },
+        ],
+      },
+      {
+        heading: "Inspect the Shocker & Strut",
+        para: `After getting your car suspension repaired,
+         the best way to keep your suspension in good condition is to check the Shocker or Strut. If you feel the Shocker or Strut is leaking, then it is important to get it 
+        replaced at your nearest car service centre.`,
+      },
+      {
+        heading: "Inspect Wheel Alignment ",
+        para: `Checking the wheel alignment is the most
+         important thing to do after the suspension repair. If the wheels are not aligned, it can put a lot of force on the suspension.
+
+        `,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Clutch & Body Parts In Pune",
+
+    content: [
+      {
+        heading: "Light & Fitment Services in Pune",
+        para: `Headlight Replacement and Taillight Replacement Services offered by GoMechanic Pune enable you to get your WagonR headlights and taillights replaced without facing any hassle. Get OEM/OES developed headlight/taillight assemblies for 
+        your WagonR with GoMechanic Pune..
+        `,
+      },
+      {
+        heading: "Light & Fitment Services Inclusions:",
+        sub: [
+          {
+            subheading:
+              "We offer light replacement services for all cars of any make and model at GoMechanic Pune. The light replacement service includes: ",
+            para: " Tail Light Replacement Service, Horn Replacement Service",
+          },
+
+          {
+            subheading: "Suspension Issues",
+            para: ` Are you feeling a bumpy ride in your Maruti Suzuki WagonR 
+            while travelling or realising the wheel alignment is wrong? If yes, then the poor suspension can be an issue. Suspension is one of the most important components in the car. It helps keep your car stable and makes your travel smooth and comfortable. If you feel a bump while driving or realise that one side of the car is bending more than the other,
+             then visit the car service centre for your car service.`,
+          },
+        ],
+      },
+      {
+        heading: "Specialised Tools & Equipment",
+        para: `All the GoMechanic workshops across Pune 
+        have specialised tools and modern equipment which ensure that the headlight, taillight or the horn on your WagonR is fitted well in place and functions completely. Our trained mechanics also ensure that the front or the rear bumper is fitted back well if they need to be
+         opened to carry out the light replacement service.`,
+      },
+      {
+        heading: "Warranty on Light & Fitment Services ",
+        para: `Checking the wheel alignment is the most
+        All the headlight/taillight replacement services
+         at GoMechanic Pune come with a 1-month warranty on fitting.`,
+      },
+    ],
+  },
 ];

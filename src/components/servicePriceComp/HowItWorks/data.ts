@@ -150,4 +150,132 @@ export const Waranty = [
       },
     ],
   },
+  {
+    desc: [
+      {
+        para1: "Free Cleaning",
+        para2:
+          " We offer 1 free cleaning in case you feel that it was not done up to your expectations.",
+      },
+      {
+        para1: "Up To 5 Years Warranty",
+        para2:
+          "With GoMechanic, you get industry-best warranty on paint protection services such as PPF..",
+      },
+    ],
+    terms: [
+      {
+        header: "Terms and Conditions",
+        para1:
+          "Any spillage/wastage caused post delivery of car will not be covered.",
+        para2:
+          "Damage caused to paint protection due to accidents will not be covered.",
+      },
+    ],
+  },
+  {
+    desc: [
+      {
+        para1: "Free Inspection and Repair",
+        para2:
+          "We'll inspect and repair your car, for free, in case of defective repair.",
+      },
+      {
+        para1: "Replacement of Spares",
+        para2:
+          "We'll replace any defective spare part, free of cost, within 90 days of the service.",
+      },
+      {
+        para1: "1 Month Warranty on Labours",
+        para2:
+          "GoMechanic provides you 1 month warranty on the labour of custom services to ensure hassle-free experience.",
+      },
+    ],
+    terms: [
+      {
+        header: "Terms and Conditions",
+        para1:
+          "Any spare parts that have not been fitted by GoMechanic during service will not be covered.",
+        para2:
+          "Any fluid leakage/malfunctioning caused after 1 month warranty period will not be covered.",
+      },
+    ],
+  },
+  {
+    desc: [
+      {
+        para1: "Free Revisit, No Questions Asked",
+        para2:
+          "If you face any issue after the service, our experts will inspect the car, free of cost.",
+      },
+      {
+        para1: "30 Days Warranty On Oil and Filter",
+        para2:
+          "At GoMechanic, we use 100% Genuine parts. Any defective filter or oil will be replaced, free of cost.",
+      },
+      {
+        para1: "Warranty on Brake Pads",
+        para2: "GoMechanic offers 1 month warranty on the brake pads/discs.",
+      },
+    ],
+    terms: [
+      {
+        header: "Terms and Conditions",
+        para1:
+          "Any Damaged Spare Parts not fitted by GoMechanic during the service will not be covered.",
+        para2:
+          "Any Fluid Leakage caused due to accidents post service will not be covered.",
+      },
+    ],
+  },
+  {
+    desc: [
+      {
+        para1: "Free Revisit, No Questions Asked",
+        para2:
+          "If you face any issue after the service, our experts will inspect the car, free of cost.",
+      },
+      {
+        para1: "30 Days Warranty On Oil and Filter",
+        para2:
+          "At GoMechanic, we use 100% Genuine parts. Any defective filter or oil will be replaced, free of cost.",
+      },
+      {
+        para1: "Warranty on Brake Pads",
+        para2: "GoMechanic offers 1 month warranty on the brake pads/discs.",
+      },
+    ],
+    terms: [
+      {
+        header: "Terms and Conditions",
+        para1:
+          "Any Damaged Spare Parts not fitted by GoMechanic during the service will not be covered.",
+        para2:
+          "Any Fluid Leakage caused due to accidents post service will not be covered.",
+      },
+    ],
+  },
+  {
+    desc: [
+      {
+        para1: "1 Month Free Replacement",
+        para2:
+          " If the fitments such as horns, lights are found defective, we'll replace them, free of cost.",
+      },
+      {
+        para1: "1 Year Warranty on Stereos",
+        para2:
+          "All our range of Stereos come with a 1 year warranty, we'll replace it for free under this period.",
+      },
+    ],
+    terms: [
+      {
+        header: "Terms and Conditions",
+        para1:
+          "GoMechanic will not be responsible for any modification done to the fitments.",
+        para2:
+          "Any Fitments that have not been fitted by GoMechanic will not be covered.",
+      },
+    ],
+  },
 ];

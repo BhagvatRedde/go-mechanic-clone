@@ -714,4 +714,459 @@ export const reviewData = [
       },
     ],
   },
+  {
+    header: "Recent Review & Rating on Car Spa & Cleaning",
+    content: [
+      {
+        Image: "reviewImages/s1.png",
+        title: "Rakesh Pandey",
+        time: "Published 4 months ago",
+        review: `GoMechanic did a great job. They gave an all-round cleaning to my Honda Brio.
+         The service was smooth, and the process completed within time.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s2.png",
+        title: "Sanchit Sharma",
+        time: "Published 3 months ago",
+        review: `I booked a car interior spa for my Hyundai Creta. I was impressed with the work and the car’s interior 
+        was back to feeling fresh. Highly recommended! Kudos to GoMechanic.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s3.png",
+        title: "Puru Choudhary",
+        time: "Published 5 months ago",
+        review: `These guys are amazing. We take our friend’s vehicles to get Avery PPF service from GoMechanic, and they never cease to amaze us. Great work!`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s4.png",
+        title: "Rahul Vijay",
+        time: "Published 3 months ago",
+        review: `I am very pleased with the time and thorough work that GoMechanic did during my
+         Teflon Coating Service. Cheers to the team for the hard work.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "AJINKYA BENDRE",
+        time: "Published 6 months ago",
+        review: `Used them for car cleaning and jump-start service, no complaints`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Navnath Pabal",
+        time: "Published 3 months ago",
+        review: ` I am using Chevrolet spark, I had break, clutch issues,,,,, 
+        since chevrolet has almost stopped supplying spare parts, so I tried with go mechanuc Thanks to the team for suggesting A 1 auto solutions I lost my hopes with non availability of spare parts, but the way A1 team have made the availability of spares, in such a short span of time that I was totally surprised and very happy with the response with service. I wonder that even such a small garage is providing branded spare parts that too with on time availability. Truly happy with
+         the services Thanks a lot team A 1 auto solutions Highly recommended...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Binay Gupta",
+        time: "Published 2 months ago",
+        review: ` Gomechanic Pune Best cleaning and car detailing service in Gomechnic. Good qaulity work done by these guys
+         Professionalism kind of work Good behaviour as well`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s7.png",
+        title: "Vinayak Lokhande",
+        time: "Published 3 months ago",
+        review: `Royal automotive have professional and experienced men's. Recently I got my dent and paint fix from them for my 20 days old brand new car. 
+        They did a fantastic job in that. I liked it.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Sumit Godse",
+        time: "Published 5 months ago",
+        review: `Went there for denting and painting work. Took two days to remove a dent from rear quarter panel and reworking the right front bumper. Paint was an exact match.
+         Anant advises well and can be trusted! Would like to visit again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Arun Vijaykumar",
+        time: "Published 3 months ago",
+        review: `I went to them for Bumper repair and Denting and 
+        paiting job, I also opted to do the internal and external cleaning and 
+        polishing with 3M products. I must say that the denting and painting job with the repair work were done excellently and no complaints there. However, the cleaning job sucked, internal areas had marks and stains they promised would be completely gone after the cleaning, but did not. Although they were kind enough to ask me to stop by again to get those stains removed for no charge, my rating is for the hassle it caused. Else the Auto Pro guy named Vikram has been extremely professional, kept me updated timely about the status of my vehicle and the work done etc. Trustworthy people, I would take my vehicle 
+        again to this workshop and would also recommend this place to all.`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Car Inspections",
+    content: [
+      {
+        Image: "reviewImages/s1.png",
+        title: "Siddhi malhotra",
+        time: "Published 4 months ago",
+        review: `I got the HVAC service for my car to get its fluids and ac gas topped up, staff at GoMechanic did a pretty good job!`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s2.png",
+        title: "Raghav Kar",
+        time: "Published 3 months ago",
+        review: `Recently I took my Jazz to GoMechanic for the first time for a Disc Turning service.
+         They were very friendly and did a great job. Great work, guys!`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s3.png",
+        title: "Anuj Vijay",
+        time: "Published 5 months ago",
+        review: `GoMechanic provides the best car engine inspection services, and they are amazing in what they do. Helpful, smart, and they do it timely.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s4.png",
+        title: "Rahul Vijay",
+        time: "Published 3 months ago",
+        review: `I am very pleased with the time and thorough work that GoMechanic did during my
+         Teflon Coating Service. Cheers to the team for the hard work.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Khushi Rani",
+        time: "Published 6 months ago",
+        review: `I always recommend to take service from repair car and services car from the gomachanic vehicle..`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Navnath Pabal",
+        time: "Published 3 months ago",
+        review: ` I am using Chevrolet spark, I had break, clutch issues,,,,, 
+        since chevrolet has almost stopped supplying spare parts, so I tried with go mechanuc Thanks to the team for suggesting A 1 auto solutions I lost my hopes with non availability of spare parts, but the way A1 team have made the availability of spares, in such a short span of time that I was totally surprised and very happy with the response with service. I wonder that even such a small garage is providing branded spare parts that too with on time availability. Truly happy with
+         the services Thanks a lot team A 1 auto solutions Highly recommended...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "S P",
+        time: "Published 2 months ago",
+        review: ` New place so clean and neat as yet. Went for std service but was talked into upgrade. Tire pressure not checked. Service person forgot to close radiator cap and closed the hood. Had to remind him as I was watching them. vehicle diagnostic was not done tough was included as reason given was it is done only if check engine light is ON. Did not bother as had done complete check earlier. 
+        Sales person did his job quite well though.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s7.png",
+        title: "Vinayak Lokhande",
+        time: "Published 3 months ago",
+        review: `Royal automotive have professional and experienced men's. Recently I got my dent and paint fix from them for my 20 days old brand new car. 
+        They did a fantastic job in that. I liked it.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Sumit Godse",
+        time: "Published 5 months ago",
+        review: `Went there for denting and painting work. Took two days to remove a dent from rear quarter panel and reworking the right front bumper. Paint was an exact match.
+         Anant advises well and can be trusted! Would like to visit again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Pravin Thaker",
+        time: "Published 3 months ago",
+        review: `Booked a body repair and suspension overhaul for my swift with GoMechanic and I am happy with the service provided. Give it a shot if your car is out of warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Windshields & Lights",
+    content: [
+      {
+        Image: "reviewImages/c1.png",
+        title: "Ritvik Behl",
+        time: "Published 4 months ago",
+        review: `My Nissan got few cracks on the rear windshield and needed an immediate replacement.
+         I went to GoMechanic, and they did it in no time.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/c2.png",
+        title: "Natasha Malik",
+        time: "Published 3 months ago",
+        review: `Rear Windshield Replacement by GoMechanic is the best in the city. It is great service also 
+        I get a month warranty on the fitting as well.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/c3.png",
+        title: "Anuj Vijay",
+        time: "Published 5 months ago",
+        review: `GoMechanic provides the best car engine inspection services, and they are amazing in what they do. Helpful, smart, and they do it timely.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s4.png",
+        title: "Rahul Vijay",
+        time: "Published 3 months ago",
+        review: `I am very pleased with the time and thorough work that GoMechanic did during my
+         Teflon Coating Service. Cheers to the team for the hard work.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Khushi Rani",
+        time: "Published 6 months ago",
+        review: `I always recommend to take service from repair car and services car from the gomachanic vehicle..`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Navnath Pabal",
+        time: "Published 3 months ago",
+        review: ` I am using Chevrolet spark, I had break, clutch issues,,,,, 
+        since chevrolet has almost stopped supplying spare parts, so I tried with go mechanuc Thanks to the team for suggesting A 1 auto solutions I lost my hopes with non availability of spare parts, but the way A1 team have made the availability of spares, in such a short span of time that I was totally surprised and very happy with the response with service. I wonder that even such a small garage is providing branded spare parts that too with on time availability. Truly happy with
+         the services Thanks a lot team A 1 auto solutions Highly recommended...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "S P",
+        time: "Published 2 months ago",
+        review: ` New place so clean and neat as yet. Went for std service but was talked into upgrade. Tire pressure not checked. Service person forgot to close radiator cap and closed the hood. Had to remind him as I was watching them. vehicle diagnostic was not done tough was included as reason given was it is done only if check engine light is ON. Did not bother as had done complete check earlier. 
+        Sales person did his job quite well though.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s7.png",
+        title: "Lalit Sindhi",
+        time: "Published 3 months ago",
+        review: `Due to an accident, I had to replace my Front Windshield. I tried GoMechanic, 
+        and their quality of work has left me in awe.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "sameer Kumar",
+        time: "Published 5 months ago",
+        review: `There workers have good behaviour and I like this behaviour...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Aadarsh Thakur",
+        time: "Published 3 months ago",
+        review: `It was an absolute delight to have his team to come clean my polo. I’m very very satisfied with the service and I will book those again! Thanks ! I’m really happy.`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Suspension & Fitments",
+    content: [
+      {
+        Image: "reviewImages/f1.png",
+        title: "Prem Daaruwala",
+        time: "Published 4 months ago",
+        review: `Got a replacement for my starter motor from GoMechanic. Thereafter, I faced no problem with my car, it’s been almost an year. 
+        Overall it was a good experience at GoMechanic.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/f2.png",
+        title: "Chitra Desai",
+        time: "Published 3 months ago",
+        review: `It was a real headache to start my car. Thank god I went to GoMechanic to get my car checked. It had leakage ithe starter motor and needed repair. 
+        They did repair it well. It was worth every penny.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/f3.png",
+        title: "Chahal Chopra",
+        time: "Published 5 months ago",
+        review: `My car’s gearbox was vibrating vigorously and I facing problems with the steering. Turning to GoMechanic services was the best decision ever! They got everything covered
+         at my budget and my car is working fine now.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/f4.png",
+        title: "Rahul Vijay",
+        time: "Published 3 months ago",
+        review: `I am very pleased with the time and thorough work that GoMechanic did during my
+         Teflon Coating Service. Cheers to the team for the hard work.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/f5.png",
+        title: "Khushi Rani",
+        time: "Published 6 months ago",
+        review: `I always recommend to take service from repair car and services car from the gomachanic vehicle..`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Navnath Pabal",
+        time: "Published 3 months ago",
+        review: ` I am using Chevrolet spark, I had break, clutch issues,,,,, 
+        since chevrolet has almost stopped supplying spare parts, so I tried with go mechanuc Thanks to the team for suggesting A 1 auto solutions I lost my hopes with non availability of spare parts, but the way A1 team have made the availability of spares, in such a short span of time that I was totally surprised and very happy with the response with service. I wonder that even such a small garage is providing branded spare parts that too with on time availability. Truly happy with
+         the services Thanks a lot team A 1 auto solutions Highly recommended...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "S P",
+        time: "Published 2 months ago",
+        review: ` New place so clean and neat as yet. Went for std service but was talked into upgrade. Tire pressure not checked. Service person forgot to close radiator cap and closed the hood. Had to remind him as I was watching them. vehicle diagnostic was not done tough was included as reason given was it is done only if check engine light is ON. Did not bother as had done complete check earlier. 
+        Sales person did his job quite well though.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s7.png",
+        title: "Lalit Sindhi",
+        time: "Published 3 months ago",
+        review: `Due to an accident, I had to replace my Front Windshield. I tried GoMechanic, 
+        and their quality of work has left me in awe.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Pintu Kumar",
+        time: "Published 5 months ago",
+        review: `One of the best car service. Very excellent servicing my car.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Sachin Fasale",
+        time: "Published 3 months ago",
+        review: `Very satisfied with the overall experience. They took efforts to analyse the car condition and consultated us. Will surely use them again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Clutch & Body Parts",
+    content: [
+      {
+        Image: "reviewImages/a1.png",
+        title: "Kamla Nath Pandey",
+        time: "Published 4 months ago",
+        review: `Thanks to Gomechanic for its pick up and drop assistance services with no additional costs. 
+        These guys are highly professional.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/z1.png",
+        title: "Sid Solanki",
+        time: "Published 3 months ago",
+        review: `I called GoMechanic to get my front bumper fixed. They changed my bumper in no time and also charged 
+        almost 40% less than the market price.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t3.png",
+        title: "Dinesh Tyagi",
+        time: "Published 5 months ago",
+        review: `GoMechanic assisted me with my car's poor condition by getting its front bumper replaced. 
+        Highly professional services.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/a4.png",
+        title: "Rahul Vijay",
+        time: "Published 3 months ago",
+        review: `I am very pleased with the time and thorough work that GoMechanic did during my
+         Teflon Coating Service. Cheers to the team for the hard work.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/f5.png",
+        title: "Khushi Rani",
+        time: "Published 6 months ago",
+        review: `I always recommend to take service from repair car and services car from the gomachanic vehicle..`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s5.png",
+        title: "Navnath Pabal",
+        time: "Published 3 months ago",
+        review: ` I am using Chevrolet spark, I had break, clutch issues,,,,, 
+        since chevrolet has almost stopped supplying spare parts, so I tried with go mechanuc Thanks to the team for suggesting A 1 auto solutions I lost my hopes with non availability of spare parts, but the way A1 team have made the availability of spares, in such a short span of time that I was totally surprised and very happy with the response with service. I wonder that even such a small garage is providing branded spare parts that too with on time availability. Truly happy with
+         the services Thanks a lot team A 1 auto solutions Highly recommended...`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Akshat Verma",
+        time: "Published 2 months ago",
+        review: ` These amazing fog lights which I got replaced from GoMechanic highly recommend. They are quite beneficial.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s7.png",
+        title: "Lalit Sindhi",
+        time: "Published 3 months ago",
+        review: `Due to an accident, I had to replace my Front Windshield. I tried GoMechanic, 
+        and their quality of work has left me in awe.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Sumit Godse",
+        time: "Published 4 months ago",
+        review: `Went there for denting and painting work. Took two days to remove a dent from rear quarter panel and reworking the right front bumper. Paint was an exact match.
+         Anant advises well and can be trusted! Would like to visit again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Pintu Kumar",
+        time: "Published 5 months ago",
+        review: `One of the best car service. Very excellent servicing my car.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/s6.png",
+        title: "Sourav Yadav",
+        time: "Published 3 months ago",
+        review: `I recommend to all go through their service always great service`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
 ];
