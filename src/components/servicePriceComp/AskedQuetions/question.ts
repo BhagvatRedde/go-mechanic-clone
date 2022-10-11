@@ -126,4 +126,133 @@ export const questionAnswer = [
       },
     ],
   },
+  {
+    header: "Frequently Asked Questions (FAQs) on Tyres & Wheel Care",
+    content: [
+      {
+        id: "panel1",
+        quetion: "How frequently should I change my car's tyre?",
+        answer: `The life of a tyre depends on how you drive your car, terrain & quality of road and upkeep. Typically, a car tyre has a life of 50,000 to 60,000 kms. 
+        GoMechanic recommends changing tyres 50000 kms.`,
+      },
+      {
+        id: "panel2",
+        quetion: "Why should I choose GoMechanic for my car tyres?",
+        answer: `At GoMechanic, we offer the convenience of choosing your preferred car tyres from a wide range of brands and models. We ensure 100% quality assurance, genuine spares and warranty upto 5 years. Unlike other online channels, at GoMechanic you can get your car picked up or drop it yourself. 
+        We will install the tyres at the GoMechanic service centers for free.`,
+      },
+      {
+        id: "panel3",
+        quetion: "What is the process of purchasing tyres?",
+        answer: `You can choose from a wide variety of tyre brands based on 
+        your selected car. If you are looking for tyres for a different cars, it would be a good idea to select the right car. Amongst the tyres on display, you can filter tyres based on size, brand etc., go through the details of any listed tyres, find more tyres of the same size or brand as the selected tyre. Once you add tyre(s) to the cart, confirm your arrival mode, date & time,
+         payment mode and voila! your order is placed for installation.`,
+      },
+      {
+        id: "panel4",
+        quetion: "What are the available brands?",
+        answer: `At GoMechanic, you can choose tyres from Apollo, CEAT, Continental, Falken, JK, Michelin, MRF,
+         Pirelli, Bridgestone, Yokohama and many more..`,
+      },
+      {
+        id: "panel5",
+        quetion:
+          "What is the maximum quantity of tyres that I can order from GoMechanic?",
+        answer: ` You can order a maximum of 5 tyres of one kind with your order.`,
+      },
+      {
+        id: "panel6",
+        quetion: "Do you offer any warranty on car tyres?",
+        answer: `Yes, all the tyres listed by us comes with a warranty of 2 to 5 years depending upon the chosen tyre.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Denting & Painting",
+    content: [
+      {
+        id: "panel1",
+        quetion: "What kind of damages can be repaired on my WagonR ?",
+        answer: `We are equipped to fix any kind of sheet metal damage (dents, dings, tears), paint damage (scratches, scuffs, blemishes, paint chips) and plastic and fibre parts on your WagonR. We even do custom car repairs. Our various auto body workshops across Pune uses specialised tools 
+        and machinery to take care of any denting/painting repairs.`,
+      },
+      {
+        id: "panel2",
+        quetion: "Do I get any warranty on Denting/Painting car service?",
+        answer: `Yes, absolutely. With GoMechanic, you get 2 years of unconditional warranty on paint for your WagonR.`,
+      },
+      {
+        id: "panel3",
+        quetion: "Can you match the paint colour exactly to my WagonR ?",
+        answer: `We use DU PONT paint over Grade-A primer and specialised colour palettes approved by WagonR which offer exceptional colour match exactly to your WagonR . With GoMechanic,
+         you can be sure of getting the best denting/painting services in Pune.`,
+      },
+      {
+        id: "panel4",
+        quetion: "How much time does denting/painting repair take?",
+        answer: `A single panel on your WagonR takes around 24 hours start-to-finish due to the elaborative procedures involved. The process also requires further rubbing, polishing and buffing. A full car body denting and painting for WagonR can take around 7-8 days 
+        depending on the repairs required on the car.`,
+      },
+      {
+        id: "panel5",
+        quetion: "Are the rates mentioned for painting, also includes denting?",
+        answer: ` The prices for denting and painting depends on the extent of the damage and repairs involved. If a body-panel on your WagonR has a minor dent, then the painting cost will be included with denting. However, if the dent is extensive,
+         we will provide a quote after thoroughly inspecting the damage..`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "How much will it cost to repair a small dent on Maruti Suzuki WagonR ?",
+        answer: `Repairing a dent involves an elaborate process which takes time as the size and intensity of the dent vary every time. We can offer you an estimate for the dent repair
+         after a thorough inspection of you Maruti Suzuki WagonR.`,
+      },
+    ],
+  },
+  {
+    header: "Frequently Asked Questions (FAQs) on Detailing Services",
+    content: [
+      {
+        id: "panel1",
+        quetion: "What is GoMechanic Detailing & Coating Service in Pune? ?",
+        answer: `GoMechanic detailing & coating service includes multiple services which can help you retain that showroom shine for your Maruti Suzuki WagonR . 
+        These include services like PPF, Ceramic Coating, Teflon Coating and many more.`,
+      },
+      {
+        id: "panel2",
+        quetion:
+          "What is the difference between Teflon coating vs Anti-rust coating?",
+        answer: `Teflon coating for your Maruti Suzuki WagonR is a paint protection
+         treatment, chemically synthesised from a fluoropolymer which bonds to the paint offering a brilliant shine, doing away with the problem of corrosion and wear and not Anti-rust coating is a car underbody protection treatment, which is applied to the underbody of the car. thick 2-3mm of a rubberised silicone-polyether layer is applied to the under-body to give it enhanced protection against hard not a. paint chips. Book a service today and get
+         complete underbody rust and corrosion treatment at attractive prices in Pune.`,
+      },
+      {
+        id: "panel3",
+        quetion:
+          "How long does it take to carry out the detailing services at GoMechanic Pune?",
+        answer: `It completely depends upon which detailing service you choose. We try to deliver utmost satisfaction in the least time possible. However, it takes around 3-4 days to ensure the selected 
+        services are carried out perfectly on your Maruti Suzuki WagonR .`,
+      },
+      {
+        id: "panel4",
+        quetion:
+          "How often should I avail the detailing services for my Maruti Suzuki WagonR ?",
+        answer: `Most of the detailing services like Ceramic Coating and Teflon Coating last long once availed. However, GoMechanic suggests you get it in
+         7-8 months checked regularly if it needs replacement.`,
+      },
+      {
+        id: "panel5",
+        quetion:
+          "Is there a warranty on my Maruti Suzuki WagonR detailing service?",
+        answer: ` Yes, all the detailing services done at GoMechanic Pune come with a warranty. However, the warranty may vary according to the service you avail
+        . You can claim this warranty at any workshop across Pune`,
+      },
+      {
+        id: "panel6",
+        quetion:
+          "I can’t visit the workshop to drop my car. Can GoMechanic help?",
+        answer: `Yes, we provide free doorstep pickup and drop with all our services. We ensure that your experience is 
+        completely contactless considering the need of the hour.`,
+      },
+    ],
+  },
 ];

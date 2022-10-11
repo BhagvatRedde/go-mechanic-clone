@@ -401,4 +401,317 @@ export const reviewData = [
       },
     ],
   },
+  {
+    header: "Recent Review & Rating on Tyres & Wheel Care",
+    content: [
+      {
+        Image: "reviewImages/t1.png",
+        title: "Shushant Arora",
+        time: "Published 4 months ago",
+        review: `My car’s mud flaps were facing some serious issues, they were not aligned properly. Got it repaired at GoMechanic. They did the job very precisely.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t2.png",
+        title: "Ram Kapoor",
+        time: "Published 3 months ago",
+        review: `I got my car's wheel care services done at GoMechanic and I must say they did a hell of a job. Highly exceptional services at such a good price.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t3.png",
+        title: "Raghav Singh",
+        time: "Published 5 months ago",
+        review: `I own a Mahindra XUV 500 and I needed to change its mud flaps. GoMechanic provided me with brand new OEM mud flaps at such a reasonable price.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t3.png",
+        title: "Nishant Shukla",
+        time: "Published 3 months ago",
+        review: `My Honda City was having issues in the mud flaps. 
+        Staff at GoMechanic changed the mud flaps and there is no problem left..`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t4.png",
+        title: "Ankur Jain",
+        time: "Published 6 months ago",
+        review: `My Ford figo’s tyres were to be replaced. So i chose GoMechanic to do the task. 
+        I must say i was fully satisfied with the work and they did it in no time.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t5.png",
+        title: "Jatin Sharma",
+        time: "Published 3 months ago",
+        review: `Lately, the mudflaps were entangling with the wheel of my car. 
+        Visited GoMechanic and they fixed the issue by installing a new one. Great service.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t6.png",
+        title: "Arun Singh",
+        time: "Published 2 months ago",
+        review: `GoMechanic’s Complete Wheel Care service is highly recommended as I've
+         consulted them quite a few times and I must say they do their work effectively..`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/D.png",
+        title: "Sakshi kapoor",
+        time: "Published 3 months ago",
+        review: `My car needed a tyre replacement really badly. As it had clocked more than 40k kilometres. 
+        I chose GoMechanic for the same and i was fully satisfied with their services!`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Sundari Kushwaha",
+        time: "Published 5 months ago",
+        review: `Not only an excellent place to get the car serviced routinely,
+         but also good workmanship in getting it repaired. The owner of the place is very politeand honest; he and his team are expert in their job. Various repair work of my car from body dent to brakes, abs etc were done extremely well and in a very cost effective manner. Routine service is also cost effective. 
+        Internal cleaning and body polishing was also done so well. Great work. Thank you.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/H.png",
+        title: "Swapnil Gandhi",
+        time: "Published 3 months ago",
+        review: `I went there with my brother to change the wheel of our car good place supportive staff and their 
+        suggestions are always good I had a good experience hence one must visit.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/md.png",
+        title: "Faisal Khan",
+        time: "Published 1 months ago",
+        review: `Best place to buy automotive supplies, tools and paints,
+         they also do service for 4 wheelers at very decent rates.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Melwyn Saldanha",
+        time: "Published 3 months ago",
+        review: `Excellent servicing at cheap rates for 2 and 4 wheelers, Highly Recommended`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/md.png",
+        title: "Ankit Bukshete",
+        time: "Published 4 months ago",
+        review: `Excellent service..! Owner was awesome , took care of us..! Wide range of variety of Tyres..! Best place to buy tyres..!`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/pavan.png",
+        title: "Henry Buskey",
+        time: "Published 3 months ago",
+        review: `Services: Body & Trim, Electrical, Lighting repair,
+         Air conditioning, Oil change, Auto engine diagnostic, Electrical repair,
+          Tune-up service, Custom Build, Steering Wheel Repair, Classic Cars, Battery, General repairs & maintenance, Tires, A/C installation & repair, Car waxing, Engine repair, Vehicle Modifications, Auto detailing, Carburetor cleaning, Rust Repair, Re-gas/recharge, Auto glass repair, Drivetrain repair, Upholstery & interior restoration, Transmission, Air & cabin filter replacement, Tire air pump, Painting, Auto interior vacuuming, Wheel alignment, A/C services, Chassis repair, Steering & suspension repair, Brakes, A/C filter replacement, Vehicle Diagnostics service, Body repairs, Temperature check, Tire pressure testing, Car painting, Exhaust, Auto engine tuning Positive: Professionalism, Punctuality, Quality, Value Very kind, professional staff, reasonable cost, satisfied with the servicesPositive: Professionalism, Quality, Value Baaz car service is one of the best in the business. They take extra care of your car and Mr. Gurmukh is really professional towards handling people . Kudos to them on an awesome and carefree carservice experience that I had . Keep up the good workhave done service on 8 December now an issue of starting in the morning find Today 18 Dec. Now I visited and they do some fitting Check now I feel car is ok let's check
+         it for next 10 days weather this issue is come again or not.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/E.png",
+        title: "Ankit Bukshete",
+        time: "Published 3 months ago",
+        review: `Excellent service..! Owner was awesome , took care of us..! Wide range of variety of Tyres..! Best place to buy tyres..!`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t7.png",
+        title: "Suresh Kumar",
+        time: "Published 3 months ago",
+        review: `This is the second time I got my superb serviced from wheel force. Would like to share the following`,
+        star: [1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Denting & Painting",
+    content: [
+      {
+        Image: "reviewImages/d1.png",
+        title: "Shivani Khandelwal",
+        time: "Published 4 months ago",
+        review: `Be it any car service. GoMechanic never fails to amaze me. They repainted my car’s right quarter panel. It was shining again.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d2.png",
+        title: "Divyam Arora",
+        time: "Published 3 months ago",
+        review: `I recently decided to have the boot lid painted of my Wagoner. I was a bit worried about the colour contrast, but the GoMechanic did a great job.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d3.png",
+        title: "Jatin Satija",
+        time: "Published 5 months ago",
+        review: `Daily wear and tear left my car with a lot of scratches and minor dents. I gave my car at GoMechanic and they took care of it. Fully satisfied!`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d4.png",
+        title: "Vishal Khanna",
+        time: "Published 3 months ago",
+        review: `Thanks to GoMechanic for painting my front door of the car with the same colour. 
+        Highly recommended services.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d5.png",
+        title: "Snehal Rastogi",
+        time: "Published 6 months ago",
+        review: `Thanks to Gomechanic for such effective and time-efficient services you've provided to me.
+         You guys are really the best. Highly recommended.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t5.png",
+        title: "Prasad Patil",
+        time: "Published 3 months ago",
+        review: ` I have done my car dent and painting service from here, the service was awesome and above expectation. It was done so clean and matched the paint color exact same.
+         Recommend car users to visit here and take car servicing from here.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t6.png",
+        title: "Navjat Kaur",
+        time: "Published 2 months ago",
+        review: `The bumper of my BMW X3 was covered with dents. I took it to GoMechanic, and they rebuilt it from the ground up!👍`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/D.png",
+        title: "Vinayak Lokhande",
+        time: "Published 3 months ago",
+        review: `Royal automotive have professional and experienced men's. Recently I got my dent and paint fix from them for my 20 days old brand new car. 
+        They did a fantastic job in that. I liked it.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Sumit Godse",
+        time: "Published 5 months ago",
+        review: `Went there for denting and painting work. Took two days to remove a dent from rear quarter panel and reworking the right front bumper. Paint was an exact match.
+         Anant advises well and can be trusted! Would like to visit again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d6.png",
+        title: "Root Machinery",
+        time: "Published 3 months ago",
+        review: `They have good set up all essential services regarding car repair and maintenance.They are equipped with all facilities like repair services ,denting painting, insurance claim .Go for it`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
+  {
+    header: "Recent Review & Rating on Detailing Services",
+    content: [
+      {
+        Image: "reviewImages/d1.png",
+        title: "Naman Rajput",
+        time: "Published 4 months ago",
+        review: `3M Teflon coating by GoMechanic is the best in the city. It is a pocket-friendly, transparent process and with a warranty of 3 months!`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d2.png",
+        title: "Kailash Mehta",
+        time: "Published 3 months ago",
+        review: `I rarely find time to get my car serviced due to my busy schedule. GoMechanic is like a saviour as they have a great Deep All-round Spa service.`,
+        star: [1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d3.png",
+        title: "Puru Choudhary",
+        time: "Published 5 months ago",
+        review: `These guys are amazing. We take our friend’s vehicles to get Avery PPF service from GoMechanic, and they never cease to amaze us. Great work!`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d4.png",
+        title: "Vishal Khanna",
+        time: "Published 3 months ago",
+        review: `Thanks to GoMechanic for painting my front door of the car with the same colour. 
+        Highly recommended services.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d5.png",
+        title: "Jitu ST",
+        time: "Published 6 months ago",
+        review: `Was searching for a good coating service. Googled and got the recommendation of this workshop which is basically for all type of car services. Very happy with the coating. 
+        Will be looking forward for the future car services. Highly recommended`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t5.png",
+        title: "Prasad Patil",
+        time: "Published 3 months ago",
+        review: ` I have done my car dent and painting service from here, the service was awesome and above expectation. It was done so clean and matched the paint color exact same.
+         Recommend car users to visit here and take car servicing from here.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/t6.png",
+        title: "Mahesh Deore",
+        time: "Published 2 months ago",
+        review: ` I am really impressed by this workshop. Service was outstanding. Overall Good experience.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/D.png",
+        title: "Vinayak Lokhande",
+        time: "Published 3 months ago",
+        review: `Royal automotive have professional and experienced men's. Recently I got my dent and paint fix from them for my 20 days old brand new car. 
+        They did a fantastic job in that. I liked it.`,
+        star: [1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/unnamed.png",
+        title: "Apoorva Joshi",
+        time: "Published 4 months ago",
+        review: `BMW service centre offers amazing prices on car battery.
+         I positioned the exciting 1 and goat of 44 months warranty.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/vv.png",
+        title: "Sumit Godse",
+        time: "Published 5 months ago",
+        review: `Went there for denting and painting work. Took two days to remove a dent from rear quarter panel and reworking the right front bumper. Paint was an exact match.
+         Anant advises well and can be trusted! Would like to visit again.`,
+        star: [1, 1, 1, 1, 1],
+      },
+      {
+        Image: "reviewImages/d6.png",
+        title: "Roshni Kumari",
+        time: "Published 3 months ago",
+        review: `They provide very safty........And sanitized in their work....`,
+        star: [1, 1, 1, 1, 1],
+      },
+    ],
+  },
 ];

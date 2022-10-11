@@ -139,4 +139,126 @@ export const HondaData = [
       },
     ],
   },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Tyres & Wheel Care In Pune",
+
+    content: [
+      {
+        heading: "GoMechanic Tyre service",
+        para: `Car tyres are the only point of contact for your car with the road, therefore your need to make sure your car tyres are balanced and in perfect condition.
+        Factors that can be indicators for tyre replacement are; uneven tread wear, cracks, cupping, bulges & bubbles and sidewall damage.
+        Car tyres have a finite life span and should be replaced every 4 years or 40,000 kms, whichever comes earlier..`,
+      },
+      {
+        heading: "Tyre services offered",
+        sub: [
+          {
+            subheading: "Tyre Replacement/Purchase:  ",
+            para: "Buy Maruti Suzuki WagonR tyres from leading brands like MRF, Michelin, Apollo, Bridgestone etc..",
+          },
+          {
+            subheading: "Tyre Fitting: ",
+            para: "Get complimentary tyre fitting with every new car tyre purchase with GoMechanic.",
+          },
+          {
+            subheading: "Tyre Rotation:",
+            para: "Tyre Rotation ensure even wear and tear of your car tyres.",
+          },
+          {
+            subheading: "Wheel Balancing: ",
+            para: " Laser-assisted wheel balancing with precious counterweights.",
+          },
+          {
+            subheading: "Nitrogen Inflation: ",
+            para: "Nitrogen is proven to boost fuel mileage by upto 10%.",
+          },
+        ],
+      },
+      {
+        heading: "Industry-rated top-notch equipment",
+        para: `We employ only the cutting edge technology in tyre replacement,
+         wheel balancing/alignment and tyre rotation service. From specialised tyre replacement jigs, nitrogen gas inflators and other tools specific to your Maruti Suzuki WagonR . 
+        Visit the nearest GoMechanic workshop in Pune`,
+      },
+
+      {
+        heading: "Dealership Warranty on Car Tyres",
+        para: `When you choose GoMechanic, you get the GoMechanic Advantage. 
+        Your new car tyres are covered under dealership warranty straight from the tyre manufacture anywhere in Pune.
+         Now, book with confidence.`,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Denting & Painting In Pun",
+
+    content: [
+      {
+        heading: "Maruti Suzuki WagonR Denting Painting service in Pune",
+        para: `A cost-effective way to maintain a vehicle for prolonged use
+        Ignoring paint damage can cause rusting problems.
+        A car with dents and scratches holds less value in the resale market.`,
+      },
+      {
+        heading: "Highly equipped auto-body workshop",
+        sub: [
+          {
+            subheading:
+              "Specialised Maruti Suzuki WagonR Auto-body Workshop:  ",
+            para: " Precision denting and painting equipment and hermetically sealed paint booth for the best results.",
+          },
+          {
+            subheading: "Nippon Paint/ Grade-A Primer:  ",
+            para: "Premium Nippon paint with Grade-A primer offering 100% colour match for a showroom new finish. ",
+          },
+          {
+            subheading: "2 Year Warranty On Paint:",
+            para: "We offer a 2-year unconditional warranty clause on paint across every GoMechanic workshop.",
+          },
+        ],
+      },
+      {
+        heading: "Warranty on Denting/Painting services",
+        para: `With our denting/painting services, 
+        we offer a 2-year warranty clause across every GoMechanic workshop in Pune.`,
+      },
+    ],
+  },
+  {
+    MainHeading:
+      "Why Choose GoMechanic For Maruti Suzuki WagonR CNG Detailing Services In Pune",
+
+    content: [
+      {
+        heading: "Car Detailing Services in Pune",
+        para: `Car Detailing Services offered by GoMechanic Pune enable you to avail detailing and coating services for your Maruti Suzuki WagonR without facing any hassle. We at GoMechanic Pune use only the best products
+         in the industry for your Maruti Suzuki WagonR detailing and coating services.`,
+      },
+      {
+        heading: "Highly equipped auto-body workshop",
+        sub: [
+          {
+            subheading: "Detailing Service Inclusions: ",
+            para: " PPF- Paint Protection Film, Silencer Coating ",
+          },
+          {
+            subheading: "Detailing Service Inclusions: ",
+            para: "Teflon Coating, Anti-Rust Underbody Coating ",
+          },
+        ],
+      },
+      {
+        heading: "Specialised Tools & Equipment",
+        para: `All the GoMechanic workshops across Pune have specialised tools, modern equipment and best-in-class detailing products which ensure that the detailing or coating on your Maruti Suzuki WagonR is done well and delivers the best performance. Our trained mechanics also ensure that the detailing 
+        and coating are done perfectly before delivering your vehicle.`,
+      },
+      {
+        heading: "Warranty on Detailing Services",
+        para: `All the detailing services at GoMechanic Pune come with a warranty.
+         However, the warranty period may vary with the service you choose.`,
+      },
+    ],
+  },
 ];
