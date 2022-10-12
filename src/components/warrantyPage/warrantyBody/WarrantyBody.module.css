@@ -2,6 +2,8 @@
   display: flex;
     /* height: 100vh;  */
    overflow-y: scroll;
+   background-color: #fff;
+
 
 }
 .custom-card img {
@@ -109,6 +111,21 @@
   font-size: 16px;
   padding: 7px 6px;
   margin-left: 85%;
+  position: relative;
+  cursor: pointer;
+}
+.card-btn-sec{
+  border: 1.5px solid #e73c33;
+  color:white;
+  background-color: red;
+  width: 76.8px;
+  width: 7rem;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+  border-radius: 0.1875rem;
+  font-size: 16px;
+  padding: 7px 6px;
+  margin-left: 83%;
   position: relative;
   cursor: pointer;
 }

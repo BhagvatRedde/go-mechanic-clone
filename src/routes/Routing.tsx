@@ -5,6 +5,7 @@ import { Services } from "../pages/services/Services";
 import SparePage from "../pages/spare-page/SparePage";
 import Milesmembership from "../pages/miles-Membership/Miles-Membership";
 import Warranty from "../components/warrantyPage/Warranty";
+import { SecureCheckout } from "../components/servicePriceComp/checkoutCard/secureCheckout/SecureCheckout";
 
 const Routing = ({ selectedCarHandler, ...rest }: any) => {
   return (
@@ -21,6 +22,7 @@ const Routing = ({ selectedCarHandler, ...rest }: any) => {
           element={<Services selectedCar={rest.selectedCar} />}
         />
         <Route path="/miles-membership" element={<Milesmembership />} />
+        <Route path="/cartPage" element={<SecureCheckout/>} />
       </Routes>
     </div>
   );
