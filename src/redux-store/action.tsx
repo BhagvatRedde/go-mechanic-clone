@@ -15,3 +15,7 @@ export const SetIsBtnActive = (data: any) => ({
   type: "IsBtnActive",
   payload: data,
 });
+export const RemoveCheckoutRow = (data: any) => ({
+  type: "RemoveRow",
+  payload: data,
+});

@@ -19,7 +19,7 @@ export const AcService = () => {
     <>
       {AppData &&
         AppData[0]?.PackageCardData[0]?.AcService?.map((data: any) => (
-          <>
+          <div className="mb-4">
             <div className={styles["card-header"]}>{data.header}</div>
             {data.content.map((content: any) => (
               <PackageCard
@@ -30,7 +30,7 @@ export const AcService = () => {
                 type="AcService"
               />
             ))}
-          </>
+          </div>
         ))}
     </>
   );

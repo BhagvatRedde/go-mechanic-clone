@@ -27,8 +27,9 @@ import LuxCars from "../../components/homePageComps/lux-cars.tsx/LuxCars";
 import Featured_buddies from "../../components/homePageComps/Featured_buddies/Featured_buddies";
 import HomeFooter from "../../components/homePageComps/homeFooter/HomeFooter";
 import HomeFooterEnd from "../../components/homePageComps/homeFooter/HomeFooterEnd";
-export const Home = () => {
+export const Home = ({ selectedCarHandler }: any) => {
   const [cityName, setCityName] = useState("Pune");
+  const [selectedCar, setSelectedCar] = useState();
   const dispatch = useDispatch();
   useEffect(() => {
     axios
@@ -43,7 +44,10 @@ export const Home = () => {
   const getCityName = (city: string) => {
     setCityName(city);
   };
-
+  const getSelectedCar = (data: any) => {
+    setSelectedCar(data);
+    selectedCarHandler(data);
+  };
   return (
     <div>
       <div className={styles["bodyDiv"]}>
@@ -54,6 +58,7 @@ export const Home = () => {
         </div>
         <ServiceModal
           cityName={cityName}
+          getSelectedCar={getSelectedCar}
           className={`${styles["floatingDiv"]}`}
         />
         <div className={`${styles["home-content"]}`}>
@@ -74,7 +79,7 @@ export const Home = () => {
         </div>
       </div>
       <div className={`${styles["footer-main"]}`}>
-        <HomeFooter/>
+        <HomeFooter />
         <HomeFooterEnd />
       </div>
     </div>
