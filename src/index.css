@@ -79,5 +79,5 @@ html {
   border-radius: 0;
 }
 .special-label {
-  display: none;
+  display: none !important;
 }

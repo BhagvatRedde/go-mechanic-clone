@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import styles from "./PhoneNumber.module.css";
 
 import "react-phone-input-2/lib/material.css";
-export const PhoneNumber = () => {
+export const PhoneNumber = ({ getLoggedInHandler }: any) => {
   const [value, setValue] = useState("");
   const [num, setNum] = useState();
   const [enteredotp, setEnteredOtp] = useState(0);
@@ -34,6 +34,7 @@ export const PhoneNumber = () => {
       ev.preventDefault();
       return false;
     }
+    getLoggedInHandler(true);
   };
   return (
     <Card

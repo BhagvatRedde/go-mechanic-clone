@@ -1,11 +1,17 @@
 import { Box } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { AddAddress } from "./addAddress/AddAddress";
 import { DateTime } from "./dateTime/DateTime";
 import { PaymentOptions } from "./payment/PaymentOptions";
 import { PhoneNumber } from "./phoneNumber/PhoneNumber";
 import styles from "./SecureCheckout.module.css";
 export const SecureCheckout = () => {
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const getLoggedInHandler = (data: any) => {
+    console.log(data);
+    setLoggedIn(data);
+  };
   return (
     <>
       <Box
@@ -21,8 +27,8 @@ export const SecureCheckout = () => {
       </Box>
 
       <div className={styles["checkout-content"]}>
-        <PhoneNumber />
-        <DateTime />
+        <PhoneNumber getLoggedInHandler={getLoggedInHandler} />
+        <DateTime loggedIn={loggedIn} />
         <AddAddress />
         <PaymentOptions></PaymentOptions>
       </div>
