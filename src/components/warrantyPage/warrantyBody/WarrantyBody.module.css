@@ -1,5 +1,8 @@
 .warranty-maindiv {
   display: flex;
+    /* height: 100vh;  */
+   overflow-y: scroll;
+
 }
 .custom-card img {
   height: 21vmax;
@@ -14,7 +17,8 @@
   width: 65vw;
   /* position:static; */
   margin-top: 7em;
-  height: 100vh;
+  height: 200vh;
+  /* max-height: max-content; */
   overflow-y: scroll;
   /* position: relative; */
 }
@@ -113,7 +117,7 @@
   margin-top: 6em;
   margin-left: 1em;
   height: 100vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   /* position: fixed; */
 }
 
@@ -226,4 +230,13 @@
       width: 100%;
     -o-object-fit: contain;
     object-fit: contain;
+}
+
+.acordian{
+      display: flex;
+    /* -ms-flex-align: center; */
+    align-items: center;
+    /* width:30% !important; */
+    /* -ms-flex-pack: justify; */
+    justify-content: space-between;
 }

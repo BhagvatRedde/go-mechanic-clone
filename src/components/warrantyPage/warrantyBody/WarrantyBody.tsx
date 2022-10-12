@@ -2,10 +2,12 @@ import { Box, Button, Grid } from "@mui/material";
 import React from "react";
 import { Card } from "react-bootstrap";
 import Marquee from "react-fast-marquee";
+import { quetionAnswer } from "../../homePageComps/Quetions/quetion";
+import { F_Question } from "../../reusable/F_Question/F_Question";
 // import Marquee from "react-css-marquee";
 
 import styles from "../warrantyBody/WarrantyBody.module.css";
-import { CardData, SubCarData, tagData } from "./TagData";
+import { CardData, freqQuestions, SubCarData, tagData } from "./TagData";
 import WarrantyCard from "./WarrantyCard";
 // const arr = ["abc", "cgg"];
 
@@ -40,8 +42,13 @@ const WarrantyBody = () => {
         ))}
         <div className={styles["graph"]}>
           <h3 className={styles["graph-title"]}>Your Warranty Savings</h3>
-          <h4 className={styles['graph-para']}>Save more than 50% with Warranty Plans</h4>
-          <img src="Warranty/graph-new.png" className={styles["graph-image"]}></img>
+          <h4 className={styles["graph-para"]}>
+            Save more than 50% with Warranty Plans
+          </h4>
+          <img
+            src="Warranty/graph-new.png"
+            className={styles["graph-image"]}
+          ></img>
         </div>
       </div>
       {/* second div */}
@@ -92,6 +99,8 @@ const WarrantyBody = () => {
               ))}
             </div>
           </div>
+          {/* Frequently asked questions */}
+          <F_Question data={freqQuestions} className={styles["acordian"]} />
         </div>
       </div>
     </div>
