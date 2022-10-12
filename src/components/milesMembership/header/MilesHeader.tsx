@@ -3,7 +3,7 @@ import  styles  from '../header/MilesHeader.module.css';
 
 const MilesHeader = () => {
     return (
-      <>
+      <div className={styles["main-container"]}>
         <div className={styles["main"]}>
   
             <img
@@ -12,7 +12,7 @@ const MilesHeader = () => {
             />
        
         </div>
-      </>
+      </div>
     );
 }
 

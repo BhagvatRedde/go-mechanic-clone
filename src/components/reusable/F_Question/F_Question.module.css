@@ -3,8 +3,6 @@
 }
 
 .quetions {
-  flex-shrink: 0;
-
   padding: 0;
   flex-direction: row;
   align-items: center;

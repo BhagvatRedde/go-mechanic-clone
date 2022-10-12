@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-
+import { PulseLoader } from "react-spinners";
 import "./App.css";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div>
-      {/* {loading ? (
+      {loading ? (
         <PulseLoader
           className="text-center"
           color={"#D0021B"}
@@ -35,13 +35,9 @@ function App() {
           size={20}
         />
       ) : (
-        <Home />
-        // <Services />
-      )} */}
-      {/* <Home /> */}
-      {/* <SparePage /> */}
-      {/* <Services /> */}
-      <Routing />
+
+        <Routing />
+      )}
     </div>
   );
 }
