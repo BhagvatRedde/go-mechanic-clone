@@ -30,7 +30,7 @@ const WarrantyCart = ({ selectedPrice }: any) => {
                 <button
                   className={styles["cart-btn"]}
                   role="button"
-                  // onClick={() => navigate("/cartPage")}
+                  onClick={() => navigate("/cartPage")}
                 >
                   View Cart
                 </button>
