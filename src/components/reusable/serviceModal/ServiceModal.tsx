@@ -10,7 +10,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { style } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 
-export const ServiceModal = ({ cityName }: any) => {
+export const ServiceModal = ({ cityName, getSelectedCar }: any) => {
   const [value, setValue] = useState("");
   const [isSelectCar, setIsSelectCar] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -31,6 +31,7 @@ export const ServiceModal = ({ cityName }: any) => {
     brand: "",
     carModel: "",
     fuelType: "",
+    carImage: "",
   });
   const [yourSelectedCar, setYourSelectedCar] = useState("Select Your Car");
   const [model, setModel] = useState({
@@ -120,7 +121,10 @@ export const ServiceModal = ({ cityName }: any) => {
                     <div
                       className={styles["car-text"]}
                       onClick={() => {
-                        setSelectedCar({ ...selectedCar, brand: data.name });
+                        setSelectedCar({
+                          ...selectedCar,
+                          brand: data.name,
+                        });
                         setSearch("");
                         setModel({ ...model, isCarModel: true });
                       }}
@@ -179,7 +183,11 @@ export const ServiceModal = ({ cityName }: any) => {
                   <div
                     className={styles["car-text"]}
                     onClick={() => {
-                      setSelectedCar({ ...selectedCar, carModel: data.name });
+                      setSelectedCar({
+                        ...selectedCar,
+                        carModel: data.name,
+                        carImage: data.icon,
+                      });
                       setSearch("");
                       setModel({ ...model, isFuelType: true });
                     }}
@@ -240,6 +248,12 @@ export const ServiceModal = ({ cityName }: any) => {
                     setYourSelectedCar(
                       `${selectedCar.brand}, ${selectedCar.carModel}, ${data.name}`
                     );
+                    getSelectedCar({
+                      brand: selectedCar.brand,
+                      model: selectedCar.carModel,
+                      fuel: data.name,
+                      img: selectedCar.carImage,
+                    });
                   }}
                 >
                   <div className={styles["car-logo"]}>

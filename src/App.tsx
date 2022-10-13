@@ -5,8 +5,10 @@ import "./App.css";
 import axios from "axios";
 import { SaveData } from "./redux-store/action";
 import Routing from "./routes/Routing";
+import { SecureCheckout } from "./components/servicePriceComp/checkoutCard/secureCheckout/SecureCheckout";
 function App() {
   const [loading, setLoading] = useState(false);
+  const [selectedCar, setSelectedCar] = useState();
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,9 +27,12 @@ function App() {
     }, 1000);
   }, []);
 
+  const selectedCarHandler = (data: any) => {
+    setSelectedCar(data);
+  };
   return (
     <div>
-      {loading ? (
+      {/* {loading ? (
         <PulseLoader
           className="text-center"
           color={"#D0021B"}
@@ -37,7 +42,18 @@ function App() {
       ) : (
 
         <Routing />
-      )}
+      )} */}
+      {/* <Home />
+        // <Services />
+      )}  */}
+      {/* <Home /> */}
+      {/* <SparePage /> */}
+      {/* <Services /> */}
+      <Routing
+        selectedCarHandler={selectedCarHandler}
+        selectedCar={selectedCar}
+      />
+      {/* <SecureCheckout /> */}
     </div>
   );
 }

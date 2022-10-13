@@ -23,3 +23,6 @@
 ::-webkit-scrollbar {
   display: none;
 }
+.loader-style {
+  padding-top: 35vh;
+}

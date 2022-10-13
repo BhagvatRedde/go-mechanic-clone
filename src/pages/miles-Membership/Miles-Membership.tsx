@@ -9,6 +9,7 @@ import BlackDash from '../../components/reusable/BlackDash/BlackDash';
 import { Miles_Questions } from '../../components/milesMembership/MilesQuestion/Miles_Question';
 import { M_Footer } from '../../components/milesMembership/MilesFooter/M_Footer';
 import { MilesFc } from '../../components/milesMembership/MilesCard/MilesFc';
+import Switch_member from '../../components/milesMembership/membership/Switch_member';
 
 
 
@@ -30,14 +31,14 @@ const Milesmembership = () => {
   return (
     <>{loading ? (
       <div className={styles["loader-style"]}>
-      <ClipLoader
-        className="text-center mt-5 "
-        color={"#D0021B"}
-        loading={loading}
+        <ClipLoader
+          className="text-center mt-5 "
+          color={"#fff"}
+          loading={loading}
 
-        size={40}
+          size={40}
 
-      />
+        />
       </div>
 
     ) : (
@@ -50,6 +51,7 @@ const Milesmembership = () => {
             <div className={styles["home-content"]}>
 
               <MilesFc />
+              <Switch_member />
               <BlackDash />
 
             </div>

@@ -27,9 +27,12 @@ import LuxCars from "../../components/homePageComps/lux-cars.tsx/LuxCars";
 import Featured_buddies from "../../components/homePageComps/Featured_buddies/Featured_buddies";
 import HomeFooter from "../../components/homePageComps/homeFooter/HomeFooter";
 import HomeFooterEnd from "../../components/homePageComps/homeFooter/HomeFooterEnd";
-export const Home = () => {
+import { PulseLoader } from "react-spinners";
+export const Home = ({ selectedCarHandler }: any) => {
   const [cityName, setCityName] = useState("Pune");
+  const [selectedCar, setSelectedCar] = useState();
   const [passedIndex, setPassedIndex] = useState(0);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   useEffect(() => {
     axios
@@ -48,40 +51,67 @@ export const Home = () => {
     console.log(index)
     setPassedIndex(index);
   }
+  const getSelectedCar = (data: any) => {
+    setSelectedCar(data);
+    selectedCarHandler(data);
+  };
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
 
   return (
-    <div>
-      <div className={styles["bodyDiv"]}>
-        <div className={`${styles["img-container"]}`}>
-          <div className="d-flex">
-            <AppHeader bgColor="transparent" getCityName={getCityName} />
+    <>
+      {
+        loading ? (
+          <div className={styles["loader-style"]} >
+            <PulseLoader
+              className="text-center mt-5 "
+              color={"#e73c33"}
+              loading={loading}
+
+              size={20}
+
+            />
+          </div >
+        ) : (
+          <div>
+            <div className={styles["bodyDiv"]}>
+              <div className={`${styles["img-container"]}`}>
+                <div className="d-flex">
+                  <AppHeader bgColor="transparent" getCityName={getCityName} />
+                </div>
+              </div>
+              <ServiceModal
+                cityName={cityName}
+                getSelectedCar={getSelectedCar}
+                className={`${styles["floatingDiv"]}`}
+              />
+              <div className={`${styles["home-content"]}`}>
+                <StickyHeader />
+                <CarServices cityName={cityName} />
+                <CustomServices />
+                <FestiveCarEssential />
+                <Workshop />
+                <LuxCars />
+                <MechanicWork />
+                <MechanicBenefits />
+                <RatingDiv />
+                <OwnersFeedback passedIndex={passedIndex} />
+                <GoQuetion passedIndex={passedIndex} />
+                <Featured_buddies />
+                <WhyChoose passedIndex={passedIndex} />
+                <PriceTable />
+              </div>
+            </div>
+            <div className={`${styles["footer-main"]}`}>
+              <HomeFooter />
+              <HomeFooterEnd />
+            </div>
           </div>
-        </div>
-        <ServiceModal
-          cityName={cityName}
-          className={`${styles["floatingDiv"]}`}
-        />
-        <div className={`${styles["home-content"]}`}>
-          <StickyHeader />
-          <CarServices cityName={cityName} />
-          <CustomServices />
-          <FestiveCarEssential />
-          <Workshop />
-          <LuxCars />
-          <MechanicWork />
-          <MechanicBenefits />
-          <RatingDiv />
-          <OwnersFeedback passedIndex={passedIndex} />
-          <GoQuetion passedIndex={passedIndex} />
-          <Featured_buddies />
-          <WhyChoose passedIndex={passedIndex} />
-          <PriceTable />
-        </div>
-      </div>
-      <div className={`${styles["footer-main"]}`}>
-        <HomeFooter />
-        <HomeFooterEnd />
-      </div>
-    </div>
+        )}
+    </>
   );
 };
