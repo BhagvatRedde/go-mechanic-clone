@@ -14,3 +14,9 @@
   width: 300px;
   padding: 1em;
 }
+.card-container {
+  padding: 2em;
+}
+.redBorder-left {
+  border-left: 2px solid #e73c33;
+}

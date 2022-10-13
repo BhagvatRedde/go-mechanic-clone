@@ -41,13 +41,15 @@ export const PhoneNumber = ({ getLoggedInHandler }: any) => {
       variant="outlined"
       sx={{
         maxWidth: 730,
-        borderLeft: "2px solid #e73c33",
+        // borderLeft: "2px solid #e73c33",
         borderRadius: "0",
         marginTop: 4,
       }}
     >
       {!loggedIn ? (
-        <div className="p-4">
+        <div
+          className={`${styles["card-container"]} ${styles["redBorder-left"]}`}
+        >
           <h5>Account</h5>
           <p>To place an order, log in to your existing account or sign up. </p>
           <div className={styles["phone-container"]}>

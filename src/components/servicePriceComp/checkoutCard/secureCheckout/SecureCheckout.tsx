@@ -7,10 +7,13 @@ import { PhoneNumber } from "./phoneNumber/PhoneNumber";
 import styles from "./SecureCheckout.module.css";
 export const SecureCheckout = () => {
   const [loggedIn, setLoggedIn] = useState(false);
-
+  const [isAddress, setIsAddress] = useState(false);
   const getLoggedInHandler = (data: any) => {
     console.log(data);
     setLoggedIn(data);
+  };
+  const isAddressEnteredHandler = (data: boolean) => {
+    setIsAddress(data);
   };
   return (
     <>
@@ -28,8 +31,11 @@ export const SecureCheckout = () => {
 
       <div className={styles["checkout-content"]}>
         <PhoneNumber getLoggedInHandler={getLoggedInHandler} />
-        <DateTime loggedIn={loggedIn} />
-        <AddAddress />
+        <DateTime
+          loggedIn={loggedIn}
+          isAddressEnteredHandler={isAddressEnteredHandler}
+        />
+        <AddAddress isAddress={isAddress} />
         <PaymentOptions></PaymentOptions>
       </div>
     </>

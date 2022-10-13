@@ -34,7 +34,7 @@ const slotTimes = [
   { id: 6, time: 4, slot: "4-5 PM" },
   { id: 7, time: 5, slot: "5-6 PM" },
 ];
-export const DateTime = ({ loggedIn }: any) => {
+export const DateTime = ({ loggedIn, ...rest }: any) => {
   const [dates, setDates] =
     useState<{ dd: string; weekDay: string; fullDate: string }[]>();
   const [cuurHour, setCurrHour] = useState<number>();
@@ -45,12 +45,16 @@ export const DateTime = ({ loggedIn }: any) => {
   const [btnContinue, setBtnContinue] = useState(false);
   const fullDate = moment(new Date()).format("YYYY-MM-DD");
   const dd = fullDate.slice(8, 11);
+
+  const [sliceIndex, setSliceIndex] = useState<number>();
+  const [dateIndex, setDateIndex] = useState<number>(0);
+
+  const [CalcSliceIndex, setCalcSliceIndex] = useState<number>();
+
   const [appointment, setAppointment] = useState({
     slotDate: fullDate,
     slotTime: slotTimes[0].slot,
   });
-  const [sliceIndex, setSliceIndex] = useState<number>();
-  const [CalcSliceIndex, setCalcSliceIndex] = useState<number>();
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
@@ -67,20 +71,36 @@ export const DateTime = ({ loggedIn }: any) => {
       arr.push(datesObj);
     }
     setDates(arr);
-    const currHour = moment().hour() - 12;
+    const currHour = moment().hour();
+    console.log(currHour);
+    let currHour2 = currHour;
+    if (currHour > 12) currHour2 = currHour2 - 12;
+    console.log(currHour);
+
     const index = slotTimes.findIndex((item: any) => {
-      return item.time == currHour;
+      return item.time == currHour2;
     });
+    console.log(index);
     setCalcSliceIndex(index + 1);
     setSliceIndex(index + 1);
+    if (currHour > 18) {
+      setDateIndex(1);
+      setAppointment({
+        slotDate: arr[0].fullDate,
+        slotTime: slotTimes[0].slot,
+      });
+    }
+    if (index == 0 || index > 0) {
+      setAppointment({ ...appointment, slotTime: slotTimes[index + 1].slot });
+    }
   }, []);
-  // useEffect(()=>)
 
   const slotDateHandler = (i: number, fullDate: any) => {
     setDateBoxActive(i);
     setAppointment({ ...appointment, slotDate: fullDate });
     if (i === 0) setSliceIndex(CalcSliceIndex);
     else setSliceIndex(0);
+    console.log(CalcSliceIndex);
   };
   const slotTimeHandler = (i: number, slotTime: any) => {
     setTimeBoxActive(i);
@@ -89,6 +109,7 @@ export const DateTime = ({ loggedIn }: any) => {
 
   const continueHandler = () => {
     setBtnContinue(true);
+    rest.isAddressEnteredHandler(true);
   };
 
   return (
@@ -103,9 +124,11 @@ export const DateTime = ({ loggedIn }: any) => {
             marginTop: 4,
           }}
         >
-          <h4 className={styles["dateTime-container-h4"]}>
-            Select Date and Time of Service
-          </h4>
+          <div className={styles["dateTime-container"]}>
+            <h4 className={styles["dateTime-container-h4"]}>
+              Select Date and Time of Service
+            </h4>
+          </div>
         </Card>
       )}
 
@@ -121,32 +144,35 @@ export const DateTime = ({ loggedIn }: any) => {
                 borderRadius: "0",
                 marginTop: 4,
                 position: "relative",
+                borderLeft: "2px solid #e73c33",
               }}
             >
-              <div className={styles["dateTime-container"]}>
+              <div className={`${styles["dateTime-container"]} `}>
                 <h4 className={styles["dateTime-container-h4"]}>
                   Select Date and Time of Service
                 </h4>
                 <div className="d-flex ">
                   {dates &&
-                    dates.map((data: any, i: number) => (
-                      <div
-                        key={i}
-                        className={
-                          dateBoxActive == i
-                            ? styles["date-pick"]
-                            : styles["date-not-pick"]
-                        }
-                        onClick={() => slotDateHandler(i, data.fullDate)}
-                      >
-                        <div className={styles["date-content"]}>
-                          <div>{data.dd}</div>
-                          <div className={styles["date-weekday"]}>
-                            {data.weekDay}
+                    dates
+                      .slice(dateIndex, dates.length)
+                      .map((data: any, i: number) => (
+                        <div
+                          key={i}
+                          className={
+                            dateBoxActive == i
+                              ? styles["date-pick"]
+                              : styles["date-not-pick"]
+                          }
+                          onClick={() => slotDateHandler(i, data.fullDate)}
+                        >
+                          <div className={styles["date-content"]}>
+                            <div>{data.dd}</div>
+                            <div className={styles["date-weekday"]}>
+                              {data.weekDay}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
                 </div>
                 <div>
                   <span className={styles["pick-slot"]}>Pick Time Slot </span>

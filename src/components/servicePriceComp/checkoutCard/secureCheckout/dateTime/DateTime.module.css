@@ -85,3 +85,6 @@
   font-size: 1.1em;
   color: #9b9b9b;
 }
+.redBorder-left {
+  border-left: 2px solid #e73c33;
+}
